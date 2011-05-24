@@ -1,0 +1,40 @@
+<!-- application/scripts/layout.phtml -->
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <?php   
+        // setting the controller and action name as title segments:
+        $request = Zend_Controller_Front::getInstance()->getRequest();
+        $this->headTitle($request->getActionName())
+             ->headTitle($request->getControllerName());
+        // setting the site in the title
+        $this->headTitle('Jewelry by GL');     
+        // setting a separator string for segments:
+        $this->headTitle()->setSeparator(' / ');        
+        // build meta
+        $this->headMeta()->appendName('keywords', 'jewelry, jewelry by gl, nederlands, germany'); 
+        $this->headMeta()->appendName('description', 'custom made jewelry by GL high quality high value high fashion sense sensibility'); 
+        $this->headMeta()->appendName('robots', 'index, follow'); 
+        // build css
+        $this->headLink()->appendStylesheet('/css/styles.css');
+        $this->headLink()->appendStylesheet('/css/styles-ie.css');
+        // build js
+        $this->headScript()->appendFile('/js/prototype.js');
+        $this->headScript()->appendFile('/js/jquery.min.js');
+    ?>
+    <?= $this->headTitle(); ?>
+    <?= $this->headMeta(); ?>
+    <?= $this->headLink(); ?>
+    <?= $this->headScript(); ?>
+</head>
+<body>
+    <div id="container">
+        <div class="navigation">
+            <?= $this->navigation()->menu(); ?>
+        </div>
+        <div id="content">
+            <?= $this->layout()->content ?>       
+        </div>  
+</div>   
+</body>
+</html>

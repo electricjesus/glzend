@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configdata>
+    <navigation>
+        <home>
+            <label>Home Page</label>
+            <uri>/</uri>
+        </home>
+        <vision>
+            <label>Vision</label>
+            <uri>/vision</uri>
+        </vision>
+        <history>
+            <label>History</label>
+            <uri>/history</uri>
+        </history>
+        <factory>
+            <label>Factory</label>
+            <uri>/factory</uri>
+        </factory>
+        <collection>
+            <label>Collection</label>
+            <uri>/collection</uri>
+            <pages>
+                <latevictorian>
+                    <label>Late Victorian</label>
+                    <uri>/latevictorian</uri>
+                </latevictorian>
+                <artnouveau>
+                    <label>Art Nouveau</label>
+                    <uri>/artnouveau</uri>
+                </artnouveau>
+                <artdeco>
+                    <label>Art Deco</label>
+                    <uri>/artdeco</uri>
+                </artdeco>
+            </pages>            
+        </collection>
+        <vacancies>
+            <label>Vacancies</label>
+            <uri>/vacancies</uri>
+        </vacancies>
+        <contact>
+            <label>Contact</label>
+            <uri>/contact</uri>
+        </contact>
+    </navigation>
+</configdata>
