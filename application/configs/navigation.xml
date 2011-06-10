@@ -3,19 +3,19 @@
     <navigation>
         <home>
             <label>Home Page</label>
-            <uri>/</uri>
+            <uri>/index/index</uri>
         </home>
         <vision>
             <label>Vision</label>
-            <uri>/vision</uri>
+            <uri>/index/vision</uri>
         </vision>
         <history>
             <label>History</label>
-            <uri>/history</uri>
+            <uri>/index/history</uri>
         </history>
         <factory>
             <label>Factory</label>
-            <uri>/factory</uri>
+            <uri>/index/factory</uri>
         </factory>
         <collection>
             <label>Collection</label>
@@ -23,21 +23,21 @@
             <pages>
                 <latevictorian>
                     <label>Late Victorian</label>
-                    <uri>/latevictorian</uri>
+                    <uri>/collection/latevictorian</uri>
                 </latevictorian>
                 <artnouveau>
                     <label>Art Nouveau</label>
-                    <uri>/artnouveau</uri>
+                    <uri>/collection/artnouveau</uri>
                 </artnouveau>
                 <artdeco>
                     <label>Art Deco</label>
-                    <uri>/artdeco</uri>
+                    <uri>/collection/artdeco</uri>
                 </artdeco>
             </pages>            
         </collection>
         <vacancies>
             <label>Vacancies</label>
-            <uri>/vacancies</uri>
+            <uri>/index/vacancies</uri>
         </vacancies>
         <contact>
             <label>Contact</label>
