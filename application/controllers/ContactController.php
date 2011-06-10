@@ -6,6 +6,7 @@ class ContactController extends Zend_Controller_Action
     {
         /* Initialize action controller here */
     }
+	
     public function indexAction()
     {
         // action body
