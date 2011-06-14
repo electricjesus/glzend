@@ -2,8 +2,25 @@
 	<p>Timeless Classics, from elegant simplicity to iconic designs. Our sterling silver jewellery 
 	inherit the timeless appeal of the original Late Victorian, Art Nouveau and Art Deco Movement.</p>
 </div>
-
+<?php 
+        $_products = new Products;
+        $_rows = $_products->fetchAll(
+                    $_products
+                        ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)
+                        ->setIntegrityCheck(false)
+                        ->join('featured','featured.product_id = products.id')
+                        ->where('featured.location = ?','homepage'));
+?>
+<?php foreach($_rows as $_row): ?>
+<?php $rowData =  $_row->toArray(); ?>
+<div id="<?= $rowData['id'] ?>" class="item">
+    <p>
+        <?= $rowData['description'] ?>
+    </p>
+    <img src="<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
+</div>
+<?php endforeach; ?>
 <div class="image-right">
-	<img src="<?= $this->getBaseUrl; ?>/images/home.png" alt="" />
+	<img src="<?= $this->getBaseUrl; ?>/images/home.png" alt="" />	
 </div>
 

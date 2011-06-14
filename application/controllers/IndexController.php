@@ -2,19 +2,14 @@
 
 class IndexController extends Zend_Controller_Action
 {    
+
+    public $_data;
     public function init()
     {
         /* Initialize action controller here */
         include_once "Databases/Products.php";
     }
-    public function indexAction() {
-        $_products = new Products;
-        $_rows = $_products->fetchAll(
-                    $_products
-                        ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)
-                        ->setIntegrityCheck(false)
-                        ->join('featured','featured.product_id = products.id')
-                        ->where('featured.location = ?','homepage'));
+    public function indexAction() {       
     }
     public function factoryAction() {}
     public function vacanciesAction() {}
