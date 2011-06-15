@@ -2,6 +2,13 @@
 
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
+    protected function _initAutoloader () {
+        require_once 'Zend/Loader/Autoloader.php';
+        $loader = Zend_Loader_Autoloader::getInstance();
+        //register database classes
+        $loader->registerNamespace('Databases_');
+        $loader->registerNamespace('Utilities_');
+    }
     protected function _initDoctype() {
         $this->bootstrap('layout');
         $layout = $this->getResource('layout');
