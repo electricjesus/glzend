@@ -3,7 +3,19 @@
 	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non metus nulla, at adipiscing justo. 
 	Aliquam enim nulla, tincidunt in dictum id, scelerisque quis massa. </p>
 </div>
-
+<?php 
+        $_featured = new Databases_Featured;
+        $_rows = $_featured->fetchAll(
+                    $_featured
+                        ->select()
+                        ->where('featured.location = ?','category'));
+?>
 <div class="image-right">
+    <? foreach($_rows as $_row): ?>
+    <? $_rowData = $_row->toArray(); ?>
+    <div id="<?= $_rowData['id'] ?>"> 
+        <p><?= $_rowData['product_id'] ?></p>
+    </div>
+    <? endforeach; ?>
 	<img src="<?= $this->getBaseUrl; ?>/images/vision.png" alt="" />
 </div>

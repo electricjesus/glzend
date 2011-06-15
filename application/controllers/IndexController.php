@@ -1,9 +1,7 @@
 <?php
 
 class IndexController extends Zend_Controller_Action
-{    
-
-    public $_data;
+{
     public function init() {
         /* Initialize action controller here */
     }
