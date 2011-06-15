@@ -3,7 +3,7 @@
 	inherit the timeless appeal of the original Late Victorian, Art Nouveau and Art Deco Movement.</p>
 </div>
 <?php 
-        $_products = new Products;
+        $_products = new Databases_Products;
         $_rows = $_products->fetchAll(
                     $_products
                         ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)

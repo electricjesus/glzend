@@ -4,10 +4,8 @@ class IndexController extends Zend_Controller_Action
 {    
 
     public $_data;
-    public function init()
-    {
+    public function init() {
         /* Initialize action controller here */
-        include_once "Databases/Products.php";
     }
     public function indexAction() {       
     }
