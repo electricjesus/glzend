@@ -2,7 +2,7 @@
 <configdata>
     <navigation>
         <home>
-            <label>Home Page</label>
+            <label>Home</label>
             <uri>/index/index</uri>
         </home>
         <vision>

@@ -1,0 +1,333 @@
+html{
+	height: 100%
+}
+
+body {
+	margin:0;
+	padding:0;
+	border:0;			/* This removes the border around the viewport in old versions of IE */
+	width:100%; height: 100%;
+	background:#fff;
+	min-width:600px;    	/* Minimum width of layout - remove line if not required */
+					/* The min-width property does not work in old versions of Internet Explorer */
+	font-family: Georgia,Times New Roman,serif;
+	font-size:100%;
+}
+a img {border: none; } 
+a {
+	color:#369; 
+}
+/* a:hover {
+	color:#fff;
+	background:#369;
+	text-decoration:none;
+} */
+h1, h2, h3 {
+	margin:.8em 0 .2em 0;
+	padding:0;
+}
+p {
+	margin:.4em 0 .8em 0;
+	padding:0;
+}
+img {
+	margin:10px 0 5px;
+}
+#ads img {
+	display:block;
+	padding-top:10px;
+}
+
+/* Header styles */
+#header {
+	clear:both;
+	float:left;
+	width:100%;
+}
+#header {
+	border-bottom:1px solid #000;
+}
+#header p,
+#header h1,
+#header h2 {
+	padding:.4em 15px 0 15px;
+	margin:0;
+}
+#header ul {
+	clear:left;
+	float:left;
+	width:100%;
+	list-style:none;
+	margin:10px 0 0 0;
+	padding:0;
+}
+#header ul li {
+	display:inline;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+#header ul li a {
+	display:block;
+	float:left;
+	margin:0 0 0 1px;
+	padding:3px 10px;
+	text-align:center;
+	background:#eee;
+	color:#000;
+	text-decoration:none;
+	position:relative;
+	left:15px;
+	line-height:1.3em;
+}
+#header ul li a:hover {
+	background:#369;
+	color:#fff;
+}
+#header ul li a.active,
+#header ul li a.active:hover {
+	color:#fff;
+	background:#000;
+	font-weight:bold;
+}
+#header ul li a span {
+	display:block;
+}
+/* 'widths' sub menu */
+#layoutdims {
+	clear:both;
+	background:#eee;
+	border-top:4px solid #000;
+	margin:0;
+	padding:6px 15px !important;
+	text-align:right;
+}
+/* column container */
+.colmask {
+	position:relative;	/* This fixes the IE7 overflow hidden bug */
+	clear:both;
+	float:left;
+	width:100%; height: 100%;			/* width of whole page */
+	overflow:hidden;		/* This chops off any overhanging divs */
+	min-height: 619px;
+}
+/* common column settings */
+.colright,
+.colmid,
+.colleft {
+	float:left;
+	width:100%;
+	position:relative;
+}
+.col1,
+.col2,
+.col3 {
+	float:left;
+	position:relative;
+	padding:0 0 1em 0;
+	overflow:hidden;
+}
+/* 2 Column (left menu) settings */
+.leftmenu {
+	background:#000;		/* right column background colour */
+}
+.leftmenu .colleft {
+	right:80%;			/* right column width */
+	background:#FFF;	/* left column background colour */
+	min-height: 619px;
+	height: 100%;
+}
+.leftmenu .col2 {
+	width:74%;			/* right column content width */
+	left:80%;			/* 100% plus left column left padding */
+	color: #E1E1E1;
+	height: 100%;   padding-left: 5%;
+
+}
+.leftmenu .col2 div.block-content form{
+	padding: 0 47px;
+	margin-bottom: 20px;
+}
+.leftmenu .col2 div.block-content{
+	margin-top: 400px;
+}
+
+.leftmenu .col2 .contact-details span pre{
+	 margin-left: -335px;
+}
+
+.leftmenu .col2 .header{
+	margin-top: 139px;
+	padding: 0 36px;
+}
+.leftmenu .col2 .home{
+	display: none;
+}
+
+.leftmenu .col2 #content h2 {
+	margin-bottom: 20px; margin-top: 13%;
+	color: #FFF;
+}
+
+div.right-picture{
+	position:absolute;
+	top: 10px;
+	right: -150px;
+}
+
+div.right-picture img{
+	opacity: 0.5;
+	overflow:inherit;
+}
+.right-picture.History {
+	position:relative;
+	top: 0px;
+	right: 0px;
+    text-align:center;
+}
+.right-picture.History img {	
+	width:351px;
+	float:left;
+	padding:0 2em;
+	opacity: 1 !important;
+}
+.error{
+	color: #971619;
+}
+
+.leftmenu .col1{
+	width:21%;			/* left column content width (column width minus left and right padding) */
+	left:79%;			/* (right column left and right padding) plus (left column left padding) */
+	text-align: center;
+}
+ul.navigation, ul.navigation ul {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  width: 13em;
+  text-align: right;
+ 
+}
+ul.navigation{
+	float: right;
+	width: 240px;
+	font-family: Georgia, Times New Roman, serif;
+}
+
+ul.navigation a {
+  display: block;
+  text-decoration: none;	
+}
+
+ul.navigation li {
+  background: url("../images/menu_line.png") bottom right no-repeat;
+}
+
+ul.navigation li a {
+
+  padding: 0.5em 1em 0.5em 0.5em;
+  color: #000000;
+  font-weight: bold;
+  
+}
+
+ul.navigation li a:hover {
+  background: url("../images/menu_line.png") bottom right no-repeat #e1e1e1;
+  color: #2a2a2a;
+}
+
+ul.navigation li ul li a {
+  color: #000;
+  padding-left: 20px;
+  font-weight: normal;
+}
+
+ul.navigation ul li {
+	/*background: url("../images/menu_line.png") bottom right no-repeat;*/
+	position: relative;
+	left: 32px;
+	background: none;
+}
+
+
+ul.navigation li ul li a:hover {
+  background: #aaa;
+  border-left: 5px #000 solid;
+  padding-left: 15px;
+}
+
+.block-content p{
+	
+	color: #E1E1E1;
+	font-family: Georgia, Times New Roman, serif;
+	padding-right: 6%;
+}
+.col1 img{
+	margin-left: 12px;
+	width: 95%;
+}
+
+
+/* Footer styles */
+#footer {
+	clear:both;
+	float:left;
+	width:100%;
+	border-top:1px solid #000;
+}
+#footer p {
+	padding:10px;
+	margin:0;
+}
+
+
+/********** NEW STYLES **************/
+div.image-right{
+	left: 64%; top: 3%;
+    position: absolute;
+    
+}
+div.image-right img{
+	opacity: 0.5;
+}
+div#content div.block-content{
+	text-align: center;
+	margin-top: 40%;
+
+}
+
+/***************** HISTORY ********************/
+div#content div p.history{
+    line-height: 24px;
+    margin-bottom: 33px;
+    padding-right: 4%;
+    text-align: justify;
+}
+div.image-history {
+	width: 75%;
+}
+div.image-history img{
+	float: left;
+    margin-right: 20px;
+    opacity: 0.8;
+    width: 50%;
+}
+
+/***************** VISION *********************/
+div#content div p.vision{
+	margin-right: 5%;
+}
+
+/***************** VACANCIES ******************/
+div#content div p.vacancies{
+	margin-right: 5%;
+    text-align: justify;
+}
+div#content div ul.vacancies{
+	list-style-type: none;
+}
+
+/***************** CONTACT ******************/
+div#content div ul.contact{
+	list-style-type: none;
+}
