@@ -28,13 +28,44 @@
     <?= $this->headScript(); ?>
 </head>
 <body>
-    <div id="container">
+    <?php /* <div id="container">
         <div class="navigation">
+			<div class="logo">
+				<img src="<?= $this->getBaseUrl; ?>/images/logo.jpg" alt="GL" />
+			</div>
             <?= $this->navigation()->menu(); ?>
         </div>
         <div id="content">
             <?= $this->layout()->content ?>       
         </div>  
-</div>   
+	</div>  */ ?>
+	
+
+
+<div class="colmask leftmenu">
+	<div class="colleft">
+		<div class="col1">
+			<!-- Column 1 - MENU start -->
+			
+			<div class="logo">
+				<img src="<?= $this->getBaseUrl; ?>/images/logo.jpg" alt="GL" />
+			</div>
+			<?= $this->navigation()->menu(); ?>
+
+			<!-- Column 1 end -->
+		</div>
+		<div class="col2">
+			<!-- Column 2 - CONTENT start -->
+			
+			<div id="content">
+				<?= $this->layout()->content ?>       
+			</div>
+
+			<!-- Column 2 end -->
+		</div>
+	</div>
+</div>
+
+
 </body>
 </html>
