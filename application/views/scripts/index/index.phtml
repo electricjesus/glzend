@@ -2,7 +2,8 @@
 	<p>Timeless Classics, from elegant simplicity to iconic designs. Our sterling silver jewellery 
 	inherit the timeless appeal of the original Late Victorian, Art Nouveau and Art Deco Movement.</p>
 </div>
-<?php /*
+<?php $_showfeatured = false; if($_showfeatured): ?>
+<?php 
         $_products = new Databases_Products;
         $_rows = $_products->fetchAll(
                     $_products
@@ -21,7 +22,8 @@
     </p>
     <img src="<?= $this->getBaseUrl; ?>/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
 </div>
-<?php endforeach; ?> */ ?>
+<?php endforeach; ?> 
+<?php endif ?>
 <div class="image-right">
 	<img src="<?= $this->getBaseUrl; ?>/images/home.png" alt="" />	
 </div>
