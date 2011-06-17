@@ -14,8 +14,6 @@
                         //->where('sort.item_type = ?','product')
 						->where('category_id = ?','3')
 						);
-						
-						
 	?>
 	<?php foreach($_rows as $_row): ?>
 	<?php $rowData =  $_row->toArray(); ?>
@@ -25,6 +23,30 @@
 		</p>
 		<img src="<?= $this->getBaseUrl; ?>/images/catalog/GL-Images/GL_2010_cd/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
 	</div>
-	<?php endforeach; ?> ?>
+	<?php endforeach; ?>
+
+</div>
+
+<div class="vertical-product">
+
+	<?php
+        $_products = new Databases_Products;
+        $_rows = $_products->fetchAll(
+                    $_products
+                        ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)
+                        ->setIntegrityCheck(false)
+                        //->join('featured','featured.product_id = products.id')
+                        ->join('sort','sort.item_id = products.id')
+                        //->where('featured.location = ?','category')
+                        ->where('sort.item_type = ?','product')
+						->where('category_id = ?','3')
+						);
+	?>
+	<?php foreach($_rows as $_row): ?>
+	<?php $rowData =  $_row->toArray(); ?>
+	<div>
+		<img src="<?= $this->getBaseUrl; ?>/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
+	</div>
+	<?php endforeach; ?>
 
 </div>

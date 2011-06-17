@@ -331,3 +331,11 @@ div#content div ul.vacancies{
 div#content div ul.contact{
 	list-style-type: none;
 }
+
+/***************** Collection/LateVictorian ******************/
+div.latevictorian{
+	width: 50%;
+}
+div.vertical-product{
+	
+}
