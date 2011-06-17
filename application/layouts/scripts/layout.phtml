@@ -1,54 +1,55 @@
 <!-- application/scripts/layout.phtml -->
 <?php echo $this->doctype() ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <?php   
-        // setting the controller and action name as title segments:
-        $request = Zend_Controller_Front::getInstance()->getRequest();
-        $this->headTitle($request->getActionName())
-             ->headTitle($request->getControllerName());
-        // setting the site in the title
-        $this->headTitle('Jewelry by GL');     
-        // setting a separator string for segments:
-        $this->headTitle()->setSeparator(' / ');        
-        // build meta
-        $this->headMeta()->appendName('keywords', 'jewelry, jewelry by gl, nederlands, germany'); 
-        $this->headMeta()->appendName('description', 'custom made jewelry by GL high quality high value high fashion sense sensibility'); 
-        $this->headMeta()->appendName('robots', 'index, follow'); 
-        // build css
-        $this->headLink()->appendStylesheet('/css/styles.css');
-        $this->headLink()->appendStylesheet('/css/styles-ie.css');
-        // build js
-        $this->headScript()->appendFile('/js/jquery.min.js');
-        $this->headScript()->appendFile('/js/jquery.jcarousel.min.js');
-    ?>
-    <?= $this->headTitle(); ?>
-    <?= $this->headMeta(); ?>
-    <?= $this->headLink(); ?>
-    <?= $this->headScript(); ?>
-</head>
-<body>
-    <div class="colmask leftmenu">
-	    <div class="colleft">
-		    <div class="col1">
-			    <!-- Column 1 - MENU start -->
+    <head>
+        <?php   
+            // setting the controller and action name as title segments:
+            $request = Zend_Controller_Front::getInstance()->getRequest();
+            $this->headTitle($request->getActionName())
+                 ->headTitle($request->getControllerName());
+            // setting the site in the title
+            $this->headTitle('Jewelry by GL');     
+            // setting a separator string for segments:
+            $this->headTitle()->setSeparator(' / ');        
+            // build meta
+            $this->headMeta()->appendName('keywords', 'jewelry, jewelry by gl, nederlands, germany'); 
+            $this->headMeta()->appendName('description', 'custom made jewelry by GL high quality high value high fashion sense sensibility'); 
+            $this->headMeta()->appendName('robots', 'index, follow'); 
+            // build css
+            $this->headLink()->appendStylesheet('/css/styles.css');
+            $this->headLink()->appendStylesheet('/css/styles-ie.css');
+            // build js
+            $this->headScript()->appendFile('/js/jquery.min.js');
+            $this->headScript()->appendFile('/js/jquery.jcarousel.min.js');
+        ?>
+        <?= $this->headTitle(); ?>
+        <?= $this->headMeta(); ?>
+        <?= $this->headLink(); ?>
+        <?= $this->headScript(); ?>
+    </head>
+    <body>
+        <div class="colmask leftmenu">
+	        <div class="colleft">
+		        <div class="col1">
+			        <!-- Column 1 - MENU start -->
 			
-			    <div class="logo">
-				    <img src="<?= $this->getBaseUrl; ?>/images/logo.jpg" alt="GL" />
-			    </div>
-			    <?= $this->navigation()->menu(); ?>
+			        <div class="logo">
+				        <img src="<?= $this->getBaseUrl; ?>/images/logo.jpg" alt="GL" />
+			        </div>
+			        <?= $this->navigation()->menu(); ?>
 
-			    <!-- Column 1 end -->
-		    </div>
-		    <div class="col2">
-			    <!-- Column 2 - CONTENT start -->
+			        <!-- Column 1 end -->
+		        </div>
+		        <div class="col2">
+			        <!-- Column 2 - CONTENT start -->
 			
-			    <div id="content">
-				    <?= $this->layout()->content ?>       
-			    </div>
+			        <div id="content">
+				        <?= $this->layout()->content ?>       
+			        </div>
 
-			    <!-- Column 2 end -->
-		    </div>
-	    </div>
-    </div>
-</body>
+			        <!-- Column 2 end -->
+		        </div>
+	        </div>
+        </div>
+    </body>
+</html>
