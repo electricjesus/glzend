@@ -6,7 +6,9 @@ class CollectionController extends Zend_Controller_Action
     {
         /* Initialize action controller here */
     }
-    public function indexAction() { /*action body*/ }
+    public function indexAction() { 
+        $this->_forward('latevictorian');
+     }
     public function latevictorianAction() { /*action body*/ }
     public function artnouveauAction() { /*action body*/ }
     public function artdecoAction() { /*action body*/ }
