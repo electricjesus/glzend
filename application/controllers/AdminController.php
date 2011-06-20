@@ -12,6 +12,7 @@ class AdminController extends Zend_Controller_Action
             // proceed to login action (redirect)
         $auth = Zend_Auth::getInstance();
         if(!($auth->hasIdentity())) {
+            $this->_helper->redirector('login', 'admin');
         }
     }
     public function loginAction() {
@@ -21,7 +22,7 @@ class AdminController extends Zend_Controller_Action
             if ($form->isValid($request->getPost())) {
                 if ($this->_process($form->getValues())) {
                     // We're authenticated! Redirect to the admin home page
-                    $this->_helper->redirector('admin', 'index');
+                    $this->_helper->redirector('index', 'admin');
                 } else {
                     echo "error";
                 }
