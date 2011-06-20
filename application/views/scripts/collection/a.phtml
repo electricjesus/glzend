@@ -20,18 +20,35 @@
 <?php elseif($this->mode == 'subcategory'): ?>
     <?php
         //construct here
+		$_name = new Databases_Designers;
+		$_rows = $_name->fetchAll(
+			$_name
+					->select(Zend_Db_Table::SELECT_WITH_FROM_PART)
+					->setIntegrityCheck(false)
+					//->join('featured','featured.product_id = products.id')
+					->join('sort','sort.item_id = subcategories.id')
+					//->where('featured.location = ?','category')
+					->where('sort.item_type = ?','designer')
+					->where('category_id = ?','3')
+					->order('sort_order ASC')
+					->where('id = ?', $this->id)           
+			);
+		echo $this->id;
     ?>
+
+	
+	
     <?php if($this->where == 'carousel'): ?>    
     <li>
-        <a class="ajaxify" href="product.php?product=<?= $_item_number ?>" target="#selected-product">
-            <img width="80px" src="images/catalog/GL-Images/GL_2010_cd/<?= $_item_imagepath ?>" alt="" />
+        <a class="ajaxify" href="product.php?product=<?= $_rowData['sku'] ?>" target="#selected-product">
+            <img width="80px" src="images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" alt="" />
         </a>
     </li>
     <?php elseif($this->where == 'slideshow'): ?>
     <div class="prod">
-        <p><?= $_item_number ?></p>
-        <p><?= $_item_description ?></p>
-        <img class='product_picture' src="images/catalog/GL-Images/GL_2010_cd/<?= $_item_imagepath ?>" />
+        <p><?= $_rowData['sku'] ?></p>
+        <p><?= $_rowData['description'] ?></p>
+        <img class='product_picture' src="images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" />
     </div>
     <?php endif; ?>
 <?php else: ?>
