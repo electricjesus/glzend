@@ -1,0 +1,40 @@
+<?php if($this->mode == 'product'): ?>
+    <?php
+        $_products = new Databases_Products;
+        $_rows = $_products->fetchAll(
+            $_products
+                    ->select()
+                    ->where('id = ?', $this->id)           
+            );
+        echo $this->id;
+    ?>    
+    <?php foreach($_rows as $_row):?>        
+        <?php $_rowData = $_row->toArray(); ?>    
+        <p><?= $_rowData['sku'] ?></p>
+        <p><?= $_rowData['description'] ?></p>
+        <img 
+            class="product_picture"  
+            src="/images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" 
+            alt="<?= $_rowData['sku'] ?>" />
+    <?php endforeach; ?>
+<?php elseif($this->mode == 'subcategory'): ?>
+    <?php
+        //construct here
+    ?>
+    <?php if($this->where == 'carousel'): ?>    
+    <li>
+        <a class="ajaxify" href="product.php?product=<?= $_item_number ?>" target="#selected-product">
+            <img width="80px" src="images/catalog/GL-Images/GL_2010_cd/<?= $_item_imagepath ?>" alt="" />
+        </a>
+    </li>
+    <?php elseif($this->where == 'slideshow'): ?>
+    <div class="prod">
+        <p><?= $_item_number ?></p>
+        <p><?= $_item_description ?></p>
+        <img class='product_picture' src="images/catalog/GL-Images/GL_2010_cd/<?= $_item_imagepath ?>" />
+    </div>
+    <?php endif; ?>
+<?php else: ?>
+<h1>Hello</h1>
+<p>You may have reached this page in a wrong way. :) <a href="/">Go back home</a></p>
+<?php endif; ?>
