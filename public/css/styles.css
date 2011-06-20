@@ -337,7 +337,7 @@ div.latevictorian{
 	width: 50%;
 }
 div.vertical-product{
-	left: 45%;
+	left: 50%;
     position: absolute;
     top: 10%;
 }
@@ -345,4 +345,14 @@ div.vertical-designers{
 	position: absolute;
 	top: 10%;
 	left: 66%;
+}
+div.vertical-designers div.jcarousel-skin-tango div.jcarousel-clip-vertical{
+	width: 200px !important;
+}
+ul.designers{
+	width: 200px !important;
+}
+ul.designers li{
+	width: 200px !important;
+	height: 40px !important;
 }
