@@ -403,3 +403,73 @@ ul.designers li{
 #slideshow .item p{
 	text-align: center;
 }
+
+div.factory-video{
+	/*text-align: center;*/
+	margin-left: 281px;
+}
+
+/******************************* FLOWPLAYER ON FACTORY ******************************/
+.overlay {
+
+	/*
+		THIS ARE YOUR FULLSCREEN DIMENSIONS
+	
+	width:650px;
+	height:485px;*/
+	width:800px;
+	height:600px;
+	background-image:url(http://static.flowplayer.org/img/overlay/petrol.png);
+	display:none;
+	padding: 0 !important;
+}
+
+/* close button for overlay 
+.overlay .close {
+	background:url(http://static.flowplayer.org/img/overlay/close.png) no-repeat;
+	position:absolute;
+	top:13px;
+	right:299px;
+	width:35px;
+	height:35px;
+	cursor:pointer;
+}*/
+.overlay .close {
+	background:url(http://static.flowplayer.org/img/overlay/close.png) no-repeat;
+	position:absolute;
+	top:-65px;
+	right:315px;
+	width:35px;
+	height:35px;
+	cursor:pointer;
+}
+
+body img{
+	top: -22px !important;
+}
+
+/* original size of the player 
+#player, #player_api {
+	display: block;
+    height: 310px;
+    margin: 0 auto;
+    width: 415px;*/
+	/*left: 17px !important; top: 206px !important;
+}*/
+#player, #player_api { 
+	height:380px;
+	width:415px;
+	display:block;
+}
+
+/* absolute positioning of the player */
+#player_api {
+	position:absolute; 
+	
+	/* layer as the topmost element */
+	z-index:10000; 	
+}
+
+div#exposeMask{
+	opacity: 0.9 !important;
+}

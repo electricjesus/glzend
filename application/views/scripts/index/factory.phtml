@@ -1,12 +1,9 @@
-<?php
-    $this->headScript()->appendFile('/js/flowplayer-3.2.6.min.js');
-?>
 <div class="header">
     <h2>Factory</h2>
 </div>
 <div class="factory-video">
     <!-- container for the player -->
-    <a id="player" href="<? $this->baseUrl('movies/GL-2011-small.flv') ?>"></a>
+    <a id="player" href="http://corporate.gl.local/movies/GL-2011-small.flv"></a>
     <!-- element that is overlayed, visuals are done with external CSS -->
     <div class="overlay"></div>
     <!-- JavaScript coding -->
@@ -47,7 +44,7 @@
         }
         }).data("overlay");
         // install flowplayer on the container
-        $f("player", "<?= $this->baseUrl('swf/flowplayer-3.2.7.swf') ?>", {
+        $f("player", "http://corporate.gl.local/swf/flowplayer-3.2.7.swf", {
         // our fake fullscreen action.
         onBeforeFullscreen: function() {
         // 1. launch overlay
