@@ -18,9 +18,11 @@
             // build css
             $this->headLink()->appendStylesheet('/css/styles.css');
             $this->headLink()->appendStylesheet('/css/styles-ie.css');
+			$this->headLink()->appendStylesheet('/css/skin.css');
             // build js
             $this->headScript()->appendFile('/js/jquery.min.js');
             $this->headScript()->appendFile('/js/jquery.jcarousel.min.js');
+			//$this->headScript()->appendFile('/js/jCarouselFade.js');	***** jCarousel Fade plugin
         ?>
         <?= $this->headTitle(); ?>
         <?= $this->headMeta(); ?>
