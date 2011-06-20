@@ -281,7 +281,7 @@ ul.navigation li ul li a:hover {
 }
 
 
-/********** NEW STYLES **************/
+/******************************************* NEW STYLES *************************************************/
 div.image-right{
 	left: 64%; top: 3%;
     position: absolute;
@@ -327,15 +327,32 @@ div#content div ul.vacancies{
 	list-style-type: none;
 }
 
-/***************** CONTACT ******************/
+/***************** CONTACT *******************/
 div#content div ul.contact{
 	list-style-type: none;
 }
 
-/***************** Collection/LateVictorian ******************/
+/******* Collection/LateVictorian ************/
 div.latevictorian{
 	width: 50%;
 }
 div.vertical-product{
-	
+	left: 50%;
+    position: absolute;
+    top: 10%;
+}
+div.vertical-designers{
+	position: absolute;
+	top: 10%;
+	left: 66%;
+}
+div.vertical-designers div.jcarousel-skin-tango div.jcarousel-clip-vertical{
+	width: 200px !important;
+}
+ul.designers{
+	width: 200px !important;
+}
+ul.designers li{
+	width: 200px !important;
+	height: 40px !important;
 }
