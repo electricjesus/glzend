@@ -167,6 +167,7 @@ img {
 .leftmenu .col2 #content h2 {
 	margin-bottom: 20px; margin-top: 13%;
 	color: #FFF;
+	padding-left: 13%;
 }
 
 div.right-picture{
@@ -355,4 +356,50 @@ ul.designers{
 ul.designers li{
 	width: 200px !important;
 	height: 40px !important;
+}
+
+/******* COLLECTION SLIDESHOW ************/
+#slideshow {
+	position:relative;/*height:250px; */
+	width: auto;
+	margin: 0 auto;
+	padding-right: 51px;
+}
+
+#slideshow DIV {
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:8;
+	opacity:0.0;
+	/*height: 250px;*/
+	background-color: #000;
+	margin: 0 auto;
+	width: 419px;
+}
+
+#slideshow DIV.prod {
+    margin: 0 auto;
+    text-align:center;
+    width:100%;
+}
+
+#slideshow DIV.active {
+	z-index:10;
+	opacity:1.0;
+}
+
+#slideshow DIV.last-active {
+	z-index:9;
+}
+
+#slideshow DIV IMG {
+	/*height: 250px;*/
+	/*display: block;*/
+	border: 0;
+	margin-bottom: 10px;
+	position: relative; left: 20%;
+}
+#slideshow .item p{
+	text-align: center;
 }

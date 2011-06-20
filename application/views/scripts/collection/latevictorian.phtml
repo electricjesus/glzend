@@ -1,6 +1,13 @@
 <h2>Late Victorian</h2>
 
 <div class="latevictorian">
+
+	<!-- ################# PRODUCT SLIDER ################ -->
+	<script type="text/javascript">
+		$(function() {
+			setInterval( "slideSwitch()", 7000 );
+		});
+	</script>
 	
 	<?php
         $_products = new Databases_Products;
@@ -15,15 +22,20 @@
 						->where('category_id = ?','3')
 						);
 	?>
-	<?php foreach($_rows as $_row): ?>
-	<?php $rowData =  $_row->toArray(); ?>
-	<div id="<?= $rowData['id'] ?>" class="item">
-		<p>
-			<?= $rowData['description'] ?>
-		</p>
-		<img src="<?= $this->getBaseUrl; ?>/images/catalog/GL-Images/GL_2010_cd/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
+	<div id="slideshow">
+		<?php foreach($_rows as $_row): ?>
+		<?php $rowData =  $_row->toArray(); ?>
+		<div id="<?= $rowData['id'] ?>" class="item">
+			<p>
+				<?= $rowData['sku'] ?>
+			</p>
+			<p>
+				<?= $rowData['description'] ?>
+			</p>
+			<img src="<?= $this->getBaseUrl; ?>/images/catalog/GL-Images/GL_2010_cd/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
+		</div>
+		<?php endforeach; ?>
 	</div>
-	<?php endforeach; ?>
 </div>
 
 <!-- ################################### PRODUCT THUMBNAILS ########################################## -->
@@ -49,7 +61,7 @@
 			vertical: true,
 			animation: 1000,
 			scroll: 2,
-			visible: 5
+			visible: 4
 			
 			
 		});
