@@ -1,4 +1,84 @@
 <?php
     $this->headScript()->appendFile('/js/flowplayer-3.2.6.min.js');
 ?>
+<div class="header">
+    <h2>Factory</h2>
+</div>
+<div class="factory-video">
+    <!-- container for the player -->
+    <a id="player" href="<? $this->baseUrl('movies/GL-2011-small.flv') ?>"></a>
+    <!-- element that is overlayed, visuals are done with external CSS -->
+    <div class="overlay"></div>
+    <!-- JavaScript coding -->
+    <script type="text/javascript">
+        $(function() {
+        // setup overlay
+        var overlay = $(".overlay").overlay({
+        // use the Apple effect for overlay
+        effect: 'apple',
+        // 1. start expose effect when overlaying begins
+        mask: '#000',
+        fixed: false,
+        // 2. when overlay is loaded, we reposition and resize the player on top of it
+        onLoad: function() {
+        // get handle to the embed element
+        var embed = $("#player :first");
+        /* and reposition / resize it. you will propably have to tweak
+        these when placing this on your site */
+        var el = this.getOverlay();
+        var height = el.height();
+        embed.css({
+        // size
+        width:parseInt(el.width()) -110,
+        height:parseInt(height) -80,
+        // position
+        left: parseInt(el.css("left")) - 256,
+        top: parseInt(el.css("top")) - 15
+        });
+        // while overlay was growing we were in the paused state
+        $f().resume();
+        },
+        // when overlay closes
+        onClose: function() {
+        // 1. return our player to its original size/position
+        $("#player :first").css({top: null, left: null, width: null, height: null});
+        // 2. enable the fullscreen button again
+        $f().getControls().enable({fullscreen:true});
+        }
+        }).data("overlay");
+        // install flowplayer on the container
+        $f("player", "<?= $this->baseUrl('flowplayer/flowplayer-3.2.7.swf') ?>", {
+        // our fake fullscreen action.
+        onBeforeFullscreen: function() {
+        // 1. launch overlay
+        overlay.load();
+        // 2. pause the player and make it hidden while overlay "grows"
+        this.hide().pause();
+        // 3. disable fullscreen button when overlayed
+        this.getControls().enable({fullscreen:false});
+        // 4. disable normal fullscreen action by returning false
+        return false;
+        },
+        // when ESC is pressed above the player, "fullscreen" is closed
+        onKeyPress: function(key) {
+        if (key == 27) {
+        overlay.close();
+        }
+        },
+        // in this case, use the commercial version for a change
+        key: '#$7162d2d730cf607ac6d',
+        // some basic visual setups
+        clip: { scaling: 'fit'},
+        canvas: {backgroundGradient: 'none'}
 
+        });
+        }); 
+    </script>
+</div>
+<div class="content">
+    <div class="block-content">
+        <p class="blank">
+            This is a sample text
+        </p>
+    </div>
+</div>
