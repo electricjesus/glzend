@@ -367,6 +367,12 @@ p.inspiredby{
 img.emowords{
 	
 }
+div#selected-product{
+	position:relative;/*height:250px; */
+	width: auto;
+	margin: 0 auto;
+	padding-right: 51px;
+}
 /******* COLLECTION SLIDESHOW ************/
 #slideshow {
 	position:relative;/*height:250px; */

@@ -1,5 +1,6 @@
 <h2 class="latevictorian">Late Victorian</h2>
-<div class="latevictorian">
+<div class="product_content">
+
 	<!-- ################# PRODUCT SLIDER ################ -->
 	<script type="text/javascript">
 		
@@ -29,6 +30,7 @@
 		});
 	</script>
 	<div id="selected-product"></div>
+	
 	<?php
         $_products = new Databases_Products;
         $_rows = $_products->fetchAll(
@@ -43,15 +45,12 @@
 						);
 	?>
 	<div id="slideshow">
-		<div class="item">
+		<!-- <div class="item">
 			<img class="emowords" src="/images/general-picture-late-victorian.png" alt="">
-		</div>
+		</div> -->
 		<?php foreach($_rows as $_row): ?>
 		<?php $rowData =  $_row->toArray(); ?>
 		<div id="<?= $rowData['id'] ?>" class="item">
-			<p>
-				<?= $rowData['sku'] ?>
-			</p>
 			<p>
 				<?= $rowData['description'] ?>
 			</p>
@@ -91,14 +90,19 @@
 	});
 	</script> -->
 
+		<div id="carouselcontainer">
 	
-	<div>
-		<ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
-		<?php foreach($_rows as $_row): ?>
-		<?php $rowData =  $_row->toArray(); ?>
-		
-			<li><img src="/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>"/></li>
+	
+			<ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
+			<?php foreach($_rows as $_row): ?>
+			<?php $rowData =  $_row->toArray(); ?>
 			
+			<li>
+				<a class="ajaxify" href="/collection/a/m/product/id/<?= $rowData['sku']; ?>/" target="#selected-product">
+					<img src="/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>"/>
+				</a>
+			</li>
+	
 		<?php endforeach; ?>
 		</ul>
 	</div>
@@ -110,18 +114,19 @@
 
 	<?php
         $_subcategories = new Databases_Designers;
-        $_rows = $_subcategories->fetchAll(
+        $_designers = $_subcategories->fetchAll(
                     $_subcategories
-                        ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)
+                       ->select()
+                        ->from(array('subcategories'),array('designerid'=>'id','name','category_id'))
                         ->setIntegrityCheck(false)
-                        //->join('featured','featured.product_id = products.id')
                         ->join('sort','sort.item_id = subcategories.id')
-                        //->where('featured.location = ?','category')
                         ->where('sort.item_type = ?','designer')
-						->where('category_id = ?','3')
+						->where('category_id = ?','1')
 						->order('sort_order ASC')
 						);
 	?>
+	
+	
 	
 	<!-- <script type="text/javascript">
 		jQuery(document).ready(function() {
@@ -137,14 +142,19 @@
 	</script> -->
 
 	
+	
 	<div>
 		<p class="inspiredby">Inspired by</p>
 		<ul id="mycarousel1" class="jcarousel jcarousel-skin-tango designers">
-		<?php foreach($_rows as $_row): ?>
-		<?php $rowData =  $_row->toArray(); ?>
-		
-			<li><?= $rowData['name'] ?></li>
-			
+		<?php foreach($_designers as $_designer): ?>		
+		<?php $rowData =  $_designer->toArray(); ?>
+		    <li>
+    		    <a class="ajaxify2" href="/collection/a/m/designer/id/<?= $rowData['designerid'] ?>/c/<?= $rowData['category_id'] ?>">
+
+                    <?= $rowData['name'] ?>
+	    		</a>
+	    	</li>
+
 		<?php endforeach; ?>
 		</ul>
 	</div>

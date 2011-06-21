@@ -45,13 +45,16 @@
 	?>
 	
 	<div id="slideshow">
+		
+		
+		
 		<?php foreach($_rows as $_row): ?>
 		<?php $rowData =  $_row->toArray(); ?>
 		<div id="<?= $rowData['id'] ?>" class="item">
 			<p>
 				<?= $rowData['description'] ?>
 			</p>
-			<img src="<?= $this->getBaseUrl; ?>/images/catalog/GL-Images/GL_2010_cd/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
+			<img src="/images/catalog/GL-Images/GL_2010_cd/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
 		</div>
 		<?php endforeach; ?>
 	</div>
@@ -129,8 +132,8 @@
 	});
 	</script> -->
 
-	
 	<div>
+		<p class="inspiredby">Inspired by</p>
 		<ul id="mycarousel1" class="jcarousel jcarousel-skin-tango designers">
 		<?php foreach($_designers as $_designer): ?>		
 		<?php $rowData =  $_designer->toArray(); ?>
