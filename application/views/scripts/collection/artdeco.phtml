@@ -1,5 +1,5 @@
 <h2 class="latevictorian">Art Deco</h2>
-<div class="artdeco">
+<div class="product_content">
 	
 	<!-- ################# PRODUCT SLIDER ################ -->
 	<script type="text/javascript">
@@ -27,7 +27,7 @@
 			
 		});
 	</script>
-	
+	<div id="selected-product"></div>
 	<?php
         $_products = new Databases_Products;
         $_rows = $_products->fetchAll(
@@ -87,30 +87,30 @@
 		});
 		</script> -->
 
-		<div>
+		<div id="carouselcontainer">
 			<ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
 			<?php foreach($_rows as $_row): ?>
-			<?php $rowData =  $_row->toArray(); ?>
-			
-				<li><img src="<?= $this->getBaseUrl; ?>/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>"/></li>
-				
+			<?php $rowData =  $_row->toArray(); ?>			
+				<li>
+				    <a class="ajaxify" href="/collection/a/m/product/id/<?= $rowData['sku']; ?>/" target="#selected-product">
+    				    <img src="/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>"/>
+				    </a>
+				</li>				
 			<?php endforeach; ?>
 			</ul>
 		</div>
 </div>
 
 <!-- ################################### DESIGNERS ########################################## -->
-<div class="vertical-designers">
-
+    <div class="vertical-designers">
 	<?php
         $_subcategories = new Databases_Designers;
-        $_rows = $_subcategories->fetchAll(
+        $_designers = $_subcategories->fetchAll(
                     $_subcategories
-                       ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)
+                       ->select()
+                        ->from(array('subcategories'),array('designerid'=>'id','name','category_id'))
                         ->setIntegrityCheck(false)
-                        //->join('featured','featured.product_id = products.id')
                         ->join('sort','sort.item_id = subcategories.id')
-                        //->where('featured.location = ?','category')
                         ->where('sort.item_type = ?','designer')
 						->where('category_id = ?','1')
 						->order('sort_order ASC')
@@ -123,8 +123,7 @@
 			vertical: true,
 			animation: 1000,
 			scroll: 2,
-			visible: 5
-			
+			visible: 5			
 			
 		});
 	});
@@ -133,11 +132,13 @@
 	
 	<div>
 		<ul id="mycarousel1" class="jcarousel jcarousel-skin-tango designers">
-		<?php foreach($_rows as $_row): ?>
-		<?php $rowData =  $_row->toArray(); ?>
-		
-			<li><?= $rowData['name'] ?></li>
-			
+		<?php foreach($_designers as $_designer): ?>		
+		<?php $rowData =  $_designer->toArray(); ?>
+		    <li>
+    		    <a class="ajaxify2" href="/collection/a/m/designer/id/<?= $rowData['designerid'] ?>/c/<?= $rowData['category_id'] ?>">
+                    <?= $rowData['name'] ?>
+	    		</a>
+	    	</li>
 		<?php endforeach; ?>
 		</ul>
 	</div>
