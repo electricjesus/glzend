@@ -1,10 +1,30 @@
-<h2>Art Deco</h2>
+<h2 class="latevictorian">Art Deco</h2>
 <div class="artdeco">
 	
 	<!-- ################# PRODUCT SLIDER ################ -->
 	<script type="text/javascript">
-		$(function() {
-			setInterval( "slideSwitch()", 7000 );
+		jQuery(document).ready(function() {
+			//product slider
+			jQuery(function() {
+				setInterval( "slideSwitch()", 7000 );
+			});
+			
+			//product thumbnails
+			jQuery('#mycarousel').jcarousel({
+				vertical: true,
+				animation: 1000,
+				scroll: 2,
+				visible: 4
+			});
+			
+			//designer
+			jQuery('#mycarousel1').jcarousel({
+				vertical: true,
+				animation: 1000,
+				scroll: 2,
+				visible: 5	
+			});
+			
 		});
 	</script>
 	
@@ -54,7 +74,7 @@
 							);
 		?>
 		
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			jQuery(document).ready(function() {
 			jQuery('#mycarousel').jcarousel({
 				vertical: true,
@@ -65,7 +85,7 @@
 				
 			});
 		});
-		</script>
+		</script> -->
 
 		<div>
 			<ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
@@ -97,7 +117,7 @@
 						);
 	?>
 	
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		jQuery(document).ready(function() {
 		jQuery('#mycarousel1').jcarousel({
 			vertical: true,
@@ -108,7 +128,7 @@
 			
 		});
 	});
-	</script>
+	</script> -->
 
 	
 	<div>

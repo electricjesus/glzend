@@ -1,10 +1,32 @@
-<h2>Late Victorian</h2>
+<h2 class="latevictorian">Late Victorian</h2>
 <div class="latevictorian">
 
 	<!-- ################# PRODUCT SLIDER ################ -->
 	<script type="text/javascript">
-		$(function() {
-			setInterval( "slideSwitch()", 7000 );
+		
+
+		jQuery(document).ready(function() {
+			//product slider
+			jQuery(function() {
+				setInterval( "slideSwitch()", 7000 );
+			});
+			
+			//product thumbnails
+			jQuery('#mycarousel').jcarousel({
+				vertical: true,
+				animation: 1000,
+				scroll: 2,
+				visible: 4
+			});
+			
+			//designer
+			jQuery('#mycarousel1').jcarousel({
+				vertical: true,
+				animation: 1000,
+				scroll: 2,
+				visible: 5	
+			});
+			
 		});
 	</script>
 	
@@ -54,7 +76,7 @@
 						);
 	?>
 	
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		jQuery(document).ready(function() {
 		jQuery('#mycarousel').jcarousel({
 			vertical: true,
@@ -65,7 +87,7 @@
 			
 		});
 	});
-	</script>
+	</script> -->
 
 	
 	<div>
@@ -99,7 +121,7 @@
 						);
 	?>
 	
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		jQuery(document).ready(function() {
 		jQuery('#mycarousel1').jcarousel({
 			vertical: true,
@@ -110,10 +132,11 @@
 			
 		});
 	});
-	</script>
+	</script> -->
 
 	
 	<div>
+		<p class="inspiredby">Inspired by</p>
 		<ul id="mycarousel1" class="jcarousel jcarousel-skin-tango designers">
 		<?php foreach($_rows as $_row): ?>
 		<?php $rowData =  $_row->toArray(); ?>

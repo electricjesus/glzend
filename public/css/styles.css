@@ -167,7 +167,8 @@ img {
 .leftmenu .col2 #content h2 {
 	margin-bottom: 20px; margin-top: 13%;
 	color: #FFF;
-	padding-left: 13%;
+	/*padding-left: 13%;*/
+	width: 420px;
 }
 
 div.right-picture{
@@ -337,6 +338,9 @@ div#content div ul.contact{
 div.latevictorian{
 	width: 50%;
 }
+h2.latevictorian{
+	text-align:center;
+}
 div.vertical-product{
 	left: 50%;
     position: absolute;
@@ -344,7 +348,7 @@ div.vertical-product{
 }
 div.vertical-designers{
 	position: absolute;
-	top: 10%;
+	top: 4%;
 	left: 66%;
 }
 div.vertical-designers div.jcarousel-skin-tango div.jcarousel-clip-vertical{
@@ -357,7 +361,9 @@ ul.designers li{
 	width: 200px !important;
 	height: 40px !important;
 }
-
+p.inspiredby{
+	padding-left: 20px;
+}
 /******* COLLECTION SLIDESHOW ************/
 #slideshow {
 	position:relative;/*height:250px; */
@@ -402,4 +408,75 @@ ul.designers li{
 }
 #slideshow .item p{
 	text-align: center;
+}
+
+div.factory-video{
+	/*text-align: center;*/
+	width: 415px;
+	margin: 0 auto;
+}
+
+/******************************* FLOWPLAYER ON FACTORY ******************************/
+.overlay {
+
+	/*
+		THIS ARE YOUR FULLSCREEN DIMENSIONS
+	
+	width:650px;
+	height:485px;*/
+	width:800px;
+	height:600px;
+	background-image:url(http://static.flowplayer.org/img/overlay/petrol.png);
+	display:none;
+	padding: 0 !important;
+}
+
+/* close button for overlay 
+.overlay .close {
+	background:url(http://static.flowplayer.org/img/overlay/close.png) no-repeat;
+	position:absolute;
+	top:13px;
+	right:299px;
+	width:35px;
+	height:35px;
+	cursor:pointer;
+}*/
+.overlay .close {
+	background:url(http://static.flowplayer.org/img/overlay/close.png) no-repeat;
+	position:absolute;
+	top:-65px;
+	right:315px;
+	width:35px;
+	height:35px;
+	cursor:pointer;
+}
+
+body img{
+	top: -22px !important;
+}
+
+/* original size of the player 
+#player, #player_api {
+	display: block;
+    height: 310px;
+    margin: 0 auto;
+    width: 415px;*/
+	/*left: 17px !important; top: 206px !important;
+}*/
+#player, #player_api { 
+	height:380px;
+	width:415px;
+	display:block;
+}
+
+/* absolute positioning of the player */
+#player_api {
+	position:absolute; 
+	
+	/* layer as the topmost element */
+	z-index:10000; 	
+}
+
+div#exposeMask{
+	opacity: 0.9 !important;
 }
