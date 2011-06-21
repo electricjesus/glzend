@@ -1,12 +1,12 @@
+<? $_products = new Databases_Products; ?>
 <?php if($this->mode == 'product'): ?>
     <?php
-        $_products = new Databases_Products;
+        
         $_rows = $_products->fetchAll(
             $_products
                     ->select()
-                    ->where('id = ?', $this->id)           
+                    ->where('sku = ?', $this->id)           
             );
-        echo $this->id;
     ?>    
     <?php foreach($_rows as $_row):?>        
         <?php $_rowData = $_row->toArray(); ?>    
@@ -17,39 +17,48 @@
             src="/images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" 
             alt="<?= $_rowData['sku'] ?>" />
     <?php endforeach; ?>
-<?php elseif($this->mode == 'subcategory'): ?>
-    <?php
-        //construct here
-		$_name = new Databases_Designers;
-		$_rows = $_name->fetchAll(
-			$_name
-					->select(Zend_Db_Table::SELECT_WITH_FROM_PART)
-					->setIntegrityCheck(false)
-					//->join('featured','featured.product_id = products.id')
-					->join('sort','sort.item_id = subcategories.id')
-					//->where('featured.location = ?','category')
-					->where('sort.item_type = ?','designer')
-					->where('category_id = ?','3')
-					->order('sort_order ASC')
-					->where('id = ?', $this->id)           
-			);
-		echo $this->id;
-    ?>
-
-	
-	
+<?php elseif($this->mode == 'designer'): ?>    
     <?php if($this->where == 'carousel'): ?>    
+    <?php
+       $_rows = $_products->fetchAll(
+        $_products
+            ->select()
+            ->from(array('products'),array('pid'=>'id','*',))
+            ->setIntegrityCheck(false)
+            ->join('sort','sort.item_id = products.id')
+            ->where('sort.item_type = ?','product')
+            ->where('subcategory_id = ?',$this->id)
+            );
+    ?>
+    <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
+    <?php foreach($_rows as $_row):?>        
+    <?php $_rowData = $_row->toArray(); ?> 
     <li>
-        <a class="ajaxify" href="product.php?product=<?= $_rowData['sku'] ?>" target="#selected-product">
-            <img width="80px" src="images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" alt="" />
+        <a class="ajaxify" href="/collection/a/m/product/id/<?= $_rowData['sku']; ?>/" target="#selected-product">
+            <img width="80px" src="/images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" alt="" />
         </a>
     </li>
+    <?php endforeach; ?>
+    </ul>
     <?php elseif($this->where == 'slideshow'): ?>
-    <div class="prod">
+    <?php
+       $_rows = $_products->fetchAll(
+            $_products
+                ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)
+                ->setIntegrityCheck(false)
+                ->join('featured','featured.product_id = products.id')
+                ->where('featured.location = ?','category')
+                ->where('category_id = ?',$this->category)
+            );
+    ?>
+    <?php foreach($_rows as $_row):?>
+    <?php $_rowData = $_row->toArray(); ?>
+    <div>
         <p><?= $_rowData['sku'] ?></p>
         <p><?= $_rowData['description'] ?></p>
-        <img class='product_picture' src="images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" />
+        <img class='product_picture' src="/images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" />
     </div>
+    <?php endforeach; ?>
     <?php endif; ?>
 <?php else: ?>
 <h1>Hello</h1>
