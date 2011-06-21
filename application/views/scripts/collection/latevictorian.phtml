@@ -44,6 +44,9 @@
 						);
 	?>
 	<div id="slideshow">
+		<div class="item">
+			<img class="emowords" src="/images/general-picture-late-victorian.png" alt="">
+		</div>
 		<?php foreach($_rows as $_row): ?>
 		<?php $rowData =  $_row->toArray(); ?>
 		<div id="<?= $rowData['id'] ?>" class="item">
@@ -53,7 +56,7 @@
 			<p>
 				<?= $rowData['description'] ?>
 			</p>
-			<img src="<?= $this->getBaseUrl; ?>/images/catalog/GL-Images/GL_2010_cd/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
+			<img src="/images/catalog/GL-Images/GL_2010_cd/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
 		</div>
 		<?php endforeach; ?>
 	</div>
@@ -95,7 +98,7 @@
 		<?php foreach($_rows as $_row): ?>
 		<?php $rowData =  $_row->toArray(); ?>
 		
-			<li><img src="<?= $this->getBaseUrl; ?>/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>"/></li>
+			<li><img src="/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>"/></li>
 			
 		<?php endforeach; ?>
 		</ul>
