@@ -50,6 +50,15 @@
     margin-bottom: 10px;
 }
 
+.jcarousel-skin-tango .jcarousel-item-vertical a{
+	color: #E1E1E1;
+    text-decoration: none;
+}
+.jcarousel-skin-tango .jcarousel-item-vertical a.ajaxify2:hover + div.extra-info{
+	opacity: 1 !important;
+	
+}
+
 .jcarousel-skin-tango .jcarousel-item-vertical  img{
 	border-style: none;
 }
@@ -225,8 +234,8 @@ div.menu-designer .jcarousel-next{
 /*********************** ACTIVE STATE **************************/
 
 .jcarousel-skin-tango .jcarousel-item-vertical img#active{
-	border: 1px solid #FFF;
-	-moz-border-radius: 10px 0;
-	border-radius: 10px 0;
-	-webkit-border-radius: 10px 0;
+	border: 1px dashed #FFFFFF;
+    -moz-border-radius: 5px;
+	border-radius: 5px;
+    padding: 3px 0;
 }

@@ -52,6 +52,9 @@
 		<?php $rowData =  $_row->toArray(); ?>
 		<div id="<?= $rowData['id'] ?>" class="item">
 			<p>
+				<?= $rowData['sku'] ?>
+			</p>
+			<p>
 				<?= $rowData['description'] ?>
 			</p>
 			<img src="/images/catalog/GL-Images/GL_2010_cd/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
@@ -77,19 +80,6 @@
 						);
 	?>
 	
-	<!-- <script type="text/javascript">
-		jQuery(document).ready(function() {
-		jQuery('#mycarousel').jcarousel({
-			vertical: true,
-			animation: 1000,
-			scroll: 2,
-			visible: 4
-			
-			
-		});
-	});
-	</script> -->
-
 		<div id="carouselcontainer">
 	
 	
@@ -117,7 +107,7 @@
         $_designers = $_subcategories->fetchAll(
                     $_subcategories
                        ->select()
-                        ->from(array('subcategories'),array('designerid'=>'id','name','category_id'))
+                        ->from(array('subcategories'),array('designerid'=>'id','name','category_id','description'))
                         ->setIntegrityCheck(false)
                         ->join('sort','sort.item_id = subcategories.id')
                         ->where('sort.item_type = ?','designer')
@@ -126,23 +116,6 @@
 						);
 	?>
 	
-	
-	
-	<!-- <script type="text/javascript">
-		jQuery(document).ready(function() {
-		jQuery('#mycarousel1').jcarousel({
-			vertical: true,
-			animation: 1000,
-			scroll: 2,
-			visible: 5
-			
-			
-		});
-	});
-	</script> -->
-
-	
-	
 	<div>
 		<p class="inspiredby">Inspired by</p>
 		<ul id="mycarousel1" class="jcarousel jcarousel-skin-tango designers">
@@ -150,11 +123,15 @@
 		<?php $rowData =  $_designer->toArray(); ?>
 		    <li>
     		    <a class="ajaxify2" href="/collection/a/m/designer/id/<?= $rowData['designerid'] ?>/c/<?= $rowData['category_id'] ?>">
-
                     <?= $rowData['name'] ?>
 	    		</a>
+				
+				<?php if($rowData['description'] != ""): ?>
+					<div class="extra-info">
+						<?= $rowData['description'] ?>
+					</div>
+				<?php endif; ?>
 	    	</li>
-
 		<?php endforeach; ?>
 		</ul>
 	</div>

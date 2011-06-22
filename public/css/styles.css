@@ -351,14 +351,31 @@ div.vertical-designers{
 	top: 4%;
 	left: 66%;
 }
+div.vertical-designers .jcarousel-skin-tango .jcarousel-container{
+	width: 300px;
+}
+div.vertical-designers .jcarousel-skin-tango .jcarousel-container .jcarousel-clip-vertical{
+	width: 300px !important;
+}
+div.vertical-designers div.extra-info{
+	background-color: #7F6E57;
+    border-radius: 5px;
+	-moz-border-radius: 5px;
+    left: 33%;
+    margin-top: -20px;
+    padding: 3px 5px;
+    position: absolute;
+	opacity: 0;
+}
+}
 div.vertical-designers div.jcarousel-skin-tango div.jcarousel-clip-vertical{
 	width: 200px !important;
 }
 ul.designers{
-	width: 200px !important;
+	width: 300px !important;
 }
 ul.designers li{
-	width: 200px !important;
+	width: 300px !important;
 	height: 40px !important;
 }
 p.inspiredby{
@@ -368,10 +385,16 @@ img.emowords{
 	
 }
 div#selected-product{
-	position:relative;/*height:250px; */
-	width: auto;
-	margin: 0 auto;
-	padding-right: 51px;
+	
+	width: 419px;
+}
+div#selected-product p{
+	text-align:center;
+}
+div#selected-product img.product_picture{
+	left: 20%;
+    margin-top: 20px;
+    position: relative;
 }
 /******* COLLECTION SLIDESHOW ************/
 #slideshow {
