@@ -1,0 +1,42 @@
+<!-- application/scripts/layout.phtml -->
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <?php   
+            // setting the controller and action name as title segments:
+            $request = Zend_Controller_Front::getInstance()->getRequest();
+        ?>
+        <?= $this->headTitle($request->getActionName())
+                 ->headTitle($request->getControllerName())            
+                 ->headTitle('Jewelry by GL | Admininstration') // setting the site in the title
+                 ->headTitle()->setSeparator(' / '); // setting a separator string for segments:   
+        ?>
+        <?= $this->headMeta()
+                 ->appendName('keywords', 'jewelry, jewelry by gl, nederlands, germany, art deco, late victorian, art noveau')
+                 ->appendName('description', 'Admin page for GLJewelry website')
+                 ->appendName('robots', 'noindex, nofollow');
+        ?>
+        <?= $this->headLink()->appendStylesheet('/css/admin-styles.css')
+                 ->appendStylesheet('/css/admin-styles-ie.css')
+                 ->headLink(array( 'rel' => 'icon',
+                                   'type' => 'image/png',
+                                   'href' => '/images/favicon.png')
+                            );
+        ?>  
+        <?= $this->headScript() 
+                ->appendFile('/js/jquery.min.js');
+        ?>
+    </head>
+    <body>
+        <div class="admin container">
+            <div id="content">
+                <div class="logo">
+                    <img src="<?= $this->getBaseUrl; ?>/images/logo.jpg" alt="GL" />
+                </div>
+                <div class="main">
+                    <?= $this->layout()->content ?>       
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

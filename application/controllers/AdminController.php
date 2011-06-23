@@ -4,12 +4,9 @@ class AdminController extends Zend_Controller_Action
 {
     // public :
     public function init() {
+        $this->_helper->_layout->setLayout('adminlayout');
     }
     public function indexAction() {
-        //Zend_Auth -> hasIdentity():
-            // proceed to admin function #1
-        // else (no identity)
-            // proceed to login action (redirect)
         $auth = Zend_Auth::getInstance();
         if(!($auth->hasIdentity())) {
             $this->_helper->redirector('login', 'admin');

@@ -5,43 +5,39 @@
         <?php   
             // setting the controller and action name as title segments:
             $request = Zend_Controller_Front::getInstance()->getRequest();
-            $this->headTitle($request->getActionName())
-                 ->headTitle($request->getControllerName());
-            // setting the site in the title
-            $this->headTitle('Jewelry by GL');     
-            // setting a separator string for segments:
-            $this->headTitle()->setSeparator(' / ');        
-            // build meta
-            $this->headMeta()->appendName('keywords', 'jewelry, jewelry by gl, nederlands, germany'); 
-            $this->headMeta()->appendName('description', 'custom made jewelry by GL high quality high value high fashion sense sensibility'); 
-            $this->headMeta()->appendName('robots', 'index, follow'); 
-            // build css
-            $this->headLink()->appendStylesheet('/css/styles.css');
-            $this->headLink()->appendStylesheet('/css/styles-ie.css');
-			$this->headLink()->appendStylesheet('/css/skin.css');
-			$this->headLink(array(  'rel' => 'icon',
-			                        'type' => 'image/png',
-                                    'href' => '/images/favicon.png'));
-            // build js
-            $this->headScript()->appendFile('/js/jquery.min.js');
-			$this->headScript()->appendFile('http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js');
-            $this->headScript()->appendFile('/js/flowplayer-3.2.6.min.js');
-			$this->headScript()->appendFile('/js/jquery.jcarousel.min.js');
-			$this->headScript()->appendFile('/js/custom.ajaxify.js');
-			$this->headScript()->appendFile('/js/custom.js');
-			//$this->headScript()->appendFile('/js/jCarouselFade.js');	***** jCarousel Fade plugin
         ?>
-        <?= $this->headTitle(); ?>
-        <?= $this->headMeta(); ?>
-        <?= $this->headLink(); ?>
-        <?= $this->headScript(); ?>
+        <?= $this->headTitle($request->getActionName())
+                 ->headTitle($request->getControllerName())            
+                 ->headTitle('Jewelry by GL') // setting the site in the title
+                 ->headTitle()->setSeparator(' / '); // setting a separator string for segments:   
+        ?>
+        <?= $this->headMeta()
+                 ->appendName('keywords', 'jewelry, jewelry by gl, nederlands, germany, art deco, late victorian, art noveau')
+                 ->appendName('description', 'custom made jewelry by GL high quality high value high fashion sense sensibility')
+                 ->appendName('robots', 'index, follow');
+        ?>
+        <?= $this->headLink()->appendStylesheet('/css/styles.css')
+                 ->appendStylesheet('/css/styles-ie.css')
+			     ->appendStylesheet('/css/skin.css')
+			     ->headLink(array( 'rel' => 'icon',
+			                       'type' => 'image/png',
+                                   'href' => '/images/favicon.png')
+                            );
+        ?>  
+        <?= $this->headScript() 
+                ->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js')
+                ->appendFile('http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js')
+                ->appendFile('/js/flowplayer-3.2.6.min.js')
+                ->appendFile('/js/jquery.jcarousel.min.js')
+                ->appendFile('/js/custom.ajaxify.js')
+                ->appendFile('/js/custom.js');
+        ?>
     </head>
     <body>
         <div class="colmask leftmenu">
 	        <div class="colleft">
 		        <div class="col1">
-			        <!-- Column 1 - MENU start -->
-			
+			        <!-- Column 1 - MENU start -->			
 			        <div class="logo">
 				        <img src="<?= $this->getBaseUrl; ?>/images/logo.jpg" alt="GL" />
 			        </div>
