@@ -346,6 +346,12 @@ div.vertical-product{
     position: absolute;
     top: 10%;
 }
+div.vertical-product div.jcarousel-skin-tango .jcarousel-container-vertical{
+	width: 90px !important;
+}
+div.vertical-product div.jcarousel-skin-tango .jcarousel-container-vertical .jcarousel-clip-vertical{
+	width: 90px !important;
+}
 div.vertical-designers{
 	position: absolute;
 	top: 4%;

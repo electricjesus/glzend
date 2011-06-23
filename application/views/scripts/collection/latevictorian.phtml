@@ -111,7 +111,7 @@
                         ->setIntegrityCheck(false)
                         ->join('sort','sort.item_id = subcategories.id')
                         ->where('sort.item_type = ?','designer')
-						->where('category_id = ?','1')
+						->where('category_id = ?','3')
 						->order('sort_order ASC')
 						);
 	?>

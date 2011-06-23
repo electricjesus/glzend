@@ -76,19 +76,6 @@
 							->where('category_id = ?','1')
 							);
 		?>
-		
-		<!-- <script type="text/javascript">
-			jQuery(document).ready(function() {
-			jQuery('#mycarousel').jcarousel({
-				vertical: true,
-				animation: 1000,
-				scroll: 2,
-				visible: 4
-				
-				
-			});
-		});
-		</script> -->
 
 		<div id="carouselcontainer">
 			<ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
@@ -111,7 +98,7 @@
         $_designers = $_subcategories->fetchAll(
                     $_subcategories
                        ->select()
-                        ->from(array('subcategories'),array('designerid'=>'id','name','category_id'))
+                        ->from(array('subcategories'),array('designerid'=>'id','name','category_id','description'))
                         ->setIntegrityCheck(false)
                         ->join('sort','sort.item_id = subcategories.id')
                         ->where('sort.item_type = ?','designer')
@@ -119,18 +106,6 @@
 						->order('sort_order ASC')
 						);
 	?>
-	
-	<!-- <script type="text/javascript">
-		jQuery(document).ready(function() {
-		jQuery('#mycarousel1').jcarousel({
-			vertical: true,
-			animation: 1000,
-			scroll: 2,
-			visible: 5			
-			
-		});
-	});
-	</script> -->
 
 	<div>
 		<p class="inspiredby">Inspired by</p>
@@ -141,6 +116,11 @@
     		    <a class="ajaxify2" href="/collection/a/m/designer/id/<?= $rowData['designerid'] ?>/c/<?= $rowData['category_id'] ?>">
                     <?= $rowData['name'] ?>
 	    		</a>
+				<?php if($rowData['description'] != ""): ?>
+					<div class="extra-info">
+						<?= $rowData['description'] ?>
+					</div>
+				<?php endif; ?>
 	    	</li>
 		<?php endforeach; ?>
 		</ul>

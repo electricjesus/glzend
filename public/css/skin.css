@@ -60,7 +60,9 @@
 }
 
 .jcarousel-skin-tango .jcarousel-item-vertical  img{
-	border-style: none;
+	/*border-style: none;*/
+	border: 1px solid #000;
+	padding: 3px 2px;
 }
 
 /*.jcarousel-skin-tango .jcarousel-item-vertical  a:hover > img{
@@ -237,5 +239,5 @@ div.menu-designer .jcarousel-next{
 	border: 1px dashed #FFFFFF;
     -moz-border-radius: 5px;
 	border-radius: 5px;
-    padding: 3px 0;
+    padding: 3px 2px;
 }
