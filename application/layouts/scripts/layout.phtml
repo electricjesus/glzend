@@ -19,6 +19,9 @@
             $this->headLink()->appendStylesheet('/css/styles.css');
             $this->headLink()->appendStylesheet('/css/styles-ie.css');
 			$this->headLink()->appendStylesheet('/css/skin.css');
+			$this->headLink(array(  'rel' => 'icon',
+			                        'type' => 'image/png',
+                                    'href' => '/images/favicon.png'));
             // build js
             $this->headScript()->appendFile('/js/jquery.min.js');
 			$this->headScript()->appendFile('http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js');
