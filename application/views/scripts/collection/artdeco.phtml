@@ -82,7 +82,7 @@
 			<?php foreach($_rows as $_row): ?>
 			<?php $rowData =  $_row->toArray(); ?>			
 				<li>
-				    <a class="ajaxify" href="/collection/a/m/product/id/<?= $rowData['sku']; ?>/" target="#selected-product">
+				    <a class="ajaxify" href="/collection/a/m/product/id/<?= str_replace(' ', '+' , $rowData['sku']); ?>/" target="#selected-product">
     				    <img src="/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>"/>
 				    </a>
 				</li>				
