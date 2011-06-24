@@ -25,7 +25,7 @@ class EmailController extends Zend_Controller_Action
 		$MailObj->setBodyText($emailMessage);
 		$MailObj->setFrom($fromEmail, $fromFullName);
 		$MailObj->addTo($to);
-		$Mail->setSubject($subject);
+		$MailObj->setSubject($subject);
 		
 		
 		try
