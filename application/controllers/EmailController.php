@@ -16,11 +16,11 @@ class EmailController extends Zend_Controller_Action
 	public function sendMailAction()
 	{
 		$MailObj = new Zend_Mail();
-		$emailMessage = "Hey, this is Michael Christian Young";
-		$fromEmail = "youngstownph@yahoo.com";
-		$fromFullName = "<FROM_FULL_NAME>";
+		$emailMessage = $this->_request->getPost('comment');
+		$fromEmail = $this->_request->getPost('email');
+		$fromFullName = $this->_request->getPost('name');
 		$to = "youngstownph@gmail.com";
-		$subject = "This is a sample";
+		$subject = $this->_request->getPost('subject');
 		
 		$MailObj->setBodyText($emailMessage);
 		$MailObj->setFrom($fromEmail, $fromFullName);
