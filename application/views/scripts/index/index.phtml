@@ -1,39 +1,8 @@
 <div class="block-content">
-	<!-- AddThis Button BEGIN -->
-	<div class="addthis_toolbox addthis_default_style ">
-	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-	<a class="addthis_button_tweet"></a>
-	
-	</div>
-	<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
-	<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d6cd22e00c59e79"></script>
-	<!-- AddThis Button END -->
-
 	<p>Timeless Classics, from elegant simplicity to iconic designs. Our sterling silver jewellery 
 	inherit the timeless appeal of the original Late Victorian, Art Nouveau and Art Deco Movement.</p>
 </div>
-<?php $_showfeatured = false; if($_showfeatured): ?>
-<?php 
-        $_products = new Databases_Products;
-        $_rows = $_products->fetchAll(
-                    $_products
-                        ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)
-                        ->setIntegrityCheck(false)
-                        ->join('featured','featured.product_id = products.id')
-                        //->join('sort','sort.item_id = products.id')
-                        ->where('featured.location = ?','homepage'));
-                        //->where('sort.item_type = ?','product'))
-?>
-<?php foreach($_rows as $_row): ?>
-<?php $rowData =  $_row->toArray(); ?>
-<div id="<?= $rowData['id'] ?>" class="item">
-    <p>
-        <?= $rowData['description'] ?>
-    </p>
-    <img src="<?= $this->getBaseUrl; ?>/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
-</div>
-<?php endforeach; ?> 
-<?php endif ?>
+
 <div class="image-right">
 	<img src="<?= $this->getBaseUrl; ?>/images/home.png" alt="" />	
 </div>
