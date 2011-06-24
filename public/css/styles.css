@@ -474,10 +474,10 @@ div.factory-video{
 	/*
 		THIS ARE YOUR FULLSCREEN DIMENSIONS
 	
-	width:650px;
-	height:485px;*/
-	width:800px;
-	height:600px;
+	width:640px;
+	height:480px;*/
+	width:640px;
+	height:480px;
 	background-image:url(http://static.flowplayer.org/img/overlay/petrol.png);
 	display:none;
 	padding: 0 !important;
@@ -504,7 +504,7 @@ div.factory-video{
 }
 
 body img{
-	top: -22px !important;
+	top: 25px !important;
 }
 
 /* original size of the player 
