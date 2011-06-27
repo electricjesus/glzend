@@ -18,9 +18,9 @@
         ?>
         <?= $this->headLink()->appendStylesheet('/css/styles.css')
                  ->appendStylesheet('/css/styles-ie.css')
-			     ->appendStylesheet('/css/skin.css')
-			     ->headLink(array( 'rel' => 'icon',
-			                       'type' => 'image/png',
+                 ->appendStylesheet('/css/skin.css')
+                 ->headLink(array( 'rel' => 'icon',
+                                   'type' => 'image/png',
                                    'href' => '/images/favicon.png')
                             );
         ?>  
@@ -34,27 +34,18 @@
         ?>
     </head>
     <body>
-        <div class="colmask leftmenu">
-	        <div class="colleft">
-		        <div class="col1">
-			        <!-- Column 1 - MENU start -->			
-			        <div class="logo">
-				        <img src="<?= $this->getBaseUrl; ?>/images/logo.jpg" alt="GL" />
-			        </div>
-			        <?= $this->navigation()->menu(); ?>
-
-			        <!-- Column 1 end -->
-		        </div>
-		        <div class="col2">
-			        <!-- Column 2 - CONTENT start -->
-			
-			        <div id="content">
-				        <?= $this->layout()->content ?>       
-			        </div>
-
-			        <!-- Column 2 end -->
-		        </div>
-	        </div>
+        <div class="glcorporate container">
+            <div class="header">
+                <div class="logo">
+                    <img src="/images/logo.jpg" alt="GL Corporate logo" />
+                </div>
+                <div class="navigation">
+                    <?= $this->navigation()->menu(); ?>
+                </div>
+            </div>
+            <div class="content">
+                <?= $this->layout()->content ?> 
+            </div>
         </div>
     </body>
 </html>
