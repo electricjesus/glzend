@@ -1,2 +1,126 @@
 html, body {
+    background-color: #c9c9c9;
+    background-image: url('../images/bg-grey-repeat-x.jpg');
+    background-repeat: repeat-x;
+    margin: 0pt;
+    padding: 0pt;
+    text-align:center;
+    font-family:Georgia, serif;
+    font-size:95%;
+}
+a {
+    text-decoration:none;
+    border:none;
+}
+img {
+    border:none;
+}
+h2, h3 {
+    font-weight:400;
+    font-style:italic;
+}
+div.container {
+    width:980px;
+    margin:0 auto;
+    padding:20px auto;
+    background-color:#000;
+    color:#999;
+    text-align:left;
+}
+div.navigation ul > li,
+div.navigation ul > li a {
+    display: inline;
+    list-style-type: none;
+    padding:.5em;
+    color:#c9c9c9;
+}
+div.navigation ul ul {
+    position:absolute;
+    padding:5px 0 0 310px;
+    opacity:0;
+}
+div.navigation ul > li:hover > ul {
+    opacity:1;
+}
+div.navigation ul ul li {
+    display:block;
+    line-height:0.5em;
+}
+div.navigation {
+    margin-top: -80px;
+    padding-left:180px;
+}
+div.content {
+    margin:50px;
+    min-height:750px;
+}
+div.category-title {
+    height:65px;
+    width:300px;
+    overflow:hidden;
+}
+div.category-title.art-nouveau img {
+    margin-top:-8px;
+}
+div.category-title.art-deco img {
+    margin-top:-66px;
+}
+div.category-title.late-victorian img {
+    margin-top:-129px;
+}
+div.content.category div.gallery {
+    float:right;    
+}
+div.content.category div.gallery ul > li {
+    list-style-type:none;
+    padding:0;
+}
+div.content.category div.gallery ul {
+    padding:0;
+}
+div.category-title {
+    float:left;
+    display:inline;
+}
+div.circa {
+    float:right;
+    display:inline;
+    padding-top:25px;
+}
+div.category-info.category-header p,
+div.category-info.category-header hr {
+    clear:both;
+    text-align:justify;
+}
+div.gallery.spotlight {
+    min-width:300px;
+}
+div.gallery.carousel {
+    min-width:250px;
+}
+div.gallery.inspiration {
+    min-width:280px;
+    float:left !important;
+}
+div.gallery.inspiration h2 {
+    color:#eee;    
+}
+div.gallery.inspiration li {
+    line-height:2em;
+    height:30px;
+    margin:5px;
+    padding:0 .5em 0 2em !important;
+}
+div.gallery.inspiration li a {
+    color:#c9c9c9;
+}
+div.gallery.inspiration li:hover {
+    background-color:rgba(255,255,255,.1);
+    -moz-border-radius:5px;
+}
+img#spotlight-sep {
+    display:block;
+}
+div.footer {
+    display:none;
 }
