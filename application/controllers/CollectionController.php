@@ -11,15 +11,20 @@ class CollectionController extends Zend_Controller_Action
      }
     public function latevictorianAction() { 
         // construct data
+        $_category_name = "late-victorian";
+        $this->view->assign('categoryname', $_category_name);
         $this->render('collection'); 
     }
     public function artnouveauAction() { 
+        $_category_name = "art-nouveau";
+        $this->view->assign('categoryname', $_category_name);
         $this->render('collection');
     }
     public function artdecoAction() { 
         $_products = new Databases_Products;
         $_subcategories = new Databases_Designers;
         $_category_id = 1;
+        $_category_name = "art-deco";
         //construct data for slideshow
         $_slideshowdata = 
             $_products->fetchAll(
@@ -46,6 +51,7 @@ class CollectionController extends Zend_Controller_Action
         $this->view->assign('slideshowdata', $_slideshowdata);
         $this->view->assign('carouseldata', $_carouseldata);
         $this->view->assign('designerdata', $_designerdata);
+        $this->view->assign('categoryname', $_category_name);
         $this->render('collection');
     }
     public function aAction() {
