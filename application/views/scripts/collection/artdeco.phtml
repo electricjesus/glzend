@@ -45,15 +45,12 @@
 	?>
 	
 	<div id="slideshow">
-		
-		
-		
 		<?php foreach($_rows as $_row): ?>
 		<?php $rowData =  $_row->toArray(); ?>
 		<div id="<?= $rowData['id'] ?>" class="item">
 			<p>
 				<?= $rowData['description'] ?>
-			</p>
+			</p>			
 			<img src="/images/catalog/GL-Images/GL_2010_cd/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>">
 		</div>
 		<?php endforeach; ?>
