@@ -31,7 +31,7 @@ class EmailController extends Zend_Controller_Action
 		try
 			{
 				$MailObj->send();
-				echo "Email sent successfully";
+				echo "<p class="email-success">Email sent successfully</p>";
 			}
 		catch(Zend_Mail_Exception $e)
 			{
