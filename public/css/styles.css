@@ -93,10 +93,10 @@ div.category-info.category-header hr {
     text-align:justify;
 }
 div.gallery.spotlight {
-    min-width:300px;
+    min-width:390px;
 }
 div.gallery.carousel {
-    min-width:250px;
+    min-width:550px;
 }
 div.gallery.inspiration {
     min-width:280px;

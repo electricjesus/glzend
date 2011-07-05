@@ -4,21 +4,21 @@ class CollectionController extends Zend_Controller_Action
 {
     public function init()
     {
-        /* Initialize action controller here */        
+        /* Initialize action controller here */
     }
-    public function indexAction() { 
+    public function indexAction() {
         $this->_forward('latevictorian');
      }
-    public function latevictorianAction() { 
+    public function latevictorianAction() {
         // construct data
         $this->_buildCategoryData('3', "late-victorian");
-        $this->render('collection'); 
+        $this->render('collection');
     }
-    public function artnouveauAction() { 
+    public function artnouveauAction() {
         $this->_buildCategoryData('2', "art-nouveau");
         $this->render('collection');
     }
-    public function artdecoAction() { 
+    public function artdecoAction() {
         $this->_buildCategoryData('1',"art-deco");
         $this->render('collection');
     }
@@ -33,7 +33,7 @@ class CollectionController extends Zend_Controller_Action
         $_products = new Databases_Products;
         $_subcategories = new Databases_Designers;
         //construct data for slideshow
-        $_slideshowdata = 
+        $_slideshowdata =
             $_products->fetchAll(
                 $_products
                 ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)->setIntegrityCheck(false)
@@ -41,7 +41,7 @@ class CollectionController extends Zend_Controller_Action
                 ->where('featured.location = ?','category')->where('category_id = ?', $_category_id )
             );
         //construct data for carousel
-        $_carouseldata = 
+        $_carouseldata =
             $_products->fetchAll(
                 $_products
                     ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)->setIntegrityCheck(false)
