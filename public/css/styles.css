@@ -55,18 +55,19 @@ div.content {
     min-height:750px;
 }
 div.category-title {
-    height:65px;
+    height:50px;
+    margin-top:24px;
     width:300px;
     overflow:hidden;
 }
 div.category-title.art-nouveau img {
-    margin-top:-8px;
+    margin-top:-22px;
 }
 div.category-title.art-deco img {
-    margin-top:-66px;
+    margin-top:-80px;
 }
 div.category-title.late-victorian img {
-    margin-top:-129px;
+    margin-top:-143px;
 }
 div.content.category div.gallery {
     float:right;    
