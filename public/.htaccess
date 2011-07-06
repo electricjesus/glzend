@@ -8,7 +8,7 @@ RewriteRule ^.*$ index.php [NC,L]
 
 # BEGIN Compress text files
 <ifModule mod_deflate.c>
-    <filesMatch "\.(css|js|x?html?|php)$">
+    <filesMatch "\.(css|js|x?html?|php|xml)$">
         SetOutputFilter DEFLATE
     </filesMatch>
 </ifModule>
