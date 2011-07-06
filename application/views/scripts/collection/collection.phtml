@@ -25,7 +25,9 @@
         </div>
         <hr />
         <p>
-            In hac habitasse platea dictumst. Maecenas tristique feugiat consequat. Nunc elit erat, sollicitudin et suscipit eu, adipiscing at erat. Vestibulum tempor placerat sem at blandit. Suspendisse ultrices neque nulla. Nullam tristique lacus gravida massa consectetur ullamcorper. Suspendisse vitae lorem velit, vel porta arcu. Maecenas sodales enim nec mauris volutpat mollis et ut odio. Maecenas eu scelerisque neque. In ut porttitor mi. Etiam id felis sit amet mi cursus consequat. Pellentesque laoreet fermentum mauris vel imperdiet. Proin ultrices tempor auctor. 
+            <?php foreach($this->categorydata as $_cdata ): ?>
+            <?= $_cdata['description']; ?>
+            <?php endforeach; ?>
         </p>
     </div>
     <div class="gallery spotlight">
@@ -50,7 +52,7 @@
             <?php foreach($this->carouseldata as $_row): ?>
             <?php $rowData =  $_row->toArray(); ?>            
                 <li>
-                    <a class="ajaxify" href="/collection/a/m/product/id/<?= str_replace(' ', '+' , $rowData['sku']); ?>/" target="#selected-product">
+                    <a class="carousel-link" href="/collection/a/m/product/id/<?= str_replace(' ', '+' , $rowData['sku']); ?>/" target="#selected-product">
                         <img src="/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>"/>
                     </a>
                 </li>                
@@ -64,7 +66,7 @@
         <?php foreach($this->designerdata as $_designer): ?>        
         <?php $rowData =  $_designer->toArray(); ?>
             <li>
-                <a class="ajaxify2" href="/collection/a/m/designer/id/<?= $rowData['designerid'] ?>/c/<?= $rowData['category_id'] ?>">
+                <a class="inspiration-link" href="/collection/a/m/designer/id/<?= $rowData['designerid'] ?>/c/<?= $rowData['category_id'] ?>">
                    <?= $rowData['name'] ?>
                 </a>
                 <?php if($rowData['description'] != ""): ?>

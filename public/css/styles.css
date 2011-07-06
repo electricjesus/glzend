@@ -22,7 +22,6 @@ h2, h3 {
 div.container {
     width:980px;
     margin:0 auto;
-    padding:20px auto;
     background-color:#000;
     color:#999;
     text-align:left;
@@ -55,18 +54,19 @@ div.content {
     min-height:750px;
 }
 div.category-title {
-    height:65px;
+    height:50px;
+    margin-top:24px;
     width:300px;
     overflow:hidden;
 }
 div.category-title.art-nouveau img {
-    margin-top:-8px;
+    margin-top:-22px;
 }
 div.category-title.art-deco img {
-    margin-top:-66px;
+    margin-top:-80px;
 }
 div.category-title.late-victorian img {
-    margin-top:-129px;
+    margin-top:-143px;
 }
 div.content.category div.gallery {
     float:right;    
@@ -110,13 +110,25 @@ div.gallery.inspiration li {
     height:30px;
     margin:5px;
     padding:0 .5em 0 2em !important;
+    width:200px;
 }
 div.gallery.inspiration li a {
     color:#c9c9c9;
 }
+div.gallery.inspiration li {
+    background-image:url('../images/designers-bullet.png');
+    background-repeat:no-repeat;
+    background-position:5% 50%
+}
+div.gallery.inspiration li.active,
 div.gallery.inspiration li:hover {
+    background-position:90% 50%;
     background-color:rgba(255,255,255,.1);
     -moz-border-radius:5px;
+}
+div.gallery.inspiration li.active {
+    background-position:95% 50%;
+    width:220px !important;
 }
 img#spotlight-sep {
     display:block;
@@ -125,14 +137,15 @@ div.footer {
     display:none;
 }
 
-#slideshow {
+#slideshow, #selected-product {
      margin: 0pt auto;
      padding-right: 51px;
      position: relative;
      width: auto;
+     float:left;
 }
 
-#slideshow DIV {
+#slideshow div, #selected-product div {
      background-color: #000000;
      left: 0pt;
      margin: 0pt auto;
@@ -143,22 +156,22 @@ div.footer {
      z-index: 8;
 }
 
-#slideshow DIV.prod {
+#slideshow div.prod {
      margin: 0pt auto;
      text-align: center;
      width: 100%;
 }
 
-#slideshow DIV.active {
+#slideshow div.active {
      opacity: 1;
      z-index: 10;
 }
 
-#slideshow DIV.last-active {
+#slideshow div.last-active {
      z-index: 9;
 }
 
-#slideshow DIV IMG {
+#slideshow div img {
      border: 0pt none;
      left: 20%;
      margin-bottom: 10px;
@@ -232,4 +245,5 @@ div.image-history img{
 div.tabs div.vacancies{
 	padding: 0 5em;
 	text-align: justify;
+}
 }

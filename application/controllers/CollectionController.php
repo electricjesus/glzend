@@ -30,8 +30,15 @@ class CollectionController extends Zend_Controller_Action
         $this->view->assign('category', $this->_getParam('c')); // category
     }
     protected function _buildCategoryData ($_category_id, $_category_name) {
+        $_category = new Databases_Category;
         $_products = new Databases_Products;
-        $_subcategories = new Databases_Designers;
+        $_subcategories = new Databases_Designers;        
+        $_categorydata = 
+            $_category->fetchAll(
+                $_category
+                ->select()
+                ->where('categories.id = ?',$_category_id)
+            );        
         //construct data for slideshow
         $_slideshowdata =
             $_products->fetchAll(
@@ -55,6 +62,7 @@ class CollectionController extends Zend_Controller_Action
                     ->where('sort.item_type = ?','designer')->where('category_id = ?', $_category_id)
                     ->order('sort_order ASC')
                     );
+        $this->view->assign('categorydata', $_categorydata);
         $this->view->assign('slideshowdata', $_slideshowdata);
         $this->view->assign('carouseldata', $_carouseldata);
         $this->view->assign('designerdata', $_designerdata);
