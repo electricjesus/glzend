@@ -1,18 +1,96 @@
 <h2>History</h2>
 
 <div>
-	<div class="image-history">
-		<img src="<?= $this->getBaseUrl; ?>/images/historie.jpg" alt="" />
+		
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+		 //if this is not the first tab, hide it
+		 jQuery(".tab:not(:first)").hide();
+		 
+		 //to fix u know who
+		 jQuery(".tab:first").show();
+		 
+		 //when we click one of the tabs
+		 jQuery(".htabs a").click(function(){
+		 //get the ID of the element we need to show
+		 stringref = jQuery(this).attr("href").split('#')[1];
+		 //hide the tabs that doesn't match the ID
+		 jQuery('.tab:not(#'+stringref+')').hide();
+		 //fix
+		 if (jQuery.browser.msie && jQuery.browser.version.substr(0,3) == "6.0") {
+		 jQuery('.tab#' + stringref).show();
+		 }
+		 else
+		 //display our tab fading it in
+		 jQuery('.tab#' + stringref).fadeIn();
+		 //stay with me
+		 return false;
+		 });
+		 
+		});
+	</script>
+	
+	<ul class="htabs hide">
+		<li>
+			<a href="#english"><img src="<?= $this->getBaseUrl; ?>/images/english-flag.png" alt="English" /></a>
+		</li>
+		<li>
+			<a href="#dutch"><img src="<?= $this->getBaseUrl; ?>/images/dutch-flag.png" alt="Dutch" /></a>
+		</li>
+	</ul>
+	
+	<div class="tabs">
+		
+		<div id="english" class="tab">
+			<div class="image-history">
+				<img src="<?= $this->getBaseUrl; ?>/images/historie.jpg" alt="" />
+			</div>
+			<div class="language-english">
+				<p class="history">
+					The story begins in 1825 with the van Kempen family, which merged in 1855 with the Begeer family. They received the honour 
+					to be named "Royal van Kempen & Begeer" for manufacturing handcrafted silverware and jewellery especially for the Aristocrats, 
+					the Royal family of Holland and the rest of Europe.
+				</p>
+				<p class="history">
+					In the late 19th century the company was at the height of its success in Europe, specializing in the Art Nouveau and later the 
+					Art Deco styles jewellery.
+				</p>
+				<p class="history">
+					GL Nederland BV founded in 1974 is a privately owned Dutch based company. In 1984 GL was very fortunate to acquire the proud 
+					heritage of the Dutch silver (jewellery) industry "Royal van Kempen & Begeer" in Voorschoten from the Netherlands. To our surprise 
+					there were 30.000 original and well preserved masters, all crafted by hand, giving us a treasure trove of history, following the 
+					footsteps of the great designers of that time. Since then we have used these models and sketches and brought the designs of the past 
+					to the present day. Timeless in their own right and instantly recognizable, these pieces are now produced by GL Nederland and still 
+					in Holland.
+				</p>
+				<p class="history">
+					Using those masters GL Nederland BV keeps the Dutch tradition alive, utilizing a combination of culture, history and new techniques in 
+					manufacturing. The ever expanding collection consists of over 5000 sterling silver models and it's divided into period themes 
+					(Late Victorian, Art Nouveau and Art Deco) as well as product finish. This enables GL to appeal to the consumer who has an interest 
+					in culture and is looking for something "Different". 
+				</p>
+
+			</div>
+		</div>
+		<div id="dutch" class="tab">
+			<div class="image-history">
+				<img src="<?= $this->getBaseUrl; ?>/images/historie.jpg" alt="" />
+			</div>
+	
+			<div class="language-dutch">
+				<p class="history">Sinds de 2e helft van de 19e eeuw verwierf de Koninklijke van Kempen &amp; Begeer wereldwijde roem door haar met de hand vervaardigde 
+				zilverwerk.De grootste successen werden behaald tijdens "La belle epoque en" de daarop volgende "Golden twenties". In deze periode behoorde 
+				de Koninklijke van Kempen &amp; Begeer tot de meest productieve bedrijven van Europa en vonden de Victoriaanse, Art Nouveau en Art Deco 
+				producten moeiteloos hun weg naar koninklijke families, aristocraten en welgestelden over de hele wereld.</p>
+				
+				<p class="history"> In 1984 had GL Nederland de eer dit trotse erfgoed van de Nederlandse Zilverindustrie te verwerven. Meer dan 150 jaar vakmanschap en  
+				herinneringen en niet minder dan 30.000 originele moedermodellen. Allemaal handgemaakt van zilver of koper in de periode 1825-1984. Tot op de 
+				dag van vandaag houden we zo een oude Nederlandse traditie in ere en produceren we sterling zilveren sieraden geinspireerd door vele ontwerpers 
+				uit de Laat Victoriaanse, Art Nouveau en Art Deco Periode.Met onze collectie "Living Heritage" houdt GL Nederland de herinnering aan haar 
+				erfgoed levend en slaat hiermee een brug tussen verleden en heden.</p>
+			</div>
+		</div>
+		
 	</div>
 	
-	<p class="history">Sinds de 2e helft van de 19e eeuw verwierf de Koninklijke van Kempen &amp; Begeer wereldwijde roem door haar met de hand vervaardigde 
-	zilverwerk.De grootste successen werden behaald tijdens "La belle epoque en" de daarop volgende "Golden twenties". In deze periode behoorde 
-	de Koninklijke van Kempen &amp; Begeer tot de meest productieve bedrijven van Europa en vonden de Victoriaanse, Art Nouveau en Art Deco 
-	producten moeiteloos hun weg naar koninklijke families, aristocraten en welgestelden over de hele wereld.</p>
-	
-	<p class="history"> In 1984 had GL Nederland de eer dit trotse erfgoed van de Nederlandse Zilverindustrie te verwerven. Meer dan 150 jaar vakmanschap en  
-	herinneringen en niet minder dan 30.000 originele moedermodellen. Allemaal handgemaakt van zilver of koper in de periode 1825-1984. Tot op de 
-	dag van vandaag houden we zo een oude Nederlandse traditie in ere en produceren we sterling zilveren sieraden geinspireerd door vele ontwerpers 
-	uit de Laat Victoriaanse, Art Nouveau en Art Deco Periode.Met onze collectie "Living Heritage" houdt GL Nederland de herinnering aan haar 
-	erfgoed levend en slaat hiermee een brug tussen verleden en heden.</p>
 </div>

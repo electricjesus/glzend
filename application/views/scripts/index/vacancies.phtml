@@ -1,35 +1,99 @@
 <h2>Vacancies</h2>
 
-<div>
-	<p class="vacancies">1974 GL Netherlands BV has been a dynamic company in the field of silver jewelry and gift items, specializing in Art Deco, 
-	Art Nouveau and Victorian styles. We design and manufacture of Netherlands, but our high quality products are on the exported 
-	throughout the world, including: America, Great Britain, Germany, Spain, Poland and Russia.</p>
-	<p>Our clients are: Jewellers, gift shops, antique shops and museums.</p>
-	<p>Due to expansion of our sales activities we are looking for a:</p>
-	<p>We offer:</p>
-	<ul class="vacancies">
-		<li>* A good commission scheme</li>
-		<li>* A collection of more than 1000 different models</li>
-		<li>* Fast delivery from stock</li>
-		<li>* An excellent service</li>
-	</ul>
-	<p>Are you enthusiastic agent that we seek, please contact:</p>
-	<ul class="vacancies">
-		<li>GL NETHERLANDS BV</li>
-		<li>Attn Melany Peleg</li>
-		<li>Highway 62, 3621 BR Breukelen</li>
-		<li>Email <a href="mailto:melany@glnederland.com">melany@glnederland.com</a></li>
-		<li>Phone: +31 (0) 346-263489</li>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+		 //if this is not the first tab, hide it
+		 jQuery(".tab:not(:first)").hide();
+		 
+		 //to fix u know who
+		 jQuery(".tab:first").show();
+		 
+		 //when we click one of the tabs
+		 jQuery(".htabs a").click(function(){
+		 //get the ID of the element we need to show
+		 stringref = jQuery(this).attr("href").split('#')[1];
+		 //hide the tabs that doesn't match the ID
+		 jQuery('.tab:not(#'+stringref+')').hide();
+		 //fix
+		 if (jQuery.browser.msie && jQuery.browser.version.substr(0,3) == "6.0") {
+		 jQuery('.tab#' + stringref).show();
+		 }
+		 else
+		 //display our tab fading it in
+		 jQuery('.tab#' + stringref).fadeIn();
+		 //stay with me
+		 return false;
+		 });
+		 
+		});
+	</script>
+	
+	<ul class="htabs hide">
+		<li>
+			<a href="#english" title="English"><img src="<?= $this->getBaseUrl; ?>/images/english-flag.png" alt="English" /></a>
+		</li>
+		<li>
+			<a href="#dutch" title="Dutch"><img src="<?= $this->getBaseUrl; ?>/images/dutch-flag.png" alt="Dutch" /></a>
+		</li>
 	</ul>
 	
-	GL Nederland BV is sinds 1974 een dynamische onderneming op het gebied van zilveren sieraden en geschenkartikelen, gespecialiseerd in Art Deco, Art Nouveau en de Victoriaanse stijlen. Wij ontwerpen en fabriceren in Nederland, maar onze kwalitatief hoogwaardige producten worden over de hele wereld ge?xporteerd, zoals o.a.: Amerika, Groot Brittani?, Duitsland, Spanje, Polen en Rusland.
-
-Onze klanten zijn: Juweliers, cadeaushops, antiquairs en musea.
-
-Wegens uitbreiding van onze verkoopactiviteiten zoeken wij een:
-
-    AGENT m/v
-    VOOR NEDERLAND EN BELGI?
-
-Wij bieden: * Een goede provisieregeling * Een collectie met meer dan 1000 verschillende modellen * Snelle leveringen uit voorraad * Een uitstekende service Bent u de enthousiaste agent die wij zoeken, neem dan contact op met: GL NEDERLAND B.V. t.a.v. Melany Peleg Straatweg 62, 3621 BR Breukelen E-mail melany@glnederland.com [3] Telefoon: +31(0)346-263489 
-</div>
+	<div class="tabs">
+		<div id="english" class="tab">	
+			<div class="vacancies">
+				<p class="">1974 GL Netherlands BV has been a dynamic company in the field of silver jewelry and gift items, specializing in Art Deco, 
+				Art Nouveau and Victorian styles. We design and manufacture of Netherlands, but our high quality products are on the exported 
+				throughout the world, including: America, Great Britain, Germany, Spain, Poland and Russia.</p>
+				<p>Our clients are: Jewellers, gift shops, antique shops and museums.</p>
+				<p>Due to expansion of our sales activities we are looking for a:</p>
+				<p>We offer:</p>
+				<ul class="">
+					<li>* A good commission scheme</li>
+					<li>* A collection of more than 1000 different models</li>
+					<li>* Fast delivery from stock</li>
+					<li>* An excellent service</li>
+				</ul>
+				<p>Are you enthusiastic agent that we seek, please contact:</p>
+				<ul class="">
+					<li>GL NETHERLANDS B.V.</li>
+					<li>Attn Melany Peleg</li>
+					<li>Highway 62, 3621 BR Breukelen</li>
+					<li>Email <a href="mailto:melany@glnederland.com">melany@glnederland.com</a></li>
+					<li>Phone: +31 (0) 346-263489</li>
+				</ul>
+			</div>
+		</div>
+		<div id="dutch" class="tab">	
+			<div class="vacancies">
+				<p class="">
+					GL Nederland BV is sinds 1974 een dynamische onderneming op het gebied van zilveren sieraden en geschenkartikelen, 
+					gespecialiseerd in Art Deco, Art Nouveau en de Victoriaanse stijlen. Wij ontwerpen en fabriceren in Nederland, maar onze 
+					kwalitatief hoogwaardige producten worden over de hele wereld ge?xporteerd, zoals o.a.: Amerika, Groot Brittani?, 
+					Duitsland, Spanje, Polen en Rusland.
+				</p>
+				<p>
+					Onze klanten zijn: Juweliers, cadeaushops, antiquairs en musea.
+				</p>
+				<p>
+					Wegens uitbreiding van onze verkoopactiviteiten zoeken wij een:<br/>
+					AGENT m/v<br/>
+					VOOR NEDERLAND EN BELGI?<br/>
+				</p>
+				<p>
+					Wij bieden:
+				</p>
+				<ul class="">
+					<li>* Een goede provisieregeling</li>
+					<li>* Een collectie met meer dan 1000 verschillende modellen</li>
+					<li>* Snelle leveringen uit voorraad</li>
+					<li>* Een uitstekende service</li>
+				</ul>
+				<p>Bent u de enthousiaste agent die wij zoeken, neem dan contact op met:</p>
+				<ul class="">
+					<li>GL NETHERLANDS B.V.</li>
+					<li>t.a.v. Melany Peleg</li>
+					<li>Straatweg 62, 3621 BR Breukelen</li>
+					<li>Email <a href="mailto:melany@glnederland.com">melany@glnederland.com</a></li>
+					<li>Telefoon: +31(0)346-263489 </li>
+				</ul>
+			</div> 
+	</div>

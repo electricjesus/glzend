@@ -192,3 +192,44 @@ div.image-right img{
 div.vision{
 	top: -121px;
 }
+
+
+/*********************** HISTORY PAGE *********************/
+.htabs {
+    overflow: hidden;
+}
+.htabs ul{
+	list-style-type: none;
+}
+.tabs {
+    margin-top: 2px;
+    overflow: hidden;
+}
+.htabs li {
+    float: left;
+    overflow: hidden;
+	list-style-type: none;
+}
+.htabs a img{
+	  width: 38%;
+}
+div.language-english, div.language-dutch{
+	padding: 0 5em;
+}
+div.language-english p, div.language-dutch p{
+	line-height: 1.4em;
+    text-align: justify;
+	
+}
+div.image-history img{
+	float: left;
+    margin-left: 5em;
+    margin-right: 15px;
+    width: 41%;
+}
+
+/*********************** VACANCIES PAGE *********************/
+div.tabs div.vacancies{
+	padding: 0 5em;
+	text-align: justify;
+}
