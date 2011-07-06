@@ -4,7 +4,7 @@ class CollectionController extends Zend_Controller_Action
 {
     public function init()
     {
-        /* Initialize action controller here */
+        $this->_helper->_layout->setLayout('collectionlayout');
     }
     public function indexAction() {
         $this->_forward('latevictorian');
