@@ -5,7 +5,7 @@
 }
 
 .jcarousel-skin-tango .jcarousel-direction-rtl {
-	direction: rtl;
+    direction: rtl;
 }
 
 .jcarousel-skin-tango .jcarousel-container-horizontal {
@@ -27,8 +27,8 @@
 .jcarousel-skin-tango .jcarousel-clip-vertical {
     width:  86px;
     height: 440px;
-	overflow: hidden;
-	
+    overflow: hidden;
+    
 }
 
 .jcarousel-skin-tango .jcarousel-item {
@@ -37,12 +37,12 @@
 }
 
 .jcarousel-skin-tango .jcarousel-item-horizontal {
-	margin-left: 0;
+    margin-left: 0;
     margin-right: 10px;
 }
 
 .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
-	margin-left: 10px;
+    margin-left: 10px;
     margin-right: 0;
 }
 
@@ -51,22 +51,22 @@
 }
 
 .jcarousel-skin-tango .jcarousel-item-vertical a{
-	color: #E1E1E1;
+    color: #E1E1E1;
     text-decoration: none;
 }
 .jcarousel-skin-tango .jcarousel-item-vertical a.ajaxify2:hover + div.extra-info{
-	opacity: 1 !important;
-	
+    opacity: 1 !important;
+    
 }
 
 .jcarousel-skin-tango .jcarousel-item-vertical  img{
-	/*border-style: none;*/
-	border: 1px solid #000;
-	padding: 3px 2px;
+    /*border-style: none;*/
+    border: 1px solid #000;
+    padding: 3px 2px;
 }
 
 /*.jcarousel-skin-tango .jcarousel-item-vertical  a:hover > img{
-	border: 1px dotted #fff;
+    border: 1px dotted #fff;
 }*/
 
 .jcarousel-skin-tango .jcarousel-item-placeholder {
@@ -193,50 +193,50 @@
 
 /* ########### DESIGNER MENU #############*/
 .menu-designer .jcarousel-container{
-	width: 250px;
-	height: 200px;
+    width: 250px;
+    height: 200px;
 }
 .menu-designer .jcarousel-skin-tango .jcarousel-container .jcarousel-clip{
-	width: 250px;
-	height: 200px;
+    width: 250px;
+    height: 200px;
 }
 .menu-designer .jcarousel-skin-tango  .jcarousel-item-vertical {
-	width: 200px;
-	height: 200px;
+    width: 200px;
+    height: 200px;
 }
 .menu-designer .jcarousel-skin-tango  .jcarousel-item-vertical p{
-	
-	color: #D1D1D1;
-	text-decoration: none;
+    
+    color: #D1D1D1;
+    text-decoration: none;
 }
 
 .menu-designer .jcarousel-skin-tango  .jcarousel-item-vertical a#active-designer{
-	font-weight: bold;
+    font-weight: bold;
 }
 .menu-designer .jcarousel-skin-tango  .jcarousel-item-vertical ul#second-carousel li a p{
-	white-space: pre-wrap;
-	
+    white-space: pre-wrap;
+    
 }
 .menu-designer .jcarousel-skin-tango  .jcarousel-item-vertical a{
-	
+    
 }
 
 div.jcarousel-clip ul#second-carousel li.jcarousel-item{
-	height: 50px !important;
+    height: 50px !important;
 }
 
 div.menu-designer .jcarousel-prev{
-	left: 90px !important;
+    left: 90px !important;
 }
 div.menu-designer .jcarousel-next{
-	left: 90px !important;
+    left: 90px !important;
 }
 
 /*********************** ACTIVE STATE **************************/
 
 .jcarousel-skin-tango .jcarousel-item-vertical img#active{
-	border: 1px dashed #FFFFFF;
+    border: 1px dashed #FFFFFF;
     -moz-border-radius: 5px;
-	border-radius: 5px;
+    border-radius: 5px;
     padding: 3px 2px;
 }
