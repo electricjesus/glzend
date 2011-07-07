@@ -1,4 +1,4 @@
-carouselClickEvt = function() {
+carouselClickEvtSet = function() {
     $('a.carousel-link').click(function() {
         $('#slideshow').remove();
         $('#active').removeAttr('id');
@@ -8,7 +8,7 @@ carouselClickEvt = function() {
     });
 }
 $(document).ready(function() {
-    carouselClickEvt.call();
+    carouselClickEvtSet.call();
     $('a.inspiration-link').click(function() {
         if(!$('#slideshow')) {
             $('div.product_content').append('<div id="slideshow"></div>');
@@ -20,13 +20,7 @@ $(document).ready(function() {
                                 scroll: 2,
                                 visible: 4
                         });
-            $('a.carousel-link').click(function() {
-                $('#slideshow').remove();
-                $('#active').removeAttr('id');
-                $('#selected-product').load($(this).attr('href'))
-                $(this).children('img').attr('id','active');
-                return false;
-            });
+            carouselClickEvtSet.call();
         });
         $('#slideshow').load($(this).attr('href')+'/w/slideshow');
         return false;

@@ -5,20 +5,22 @@
         $_rows = $_products->fetchAll(
             $_products
                     ->select()
-                    ->where('sku = ?', $this->id)           
+                    ->where('sku = ?', $this->id)
             );
     ?>    
     <?php foreach($_rows as $_row):?>        
-        <?php $_rowData = $_row->toArray(); ?>    
-        <p><?= $_rowData['sku'] ?></p>
-        <p><?= $_rowData['description'] ?></p>
-        <img 
-            class="product_picture"  
-            src="/images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" 
-            alt="<?= $_rowData['sku'] ?>" />
+        <?php $_rowData = $_row->toArray(); ?>
+        <div id="<?= $_rowData['id'] ?>" class="item">
+                <img src="/images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" alt="<?= $_rowData['sku'] ?>">
+                <img id="spotlight-sep" src="/images/spotlight-sep.jpg" alt="Item Spotlight" />
+                <p>
+                    <?= $_rowData['description'] ?>
+                </p>
+                <p>Art nr.: <?= $_rowData['sku'] ?></p>
+        </div>
     <?php endforeach; ?>
-<?php elseif($this->mode == 'designer'): ?>    
-    <?php if($this->where == 'carousel'): ?>    
+<?php elseif($this->mode == 'designer'): ?>
+    <?php if($this->where == 'carousel'): ?>
     <?php
        $_rows = $_products->fetchAll(
         $_products
@@ -34,7 +36,7 @@
     <?php foreach($_rows as $_row):?>        
     <?php $_rowData = $_row->toArray(); ?> 
     <li>
-        <a class="ajaxify" href="/collection/a/m/product/id/<?= $_rowData['sku']; ?>/" target="#selected-product">
+        <a class="carousel-link" href="/collection/a/m/product/id/<?= $_rowData['sku']; ?>/" target="#selected-product">
             <img width="80px" src="/images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" alt="" />
         </a>
     </li>
@@ -53,10 +55,13 @@
     ?>
     <?php foreach($_rows as $_row):?>
     <?php $_rowData = $_row->toArray(); ?>
-    <div>
-        <p><?= $_rowData['sku'] ?></p>
-        <p><?= $_rowData['description'] ?></p>
-        <img class='product_picture' src="/images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" />
+    <div id="<?= $_rowData['id'] ?>" class="item">
+            <img src="/images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" alt="<?= $_rowData['sku'] ?>">
+            <img id="spotlight-sep" src="/images/spotlight-sep.jpg" alt="Item Spotlight" />
+            <p>
+                <?= $_rowData['description'] ?>
+            </p>
+            <p>Art nr.: <?= $_rowData['sku'] ?></p>
     </div>
     <?php endforeach; ?>
     <?php endif; ?>
