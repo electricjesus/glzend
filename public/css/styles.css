@@ -49,9 +49,13 @@ div.navigation {
     margin-top: -80px;
     padding-left:180px;
 }
+ul.navigation, ul.navigation li, ul.navigation li a{
+	z-index: 100;
+}
 div.content {
     margin:50px;
     min-height:750px;
+	position: relative;
 }
 div.category-title {
     height:50px;
@@ -200,19 +204,19 @@ div.block-content p.home{
 	color: #e1e1e1;
 }
 div.image-right{
-	position: relative;
-    right: -177px;
-    text-align: right;
-    top: -224px;
-    z-index: 1;
+	float: right;
+    position: relative;
+    right: -157px;
+    top: -171px;
+	z-index: 1;
 }
 div.image-right img{
-	width: 44%;
+	width: 384px;
 }
 
 /*********************** VISION PAGE *********************/
-div.vision{
-	top: -121px;
+div.vision div.vision{
+	
 }
 
 
@@ -289,4 +293,41 @@ div.glcorporate.container.main {
 div.content.index {
     min-height:350px;
     height:100%;
+}
+
+/*********************** FACTORY PAGE *********************/
+.overlay {
+	width:800px;
+	height:600px;
+	background-image:url(http://static.flowplayer.org/img/overlay/petrol.png);
+	display:none;
+	padding: 0 !important;
+}
+.overlay .close {
+	background:url(http://static.flowplayer.org/img/overlay/close.png) no-repeat;
+	position:absolute;
+	top:-65px;
+	right:315px;
+	width:35px;
+	height:35px;
+	cursor:pointer;
+}
+#player, #player_api { 
+	height:380px;
+	width:415px;
+	display:block;
+	margin: 0 auto;
+}
+/* absolute positioning of the player */
+#player_api {
+	position:absolute; 
+	
+	/* layer as the topmost element */
+	z-index:10000; 	
+}
+div#exposeMask{
+	opacity: 0.9 !important;
+}
+div.factory-video{
+	
 }
