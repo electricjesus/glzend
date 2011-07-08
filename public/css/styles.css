@@ -218,7 +218,7 @@ div.block-content p.home{
 	font-size: 1.5em;
     margin-top: 70px;
     text-align: center;
-	color: #e1e1e1;
+	color: #e1e1e1;	
 }
 div.image-right{
 	float: right;
@@ -226,6 +226,7 @@ div.image-right{
     right: -157px;
     top: -171px;
 	z-index: 1;
+	margin-top:32px;
 }
 div.image-right img{
 	width: 384px;

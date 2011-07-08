@@ -17,4 +17,11 @@
                         $active.animate({opacity: 0});
                 });
     }
+    jQuery(document).ready(function() {
+    //start product slider
+    jQuery(function() {
+        setInterval( "slideSwitch()", 7000 );
+    });    
+    
+});
 
