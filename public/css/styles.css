@@ -97,6 +97,17 @@ div.category-title {
     float:left;
     display:inline;
 }
+div.extra-info{
+	background-color: #7F6E57;
+    -moz-border-radius: 5px;
+	border-radius: 5px;
+    color: #000000;
+    left: 74px;
+    opacity: 0;
+    padding: 0 5px;
+    position: relative;
+    top: -6px;
+}
 div.circa {
     float:right;
     display:inline;
@@ -130,6 +141,12 @@ div.gallery.inspiration li:hover {
     background-position:90% 50%;
     background-color:rgba(255,255,255,.1);
     -moz-border-radius:5px;
+}
+div.gallery.inspiration  li a:hover + div.extra-info{
+	opacity: 1;
+}
+div.gallery.inspiration  li:hover > div.extra-info{
+	opacity: 1;
 }
 div.gallery.inspiration li.active {
     background-position:95% 50%;
