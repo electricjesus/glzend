@@ -58,7 +58,7 @@ ul.navigation, ul.navigation li, ul.navigation li a{
 	font-family: Times New Roman;	/* isyan - indicated on the psd.. hehe */
 }
 div.content {
-    margin:50px;
+    margin:20px 165px 0 78px;
     min-height:750px;
 	position: relative;
 }
@@ -117,6 +117,7 @@ div.circa {
     float:right;
     display:inline;
     padding-top:25px;
+    height:45px;
 }
 div.category-info.category-header p,
 div.category-info.category-header hr {
