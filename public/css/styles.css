@@ -46,16 +46,16 @@ div.navigation ul ul li {
     line-height:0.5em;
 }
 div.navigation {
-    margin-top: -79px;		//isyan - re-aligning
-    padding-left: 167px;	//isyan
+    margin-top: -79px;		/* isyan - re-aligning */
+    padding-left: 167px;	
 }
 div.navigation ul li{
 	
 }
 ul.navigation, ul.navigation li, ul.navigation li a{
 	z-index: 100;
-	font-size: 14px;		//isyan
-	font-family: Times New Roman;	//isyan - indicated on the psd.. hehe
+	font-size: 14px;		
+	font-family: Times New Roman;	/* isyan - indicated on the psd.. hehe */
 }
 div.content {
     margin:50px;
