@@ -36,22 +36,22 @@ div.navigation ul > li a {
 div.navigation ul ul {
     position:absolute;
     padding: 5px 0 0 293px;
-    opacity:0;
-}
-/*div.navigation ul > li:hover > ul {
-    opacity:1;
-}*/
-div.navigation ul li:nth-child(5) a:hover + ul{
-	opacity: 1 !important;		/* isyan - <a> will trigger subcategory  */
-}
-div.navigation ul ul a:hover > li{
-	opacity: 1 !important;
+    display: none;
+	
 }
 
+div.navigation ul li:hover  ul{
+	display: block !important;
+}
+div.navigation ul li a:hover{
+	color: #e2e2e2;
+}
 div.navigation ul ul li {
     border-right: none;
     display: block;
-    line-height: 1em;
+    line-height: 1.2em;
+	background-color: #3f3f3f;
+	
 }
 div.navigation {
     margin-top: -79px;		/* isyan - re-aligning */
