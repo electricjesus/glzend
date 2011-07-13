@@ -44,7 +44,7 @@ div.navigation ul ul {
 div.navigation ul li:nth-child(5) a:hover + ul{
 	opacity: 1 !important;		/* isyan - <a> will trigger subcategory  */
 }
-div.navigation ul ul:hover > li{
+div.navigation ul ul a:hover > li{
 	opacity: 1 !important;
 }
 
