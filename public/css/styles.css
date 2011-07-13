@@ -42,6 +42,7 @@ div.navigation ul ul {
 
 div.navigation ul li:hover  ul{
 	display: block !important;
+	z-index:100;
 }
 div.navigation ul li a:hover{
 	color: #e2e2e2;
