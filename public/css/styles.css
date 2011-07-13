@@ -69,7 +69,7 @@ ul.navigation, ul.navigation li, ul.navigation li a{
 	font-family: Times New Roman;	/* isyan - indicated on the psd.. hehe */
 }
 div.content {
-    margin:20px 165px 1px 78px;
+    margin:20px 165px 0px 78px;
     min-height:750px;
 	position: relative;
 }
