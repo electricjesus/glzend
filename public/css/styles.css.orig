@@ -42,7 +42,11 @@ div.navigation ul ul {
 
 div.navigation ul li:hover  ul{
 	display: block !important;
+<<<<<<< HEAD
 	z-index:100;
+=======
+	z-index: 100;
+>>>>>>> 9e446e5b1d8957fb79674e4327a5b088b58684e2
 }
 div.navigation ul li a:hover{
 	color: #e2e2e2;
@@ -70,7 +74,7 @@ ul.navigation, ul.navigation li, ul.navigation li a{
 	font-family: Times New Roman;	/* isyan - indicated on the psd.. hehe */
 }
 div.content {
-    margin:50px 165px 0px 78px;
+    margin:20px 165px 0px 78px;
     min-height:750px;
 	position: relative;
 }
@@ -110,10 +114,10 @@ div.content.category div.gallery {
     position:relative;
 }
 div.gallery.spotlight {
-    left:400px;
+    left:450px;
 }
 div.gallery.carousel {
-    left:250px;
+    left:300px;
 }
 div.gallery.inspiration {
     left:-220px;
@@ -128,7 +132,6 @@ div.content.category div.gallery ul {
 div.category-title {
     float:left;
     display:inline;
-    margin-left:-20px;
 }
 div.extra-info{
 	background-color: #7F6E57;
@@ -152,28 +155,23 @@ div.category-info.category-header hr {
     clear:both;
     text-align:justify;
 }
-div.category-info.category-header p {
-    font-size:0.9em;
-    line-height:1.5em;
-}
 div.gallery.inspiration h2 {
     color:#eee;    
 }
 div.gallery.inspiration li {
     line-height:2em;
-    height:25px;
-    margin:5px 0;
-    padding:0 .5em 0 1.2em !important;
+    height:30px;
+    margin:5px;
+    padding:0 .5em 0 2em !important;
     width:200px;
 }
 div.gallery.inspiration li a {
     color:#c9c9c9;
-    font-size:0.9em;
 }
 div.gallery.inspiration li {
     background-image:url('../images/designers-bullet.png');
     background-repeat:no-repeat;
-    background-position:1% 50%
+    background-position:5% 50%
 }
 div.gallery.inspiration li.active,
 div.gallery.inspiration li:hover {
@@ -193,15 +191,6 @@ div.gallery.inspiration li.active {
 }
 img#spotlight-sep {
     display:block;
-}
-img#spotlight-sep + p {
-    color:#eee;
-}
-div.gallery.spotlight p {
-    font-size:0.85em;
-    margin:0;
-    padding:0;
-    line-height:1.5em;
 }
 div.footer {
     display:none;
@@ -268,7 +257,17 @@ div.block-content p.home{
     text-align: center;
 	color: #e1e1e1;	
 }
-
+/*div.image-right{
+	float: right;
+    position: relative;
+    right: -157px;
+    top: -171px;
+	z-index: 1;
+	margin-top:32px;
+}
+div.image-right img{
+	width: 384px;
+} */
 
 /*********************** VISION PAGE *********************/
 img.image.vision{
@@ -347,14 +346,10 @@ div.contact-form{
 
 /*********************** CONTACT PAGE *********************/
 div.contact-info{
-	float: right;
-    width: 300px;
-}
-div.contact-info p{
-	margin-top: 0;
+	display: inline;
 }
 div.contact-form{
-	float: left;
+
 }
 div.glcorporate{
 	border-left: 1px solid #FFFFFF;
@@ -385,8 +380,8 @@ div.content.index {
 .overlay .close {
 	background:url(http://static.flowplayer.org/img/overlay/close.png) no-repeat;
 	position:absolute;
-    right: 267px;
-    top: -369px;
+	right: 236px;
+    top: -269px;
 	width:35px;
 	height:35px;
 	cursor:pointer;

@@ -9,7 +9,7 @@
             vertical: true,
             animation: 1000,
             scroll: 2,
-            visible: 4
+            visible: 3
         });
     });
 </script>
@@ -19,15 +19,17 @@
         <div class="category-title <?= $this->categoryname ?>">
             <h1><img src="/images/category-titles.jpg" alt="Art Nouveau" /></h1>
         </div>
+        <?php foreach($this->categorydata as $_cdata ): ?>
         <div class="circa">
-            <h2>1890 - 1915</h2>
+            <h2><?= $_cdata['circa']; ?></h2>
         </div>
         <hr />
         <p>
-            <?php foreach($this->categorydata as $_cdata ): ?>
             <?= $_cdata['description']; ?>
-            <?php endforeach; ?>
+        <br/>
+            &rsaquo;&rsaquo;
         </p>
+        <?php endforeach; ?>
     </div>
     <div class="gallery spotlight">
         <div id="selected-product"></div>
@@ -60,7 +62,7 @@
         </div>
     </div>
     <div class="gallery inspiration">
-        <h2>Inspired by:</h2>
+        <h2><img src="/images/inspiredby.jpg" alt="These products are inspired by:" title="Inspired by"></h2>
         <ul id="mycarousel1" class="jcarousel jcarousel-skin-tango designers">
         <?php foreach($this->designerdata as $_designer): ?>        
         <?php $rowData =  $_designer->toArray(); ?>
