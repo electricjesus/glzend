@@ -42,7 +42,11 @@ div.navigation ul ul {
 
 div.navigation ul li:hover  ul{
 	display: block !important;
+<<<<<<< HEAD
 	z-index:100;
+=======
+	z-index: 100;
+>>>>>>> 9e446e5b1d8957fb79674e4327a5b088b58684e2
 }
 div.navigation ul li a:hover{
 	color: #e2e2e2;
@@ -253,7 +257,17 @@ div.block-content p.home{
     text-align: center;
 	color: #e1e1e1;	
 }
-
+/*div.image-right{
+	float: right;
+    position: relative;
+    right: -157px;
+    top: -171px;
+	z-index: 1;
+	margin-top:32px;
+}
+div.image-right img{
+	width: 384px;
+} */
 
 /*********************** VISION PAGE *********************/
 img.image.vision{
