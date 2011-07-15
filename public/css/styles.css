@@ -342,10 +342,14 @@ div.contact-form{
 
 /*********************** CONTACT PAGE *********************/
 div.contact-info{
-	display: inline;
+	float: right;
+    width: 300px;
+}
+div.contact-info p{
+	margin-top: 0;
 }
 div.contact-form{
-
+	float: left;
 }
 div.glcorporate{
 	border-left: 1px solid #FFFFFF;
@@ -376,8 +380,8 @@ div.content.index {
 .overlay .close {
 	background:url(http://static.flowplayer.org/img/overlay/close.png) no-repeat;
 	position:absolute;
-	right: 236px;
-    top: -269px;
+    right: 267px;
+    top: -369px;
 	width:35px;
 	height:35px;
 	cursor:pointer;
