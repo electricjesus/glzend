@@ -42,6 +42,7 @@ div.navigation ul ul {
 
 div.navigation ul li:hover  ul{
 	display: block !important;
+	z-index: 100;
 }
 div.navigation ul li a:hover{
 	color: #e2e2e2;
@@ -87,6 +88,21 @@ div.category-title.art-deco img {
 }
 div.category-title.late-victorian img {
     margin-top:-143px;
+}
+div.category-title.vision img{
+	margin-top: -32px;
+}
+div.category-title.history img{
+	margin-top: -90px;
+}
+div.category-title.factory img{
+	margin-top: -150px;
+}
+div.category-title.vacancies img{
+	margin-top: -210px;
+}
+div.category-title.contact img{
+	margin-top: -274px;
 }
 div.content.category div.gallery {
     float:left;
@@ -237,7 +253,7 @@ div.block-content p.home{
     text-align: center;
 	color: #e1e1e1;	
 }
-div.image-right{
+/*div.image-right{
 	float: right;
     position: relative;
     right: -157px;
@@ -247,13 +263,25 @@ div.image-right{
 }
 div.image-right img{
 	width: 384px;
-}
+} */
 
 /*********************** VISION PAGE *********************/
-div.vision div.vision{
+img.image.vision{
+	border: 1px solid;
+    float: right;
+    margin-top: 19px;
+    padding: 5px;
+    width: 27%;
+}
+div.image.vision{
 	
 }
-
+div.content.index.vision div p{
+	float: left;
+    text-align: justify;
+    width: 500px;
+	clear: none;
+}
 
 /*********************** HISTORY PAGE *********************/
 .htabs {
@@ -280,10 +308,10 @@ div.vision div.vision{
 	
 }
 .htabs a img{
-	  width: 30px;
+	width: 30px;
 }
 div.language-english, div.language-dutch{
-	padding: 0 1em;
+	padding-right: 1em;
 }
 div.language-english p, div.language-dutch p{
 	line-height: 1.2em;
@@ -305,7 +333,7 @@ div.language-english {
 
 /*********************** VACANCIES PAGE *********************/
 div.tabs div.vacancies{
-	padding: 0 5em;
+	
 	text-align: justify;
 }
 div.contact-form{
@@ -317,9 +345,7 @@ div.contact-info{
 	display: inline;
 }
 div.contact-form{
-	float: left;
-	margin-left: 5em;
-	width: 60%;	height: 275px;
+
 }
 div.glcorporate{
 	border-left: 1px solid #FFFFFF;
