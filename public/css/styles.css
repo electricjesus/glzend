@@ -70,7 +70,7 @@ ul.navigation, ul.navigation li, ul.navigation li a{
 	font-family: Times New Roman;	/* isyan - indicated on the psd.. hehe */
 }
 div.content {
-    margin:20px 165px 0px 78px;
+    margin:50px 165px 0px 78px;
     min-height:750px;
 	position: relative;
 }
@@ -110,10 +110,10 @@ div.content.category div.gallery {
     position:relative;
 }
 div.gallery.spotlight {
-    left:450px;
+    left:400px;
 }
 div.gallery.carousel {
-    left:300px;
+    left:250px;
 }
 div.gallery.inspiration {
     left:-220px;
@@ -128,6 +128,7 @@ div.content.category div.gallery ul {
 div.category-title {
     float:left;
     display:inline;
+    margin-left:-20px;
 }
 div.extra-info{
 	background-color: #7F6E57;
@@ -151,18 +152,23 @@ div.category-info.category-header hr {
     clear:both;
     text-align:justify;
 }
+div.category-info.category-header p {
+    font-size:0.9em;
+    line-height:1.5em;
+}
 div.gallery.inspiration h2 {
     color:#eee;    
 }
 div.gallery.inspiration li {
     line-height:2em;
-    height:30px;
+    height:25px;
     margin:5px;
     padding:0 .5em 0 2em !important;
     width:200px;
 }
 div.gallery.inspiration li a {
     color:#c9c9c9;
+    font-size:0.9em;
 }
 div.gallery.inspiration li {
     background-image:url('../images/designers-bullet.png');
@@ -187,6 +193,15 @@ div.gallery.inspiration li.active {
 }
 img#spotlight-sep {
     display:block;
+}
+img#spotlight-sep + p {
+    color:#eee;
+}
+div.gallery.spotlight p {
+    font-size:0.85em;
+    margin:0;
+    padding:0;
+    line-height:1.5em;
 }
 div.footer {
     display:none;

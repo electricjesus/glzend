@@ -27,6 +27,9 @@
         <p>
             <?= $_cdata['description']; ?>
         </p>
+        <p>
+            &rsaquo;&rsaquo;
+        </p>
         <?php endforeach; ?>
     </div>
     <div class="gallery spotlight">
@@ -60,7 +63,7 @@
         </div>
     </div>
     <div class="gallery inspiration">
-        <h2>Inspired by:</h2>
+        <h2><img src="/images/inspiredby.jpg" alt="These products are inspired by:" title="Inspired by"></h2>
         <ul id="mycarousel1" class="jcarousel jcarousel-skin-tango designers">
         <?php foreach($this->designerdata as $_designer): ?>        
         <?php $rowData =  $_designer->toArray(); ?>
