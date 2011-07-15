@@ -25,7 +25,7 @@
 }
 
 .jcarousel-skin-tango .jcarousel-clip-vertical {
-    width:  86px;
+    width:  120px;
     height: 440px;
     overflow: hidden;
     
@@ -62,7 +62,7 @@
 .jcarousel-skin-tango .jcarousel-item-vertical  img{
     /*border-style: none;*/
     border: 1px solid #000;
-    padding: 3px 2px;
+    padding: 15px;
 }
 
 /*.jcarousel-skin-tango .jcarousel-item-vertical  a:hover > img{
@@ -149,6 +149,7 @@
     height: 32px;
     cursor: pointer;
     background: transparent url(../images/arrow-down.jpg) no-repeat 0 0;
+    margin:0 16px;
 }
 
 .jcarousel-skin-tango .jcarousel-next-vertical:hover {
@@ -189,6 +190,7 @@
 .jcarousel-skin-tango .jcarousel-prev-disabled-vertical:active {
     cursor: default;
     background-position: 0 -96px;
+    margin:0 16px;
 }
 
 /* ########### DESIGNER MENU #############*/
@@ -235,8 +237,6 @@ div.menu-designer .jcarousel-next{
 /*********************** ACTIVE STATE **************************/
 
 .jcarousel-skin-tango .jcarousel-item-vertical img#active{
-    border: 1px dashed #FFFFFF;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    padding: 3px 2px;
+    border: 1px solid #ddd;
+    padding: 15px;
 }
