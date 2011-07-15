@@ -19,15 +19,15 @@
         <div class="category-title <?= $this->categoryname ?>">
             <h1><img src="/images/category-titles.jpg" alt="Art Nouveau" /></h1>
         </div>
+        <?php foreach($this->categorydata as $_cdata ): ?>
         <div class="circa">
-            <h2>1890 - 1915</h2>
+            <h2><?= $_cdata['circa']; ?></h2>
         </div>
         <hr />
         <p>
-            <?php foreach($this->categorydata as $_cdata ): ?>
             <?= $_cdata['description']; ?>
-            <?php endforeach; ?>
         </p>
+        <?php endforeach; ?>
     </div>
     <div class="gallery spotlight">
         <div id="selected-product"></div>
