@@ -162,8 +162,8 @@ div.gallery.inspiration h2 {
 div.gallery.inspiration li {
     line-height:2em;
     height:25px;
-    margin:5px;
-    padding:0 .5em 0 2em !important;
+    margin:5px 0;
+    padding:0 .5em 0 1.2em !important;
     width:200px;
 }
 div.gallery.inspiration li a {
@@ -173,7 +173,7 @@ div.gallery.inspiration li a {
 div.gallery.inspiration li {
     background-image:url('../images/designers-bullet.png');
     background-repeat:no-repeat;
-    background-position:5% 50%
+    background-position:1% 50%
 }
 div.gallery.inspiration li.active,
 div.gallery.inspiration li:hover {
