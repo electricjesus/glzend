@@ -9,3 +9,17 @@ div.gallery.inspiration li.active,
 div.gallery.inspiration li:hover {
 background-color:#333;
 }
+div.image-right img{
+	width: 50%;
+	position: relative;
+	left: 450px; top: -200px;
+}
+div.content.index.index{
+	margin: 50px 78px 0px 78px !important;
+}
+div.block-content p.home{
+	margin-top: 30px;
+}
+div.category-title{
+	margin-left: -5px !important;
+}
