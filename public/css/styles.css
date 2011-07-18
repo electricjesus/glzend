@@ -136,7 +136,7 @@ div.extra-info{
 	border-radius: 5px;
     color: #000000;
     left: 74px;
-    opacity: 0;
+    display: none;
     padding: 0 5px;
     position: relative;
     top: -6px;
@@ -182,10 +182,10 @@ div.gallery.inspiration li:hover {
     -moz-border-radius:5px;
 }
 div.gallery.inspiration  li a:hover + div.extra-info{
-	opacity: 1;
+	display: block;
 }
 div.gallery.inspiration  li:hover > div.extra-info{
-	opacity: 1;
+	display: block;
 }
 div.gallery.inspiration li.active {
     background-position:95% 50%;
@@ -226,7 +226,7 @@ div.footer {
      z-index: 8;
 }
 #slideshow div {
-    opacity:0;
+    display:none;
 }
 
 #slideshow div.prod,
@@ -238,7 +238,7 @@ div.footer {
 
 #slideshow div.active,
 #selected-product div.active {
-     opacity: 1;
+     display: block;
      z-index: 10;
 }
 
