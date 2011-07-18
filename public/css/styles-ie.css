@@ -1,7 +1,4 @@
 html, body {}
-.shadow {
-	display:inline;
-	height:100px;
-	width:500px;
-	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3', MakeShadow='true', ShadowOpacity='0.40');
+div.container {
+filter:progid:DXImageTransform.Microsoft.Shadow(color='#000000',direction='120',strength='5');
 }

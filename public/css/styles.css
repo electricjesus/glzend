@@ -8,8 +8,8 @@ html, body {
     font-family:Georgia, serif;
     font-size:95%;
 }
-.shadow {
-display:none;
+.ieshadow {
+	display:none;
 }
 a {
     text-decoration:none;
@@ -28,6 +28,7 @@ div.container {
     background-color:#000;
     color:#999;
     text-align:left;
+	z-index:2;
 }
 div.navigation ul > li,
 div.navigation ul > li a {
