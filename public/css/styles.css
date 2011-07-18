@@ -75,7 +75,7 @@ ul.navigation, ul.navigation li, ul.navigation li a{
 }
 div.content {
     margin:50px 165px 0px 78px;
-    min-height:750px;
+    min-height:850px;
 	position: relative;
 }
 div.category-title {
@@ -107,6 +107,14 @@ div.category-title.vacancies img{
 }
 div.category-title.contact img{
 	margin-top: -274px;
+}
+div.content.index.index{
+	margin: 50px 78px 0px 78px !important;
+}
+div.image-right img{
+	width: 50%;
+	position: relative;
+	left: 450px; top: -200px;
 }
 div.content.category div.gallery {
     float:left;
@@ -369,7 +377,6 @@ div.glcorporate{
 }
 div.glcorporate.container.main {
 
-    height:700px;
     overflow:hidden;
 	
 }
