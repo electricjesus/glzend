@@ -17,8 +17,8 @@
         ?>
         <?= $this->headLink()->appendStylesheet('/css/styles.css')
                  ->appendStylesheet('/css/styles-ie.css','screen, projection', 'IE')
-				 ->appendStylesheet('/css/styles-ie7.css','screen, projection', 'IE7')				 
-				 ->appendStylesheet('/css/styles-ie6.css','screen, projection', 'IE6')
+				 ->appendStylesheet('/css/styles-ie7.css','screen, projection', 'IE 7')				 
+				 ->appendStylesheet('/css/styles-ie6.css','screen, projection', 'IE 6')
                  ->appendStylesheet('/css/skin.css')
                  ->headLink(array( 'rel' => 'icon',
                                    'type' => 'image/png',
@@ -37,7 +37,7 @@
     <body>
 		<div class="glcorporate container collection">
 			<div class="header">
-				<img src="/images/header-image.jpg" alt="Timeless Classics by GL" />
+				<img src="/images/header-image.jpg" alt="" />
 				<div class="navigation">
 					<?= $this->navigation()->menu(); ?>
 				</div>
