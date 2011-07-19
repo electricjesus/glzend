@@ -2,6 +2,13 @@ html, body {}
 div.container {
 filter:progid:DXImageTransform.Microsoft.Shadow(color='#000000',direction='120',strength='5');
 }
+div.gallery.inspiration li {
+height:30px;
+}
+div.gallery.inspiration li.active,
+div.gallery.inspiration li:hover {
+background-color:#333;
+}
 div.image-right img{
 	width: 50%;
 	position: relative;
