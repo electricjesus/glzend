@@ -6,11 +6,14 @@ div.navigation{
 }
 div.navigation ul ul{
 	position: absolute;
-	top: 16px;
+	top: 21px;
 	left: 170px;
 }
 ul.navigation{
 	padding: 5px 0;
+}
+div.navigation{
+	margin-top: -79px !important;
 }
 div.content.index.index{
 	margin: 50px 78px 0px 78px !important;
