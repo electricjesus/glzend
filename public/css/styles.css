@@ -30,6 +30,8 @@ div.container {
     text-align:left;
 	z-index:2;
 }
+
+/************************************* NAVIGATION **************************************/
 div.navigation ul > li,
 div.navigation ul > li a {
     display: inline;
@@ -41,9 +43,7 @@ div.navigation ul ul {
     position:absolute;
     padding: 5px 0 0 293px;
     display: none;
-	
 }
-
 div.navigation ul li:hover  ul{
 	display: block !important;
 	z-index:100;
@@ -56,10 +56,9 @@ div.navigation ul ul li {
     display: block;
     line-height: 1.2em;
 	background-color: #3f3f3f;
-	
 }
 div.navigation {
-    margin-top: -79px;		/* isyan - re-aligning */
+    margin-top: -79px;
     padding-left: 167px;	
 }
 div.navigation ul li{
@@ -71,7 +70,7 @@ div.navigation ul li:last-child{
 ul.navigation, ul.navigation li, ul.navigation li a{
 	z-index: 100;
 	font-size: 14px;		
-	font-family: Times New Roman;	/* isyan - indicated on the psd.. hehe */
+	font-family: Times New Roman;
 }
 div.content {
     margin:50px 165px 0px 78px;
@@ -107,9 +106,6 @@ div.category-title.vacancies img{
 }
 div.category-title.contact img{
 	margin-top: -274px;
-}
-div.content.index.index{
-	margin: 50px 78px 0px 78px !important;
 }
 div.image-right img{
 	width: 50%;
@@ -159,8 +155,17 @@ div.circa {
     padding-top:25px;
     height:45px;
 }
-div.category-info.category-header p,
-div.category-info.category-header hr {
+div.category-info.category-header hr{
+	clear:both;
+    text-align:justify;
+	height:1px;
+	border-width:0;
+	color: #9ea19a;
+	background-color: #9ea19a;
+	margin-bottom: 23px;
+}
+
+div.category-info.category-header p{
     clear:both;
     text-align:justify;
 }
@@ -280,7 +285,41 @@ div.block-content p.home{
     text-align: center;
 	color: #e1e1e1;	
 }
-
+div.category-title.home img{
+	margin-top: -25px;
+	margin-left: 3px;
+}
+div.category-title.home{
+	width: 369px;
+}
+div.home p{
+	font-size: 16px !important;
+	font-style: italic;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+div.home p#second-line{
+	text-align: right;
+}
+div.category-info.category-header div div{
+	display: inline;
+	margin-top: 23px; margin-bottom: 40px;
+	text-align: center;
+}
+div div.home-late{
+	float: left;
+	margin-right: 34px;
+}
+div div.home-nouveau{
+	float: left;
+}
+div div.home-deco{
+	float: right;
+}
+div div img.images{
+	display: block;
+	border-bottom: 1px solid #9ea19a;
+}
 
 /*********************** VISION PAGE *********************/
 img.image.vision{
