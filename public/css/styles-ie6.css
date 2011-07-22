@@ -1,1 +1,33 @@
 html, body {}
+ul.navigation {
+margin-top:14px;
+}
+div.navigation ul li,
+div.navigation ul  li a {
+    display: inline;
+    list-style-type: none;
+    padding:0 .5em;
+    color:#c9c9c9;
+}
+
+div.content.category div.gallery ul  li {
+    list-style-type:none;
+    padding:0;
+}
+
+div.gallery.inspiration  li:hover div.extra-info{
+	display: block;
+}
+div.home {
+	width:724px;
+}
+
+div.category-title.home h1 img {
+padding-top:20px;
+}
+
+div.home-deco {
+float:left !important;
+margin-left:25px;
+}
+
