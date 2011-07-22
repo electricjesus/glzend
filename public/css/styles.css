@@ -301,12 +301,14 @@ div.home p{
 div.home p#second-line{
 	text-align: right;
 }
-div.category-info.category-header div div{
+div.category-info.category-header div div {
 	display: inline;
 	margin-top: 23px; margin-bottom: 40px;
-	text-align: center;
-	float: left;
+	text-align: center;	
+}
+div.category-info.category-header div.home.to-categories div {
 	margin-right: 41px;
+	float: left;
 }
 div div.home-deco{
 	margin-right: 0 !important;
