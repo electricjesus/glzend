@@ -329,8 +329,8 @@ img.image.vision{
     padding: 5px;
     width: 27%;
 }
-div.image.vision{
-	
+div.content.index.vision{
+	margin-bottom: 40px;
 }
 div.content.index.vision div p{
 	float: left;
@@ -353,6 +353,9 @@ div.content.index.vision div p{
 .tabs {
     margin-top: 2px;
     overflow: hidden;
+}
+.tabs.history{
+	width: 513px;
 }
 .htabs li {
     float: left;
@@ -392,8 +395,8 @@ div.tabs div.vacancies{
 	
 	text-align: justify;
 }
-div.contact-form{
-
+div.category-info.category-header div div ul{
+	text-align: left;
 }
 
 /*********************** CONTACT PAGE *********************/
