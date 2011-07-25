@@ -1,3 +1,11 @@
+ <?= $this->headScript()->appendFile('../js/jquery.validate.js') ?>
+ 
+ <script>
+  $(document).ready(function(){
+    $("#contactForm").validate();
+  });
+  </script>
+ 
 <div class="category-info category-header">
 	<div class="category-title contact">
 		<h1><img src="/images/menu-titles.jpg" alt="Contact Us" /></h1>
@@ -6,6 +14,8 @@
 		<h2>van 1825 tot nu</h2>
 	</div>
 	<hr />
+	
+	<img class="image vision" src="<?= $this->getBaseUrl; ?>/images/vision-img.jpg" alt="Vision" />
 
 	<div class="contact-form">
 		<form name="contactform" id="contactForm" method="post" action="email/send-mail">
@@ -16,7 +26,7 @@
 				  <label for="first_name">Name</label>
 				 </td>
 				 <td valign="top">
-				  <input type="text" name="name" id="name" maxlength="50" size="30">
+				  <input type="text" name="name" id="name" maxlength="50" size="33">
 				 </td>
 				</tr>
 				 
@@ -25,7 +35,7 @@
 				  <label for="email">Email Address *</label>
 				 </td>
 				 <td valign="top">
-				  <input class="required email" type="text" name="email" id="email" maxlength="80" size="30">
+				  <input class="required email" type="text" name="email" id="email" maxlength="80" size="33">
 				 </td>
 				 </tr>
 				 <tr>
@@ -33,12 +43,7 @@
 				  <label for="subject">Subject *</label>
 				 </td>
 				 <td valign="top">
-				  <select name="subject" id="subject" class="required">
-					<option value="" selected="true">-</option>
-					<option value="inquiry">Inquiry</option>
-					<option value="question">Question</option>
-					<option value="jewelry">Jewelry</option>
-				  </select>
+				  <input class="required subject" type="text" name="subject" id="subject" minlength="3" size="33">
 				 </td>
 				 </tr>
 				 
@@ -47,12 +52,15 @@
 				  <label for="comments">Comments *</label>
 				 </td>
 				 <td valign="top">
-				  <textarea class="required" name="comment" id="comment" maxlength="1000" cols="25" rows="6"></textarea>
+				  <textarea class="required" name="comment" id="comment" minlength="3" cols="25" rows="6"></textarea>
 				 </td>
 				 
 				</tr>
 				<tr>
-				 <td colspan="2" style="text-align:center">
+				<td valign="top">
+				  &nbsp;
+				 </td>
+				<td valign="top">
 				  <input type="submit" name="submit" value="Submit" class="submit">
 				 </td>
 				</tr>

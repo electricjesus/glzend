@@ -167,11 +167,12 @@ div.category-info.category-header hr{
 
 div.category-info.category-header p{
     clear:both;
-    text-align:justify;
+    text-align:left;
 }
 div.category-info.category-header p {
     font-size:0.9em;
     line-height:1.5em;
+	margin-top: 0;
 }
 div.gallery.inspiration h2 {
     color:#eee;    
@@ -292,18 +293,11 @@ div.category-title.home img{
 div.category-title.home{
 	width: 369px;
 }
-div.home p{
-	font-size: 16px !important;
-	font-style: italic;
-	margin-top: 0;
-	margin-bottom: 0;
+div.home{
+	margin-bottom: 20px;
 }
-div.home p#second-line{
-	text-align: right;
-}
-div.category-info.category-header div div{
+div.category-info.category-header div.home-collection div{
 	display: inline;
-	margin-top: 23px; margin-bottom: 40px;
 	text-align: center;
 	float: left;
 	margin-right: 41px;
@@ -320,12 +314,8 @@ div div img.images{
 img.image.vision{
 	border: 1px solid;
     float: right;
-    margin-top: 19px;
     padding: 5px;
     width: 27%;
-}
-div.content.index.vision{
-	margin-bottom: 40px;
 }
 div.content.index.vision div p{
 	float: left;
@@ -371,6 +361,9 @@ div.language-english p, div.language-dutch p{
 	line-height: 1.2em;
     text-align: justify;
 }
+div.language-english p.history1{
+	font-weight:bold;
+}
 div.language-dutch p {
     line-height: 1.4em;
 }
@@ -395,15 +388,11 @@ div.category-info.category-header div div ul{
 }
 
 /*********************** CONTACT PAGE *********************/
-div.contact-info{
-	float: right;
-    width: 300px;
-}
 div.contact-info p{
 	margin-top: 0;
 }
 div.contact-form{
-	float: left;
+	margin-bottom: 25px;
 }
 div.glcorporate{
 	border-left: 1px solid #FFFFFF;
@@ -413,20 +402,39 @@ div.glcorporate{
 	margin-bottom: 50px;
 }
 div.glcorporate.container.main {
-
     overflow:hidden;
-	
+	padding-bottom:40px;
 }
 div.content.index {
     min-height:350px;
     height:100%;
 }
-
+form#contactForm input, form#contactForm textarea{
+	background-image:url(../images/textbox_bg.jpg);
+	background-repeat:repeat-x;
+	border:1px solid #d1c7ac;
+	width: 230px;
+	color:#333333;
+	padding:3px;
+	margin-right:4px;
+	margin-bottom:8px;
+	font-family:tahoma, arial, sans-serif;
+}
+form#contactForm input.submit{
+	width: 238px;
+}
+form#contactForm input.error, form#contactForm textarea.error{
+	background-color: #FEECEC;
+    background-image: none;
+}
+form#contactForm label.error{
+	color: #F5403A;
+}
 /*********************** FACTORY PAGE *********************/
 .overlay {
 	width:800px;
 	height:600px;
-	background-image:url(http://static.flowplayer.org/img/overlay/petrol.png);
+	/*background-image:url(http://static.flowplayer.org/img/overlay/petrol.png);*/
 	display:none;
 	padding: 0 !important;
 }
@@ -440,10 +448,10 @@ div.content.index {
 	cursor:pointer;
 }
 #player, #player_api { 
-	height:380px;
-	width:415px;
+	height: 233px;
+    width: 310px;
 	display:block;
-	margin: 0 auto;
+	float: right;
 }
 /* absolute positioning of the player */
 #player_api {
@@ -453,11 +461,11 @@ div.content.index {
 	z-index:10000; 	
 }
 div#exposeMask{
-	opacity: 0.9 !important;
+	opacity: 1 !important;
 }
 div#exposeMask+img{
 	top:0 !important;
 }
-div.factory-video{
-	
+p.factory{
+	clear: none !important;
 }
