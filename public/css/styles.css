@@ -113,18 +113,31 @@ div.image-right img{
 	left: 450px; top: -200px;
 }
 div.content.category div.gallery {
-    float:left;
+    float:right;
     display:inline;
     position:relative;
 }
 div.gallery.spotlight {
-    left:400px;
+    right:170px;
 }
-div.gallery.carousel {
-    left:250px;
+div.gallery.tinycarousel {
+    right:350px;
+    height:420px;
+    overflow:hidden;
 }
+
+div#products.gallery.tinycarousel { height: 500px; overflow:hidden; }
+div#products.gallery.tinycarousel .viewport { float: left; width: 150px; height: 440px; overflow: hidden; position: relative; }
+div#products.gallery.tinycarousel .buttons { display: block; height:30px; width:128px;}
+div#products.gallery.tinycarousel .buttons img { margin:auto; }
+div#products.gallery.tinycarousel .disable { opacity: .5; }
+div#products.gallery.tinycarousel .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
+div#products.gallery.tinycarousel .overview li{ float: left; margin: 11px 0; text-align:center;  border: 1px solid #dcdcdc; height:122px; width:122px; }
+div#products.gallery.tinycarousel .overview li img {margin:20px auto}
+
+
 div.gallery.inspiration {
-    left:-220px;
+    right:370px;
 }
 div.content.category div.gallery ul > li {
     list-style-type:none;
