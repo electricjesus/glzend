@@ -311,16 +311,20 @@ div div img.images{
 }
 
 /*********************** VISION PAGE *********************/
-img.image.vision{
+img.image{
 	border: 1px solid;
     float: right;
     padding: 5px;
+}
+img.image.vision{
+	
+    width: 14%;
+}
+img.image.history{
+
     width: 27%;
 }
 div.content.index.vision div p{
-	float: left;
-    text-align: justify;
-    width: 500px;
 	clear: none;
 }
 
@@ -408,6 +412,12 @@ div.glcorporate.container.main {
 div.content.index {
     min-height:350px;
     height:100%;
+}
+img.image.contact1{
+	left: 187px;
+    position: relative;
+    top: 272px;
+    width: 24%;
 }
 form#contactForm input, form#contactForm textarea{
 	background-image:url(../images/textbox_bg.jpg);
