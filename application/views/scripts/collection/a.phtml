@@ -32,14 +32,14 @@
             ->where('subcategory_id = ?',$this->id)
             );
     ?>
-    <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
+    <ul class="overview">
     <?php foreach($_rows as $_row):?>        
     <?php $_rowData = $_row->toArray(); ?> 
-    <li>
-        <a class="carousel-link" href="/collection/a/m/product/id/<?= $_rowData['sku']; ?>/" target="#selected-product">
-            <img width="80px" src="/images/catalog/GL-Images/GL_2010_cd/<?= $_rowData['image'] ?>" alt="" />
-        </a>
-    </li>
+        <li>
+            <a class="carousel-link" href="/collection/a/m/product/id/<?= str_replace(' ', '+' , $_rowData['sku']); ?>/" target="#selected-product">
+                <img src="/images/GL-Images/<?= $_rowData['image'] ?>" alt="<?= $_rowData['sku'] ?>"/>
+            </a>
+        </li>
     <?php endforeach; ?>
     </ul>
     <?php elseif($this->where == 'slideshow'): ?>

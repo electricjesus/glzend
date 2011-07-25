@@ -1,17 +1,8 @@
 <script type="text/javascript">
     jQuery(document).ready(function() {
-        //product slider
-        jQuery(function() {
-            setInterval( "slideSwitch()", 7000 );
-        });
-        //product thumbnails
-        jQuery('#mycarousel').jcarousel({
-            vertical: true,
-            animation: 1000,
-            scroll: 2,
-            visible: 3
-        });
+         $("div#products.gallery").tinycarousel({ axis: 'y'});
     });
+   
 </script>
 <div class="content category">
     <!-- start content -->
@@ -47,23 +38,26 @@
         <?php endforeach; ?>
         </div>
     </div>
-    <div class="gallery carousel vertical-product">
-        <div id="carouselcontainer">
-            <ul id="mycarousel" class="jcarousel jcarousel-skin-tango">
-            <?php foreach($this->carouseldata as $_row): ?>
-            <?php $rowData =  $_row->toArray(); ?>            
+
+    <div id="products" class="gallery tinycarousel">
+        <a class="buttons prev" href="#" /><img src="/images/arrow-up.jpg" alt="Previous"></a>
+        <div class="viewport">
+            <ul class="overview">
+                <?php foreach($this->carouseldata as $_row): ?>
+                <?php $rowData =  $_row->toArray(); ?>
                 <li>
                     <a class="carousel-link" href="/collection/a/m/product/id/<?= str_replace(' ', '+' , $rowData['sku']); ?>/" target="#selected-product">
                         <img src="/images/GL-Images/<?= $rowData['image'] ?>" alt="<?= $rowData['sku'] ?>"/>
                     </a>
-                </li>                
-            <?php endforeach; ?>
+                </li>
+                <?php endforeach; ?>
             </ul>
         </div>
+        <a class="buttons next" href="#" /><img src="/images/arrow-down.jpg" alt="Nexet"></a>
     </div>
     <div class="gallery inspiration">
         <h2><img src="/images/inspiredby.jpg" alt="These products are inspired by:" title="Inspired by"></h2>
-        <ul id="mycarousel1" class="jcarousel jcarousel-skin-tango designers">
+        <ul id="inspiration" class="jcarousel jcarousel-skin-tango designers">
         <?php foreach($this->designerdata as $_designer): ?>        
         <?php $rowData =  $_designer->toArray(); ?>
             <li>

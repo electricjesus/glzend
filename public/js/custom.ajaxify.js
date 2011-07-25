@@ -10,13 +10,8 @@ carouselClickEvtSet = function() {
 $(document).ready(function() {
     carouselClickEvtSet.call();
     $('a.inspiration-link').click(function() {
-        $('div#carouselcontainer').load($(this).attr('href')+'/w/carousel', function() {
-            jQuery('#mycarousel').jcarousel({
-                                vertical: true,
-                                animation: 1000,
-                                scroll: 2,
-                                visible: 4
-                        });
+        $('div.viewport').load($(this).attr('href')+'/w/carousel', function() {
+            $("div.gallery.tinycarousel").tinycarousel({ axis: 'y'});
             carouselClickEvtSet.call();
         });
         $('#slideshow').load($(this).attr('href')+'/w/slideshow');
