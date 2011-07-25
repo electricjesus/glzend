@@ -298,9 +298,11 @@ div.home{
 }
 div.category-info.category-header div.home-collection div{
 	display: inline;
-	text-align: center;
-	float: left;
+	text-align: center;	
+}
+div.category-info.category-header div.home.to-categories div {
 	margin-right: 41px;
+	float: left;
 }
 div div.home-deco{
 	margin-right: 0 !important;
