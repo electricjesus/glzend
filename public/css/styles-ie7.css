@@ -15,9 +15,9 @@ ul.navigation{
 div.navigation{
 	margin-top: -79px !important;
 }
-div.content.index.index{
+/*div.content.index.index{
 	margin: 50px 78px 0px 78px !important;
-}
+}*/
 div.block-content p.home{
 	margin-top: 30px;
 }
@@ -51,4 +51,16 @@ div.art-nouveau.category-title img{
 }
 div.art-deco.category-title img{
 	margin-top: -65px;
+}
+
+/******** HOMEPAGE ********/
+div.category-title.home img{
+	margin-top: -5px;
+
+}
+div.category-title.home{
+	width: 380px;
+}
+div.home{
+	margin-bottom: 15px;
 }
