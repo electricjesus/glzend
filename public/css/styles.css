@@ -36,7 +36,7 @@ div.navigation ul > li,
 div.navigation ul > li a {
     display: inline;
     list-style-type: none;
-    padding:0 .58em;
+    padding:0 .5em;
     color:#c9c9c9;
 }
 div.navigation ul ul {
@@ -73,7 +73,7 @@ ul.navigation, ul.navigation li, ul.navigation li a{
 	font-family: Times New Roman;
 }
 div.content {
-    margin:47px 165px 0px 78px;
+    margin:50px 165px 0px 78px;
     min-height:850px;
 	position: relative;
 }
@@ -83,11 +83,8 @@ div.category-title {
     width:300px;
     overflow:hidden;
 }
-div.category-title img {
-	width:107.65%;
-}
 div.category-title.art-nouveau img {
-    margin-top:-24px;
+    margin-top:-22px;
 }
 div.category-title.art-deco img {
     margin-top:-80px;
@@ -124,10 +121,9 @@ div.gallery.spotlight {
     right:235px;
 }
 div.gallery.tinycarousel {
-    top:25px;
-	right:271px;
+    right:350px;
     height:420px;
-    overflow:hidden;	
+    overflow:hidden;
 }
 
 div#products.gallery.tinycarousel { height: 500px; overflow:hidden; }
@@ -137,12 +133,12 @@ div#products.gallery.tinycarousel a.buttons {border:none}
 div#products.gallery.tinycarousel .buttons img { margin:0 35%; }
 div#products.gallery.tinycarousel .disable { opacity: .5; }
 div#products.gallery.tinycarousel .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
-div#products.gallery.tinycarousel .overview li{ float: left; margin: 11px 0 -4px 0; text-align:center;  border: 1px solid #dcdcdc; height:122px; width:122px; }
+div#products.gallery.tinycarousel .overview li{ float: left; margin: 11px 0; text-align:center;  border: 1px solid #dcdcdc; height:122px; width:122px; }
 div#products.gallery.tinycarousel .overview li img {margin:20px auto}
 
 
 div.gallery.inspiration {
-    right:388px;
+    right:390px;
 }
 div.content.category div.gallery ul > li {
     list-style-type:none;
@@ -172,7 +168,6 @@ div.circa {
     display:inline;
     padding-top:25px;
     height:45px;
-	font-size:12.5px;
 }
 div.category-info.category-header hr{
 	clear:both;
@@ -189,24 +184,23 @@ div.category-info.category-header p{
     text-align:left;
 }
 div.category-info.category-header p {
-    font-size:0.75em;
+    font-size:0.9em;
     line-height:1.5em;
 	margin-top: 0;
 }
 div.gallery.inspiration h2 {
-    color:#eee;  
-	margin:10px 0 -10px 0;
+    color:#eee;    
 }
 div.gallery.inspiration li {
-    line-height:1.5em;
-    height:14.25px;
+    line-height:2em;
+    height:20px;
     margin:5px 0;
     padding:0 .5em .5em 1.2em !important;
     width:200px;
 }
 div.gallery.inspiration li a {
     color:#c9c9c9;
-    font-size:0.85em;
+    font-size:0.9em;
 }
 div.gallery.inspiration li {
     background-image:url('../images/designers-bullet.png');
