@@ -235,7 +235,35 @@ div.gallery.spotlight p {
     line-height:1.5em;
 }
 div.footer {
-    display:none;
+    clear:both;
+    background-color:#191919;
+    font-size:80%;
+    padding:5px 30px;
+    margin:150px 0 0 0;
+}
+div.content.vacancies div.footer {
+    margin:auto -178px auto -78px;
+}
+div.footer p.copyright {
+    width:400px;
+    display:inline;
+}
+div.footer ul {
+    display:inline;
+    float:right;
+    margin:0;
+}
+div.footer li {
+    margin:0;
+    padding:0 1em;
+    display:inline;
+    list-style:none outside none;
+}
+div.footer li a {
+    color:#fff   
+}
+div.footer li a:hover {
+    color:#ddd
 }
 
 #slideshow, #selected-product {
@@ -420,7 +448,7 @@ div.glcorporate{
 }
 div.glcorporate.container.main {
     overflow:hidden;
-	padding-bottom:40px;
+	padding-bottom:5px;
 }
 div.content.index {
     min-height:350px;
