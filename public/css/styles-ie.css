@@ -15,7 +15,7 @@ div.image-right img{
 	left: 450px; top: -200px;
 }
 div.content.index.index{
-	margin: 50px 78px 0px 78px !important;
+	margin: 50px 165px 0px 78px;
 }
 div.block-content p.home{
 	margin-top: 30px;
@@ -31,4 +31,8 @@ div.navigation ul ul{
 	top: 166px;
 	left: 390px;
 	padding-top: 0;
+}
+div#exposeMask{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
 }
