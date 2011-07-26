@@ -5,7 +5,7 @@ div.navigation ul li,
 div.navigation ul  li a {display: inline;list-style-type: none;padding:0 .5em;color:#c9c9c9}
 div.content.category div.gallery ul  li {list-style-type:none;padding:0}
 div.gallery.inspiration  li:hover div.extra-info{display: block}
-div.home, div.history {width:760px}
+div.home, div.history, div.home-collection {width:760px}
 div.circa {display:inline;}
 div.category-info.category-header div.home img {padding-top:20px}
 div.category-title {margin-bottom:0px;}
@@ -14,4 +14,4 @@ div.category-title.history img{margin-top: -73px}
 div.category-title.factory img{margin-top: -133px}
 div.category-title.vacancies img{margin-top: -193px}
 div.category-title.contact img{margin-top: -257px}
-
+div.footer ul {position:absolute;margin-left:180px}
