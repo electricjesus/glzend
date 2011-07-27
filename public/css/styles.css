@@ -539,3 +539,7 @@ div#exposeMask+img{
 p.factory{
 	clear: none !important;
 }
+div.factory-video{
+	margin-left: 10px;
+	float: right;
+}
