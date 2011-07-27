@@ -73,13 +73,13 @@ ul.navigation, ul.navigation li, ul.navigation li a{
 	font-family: Times New Roman;
 }
 div.content {
-    margin:50px 165px 0px 78px;
+    margin:47px 165px 0px 78px;
     min-height:850px;
 	position: relative;
 }
 div.category-title {
     height:50px;
-    margin-top:24px;
+    margin-top:21px;
     width:300px;
     overflow:hidden;
 }
@@ -118,12 +118,14 @@ div.content.category div.gallery {
     position:relative;
 }
 div.gallery.spotlight {
-    right:235px;
+    right:262px;
+    top:24px;
+    z-index:41;
 }
 div.gallery.tinycarousel {
-    right:350px;
-    height:420px;
-    overflow:hidden;
+    right:358px;
+    top:7px;
+    z-index:42;
 }
 
 div#products.gallery.tinycarousel { height: 500px; overflow:hidden; }
@@ -138,7 +140,9 @@ div#products.gallery.tinycarousel .overview li img {margin:20px auto}
 
 
 div.gallery.inspiration {
-    right:390px;
+    right:391px;
+    top:-8px;
+    z-index:43;
 }
 div.content.category div.gallery ul > li {
     list-style-type:none;
@@ -146,6 +150,7 @@ div.content.category div.gallery ul > li {
 }
 div.content.category div.gallery ul {
     padding:0;
+    margin:-11px 0 0 0;
 }
 div.category-title {
     float:left;
@@ -166,7 +171,8 @@ div.extra-info{
 div.circa {
     float:right;
     display:inline;
-    padding-top:25px;
+    font-size:0.85em;
+    padding-top:26px;
     height:45px;
 }
 div.category-info.category-header hr{
@@ -176,7 +182,7 @@ div.category-info.category-header hr{
 	border-width:0;
 	color: #9ea19a;
 	background-color: #9ea19a;
-	margin-bottom: 23px;
+	margin-bottom: 12px;
 }
 
 div.category-info.category-header p{
@@ -184,7 +190,7 @@ div.category-info.category-header p{
     text-align:left;
 }
 div.category-info.category-header p {
-    font-size:0.9em;
+    font-size:0.835em;
     line-height:1.5em;
 	margin-top: 0;
 }
@@ -192,10 +198,11 @@ div.gallery.inspiration h2 {
     color:#eee;    
 }
 div.gallery.inspiration li {
-    line-height:2em;
-    height:20px;
+    font-size:0.99em;
+    line-height:1.2em;
+    height:12.8px;
     margin:5px 0;
-    padding:0 .5em .5em 1.2em !important;
+    padding:0.1em 0em .45em 1.45em !important;
     width:200px;
 }
 div.gallery.inspiration li a {
@@ -205,7 +212,7 @@ div.gallery.inspiration li a {
 div.gallery.inspiration li {
     background-image:url('../images/designers-bullet.png');
     background-repeat:no-repeat;
-    background-position:1% 50%
+    background-position:-3px 50%
 }
 div.gallery.inspiration li.active,
 div.gallery.inspiration li:hover {
