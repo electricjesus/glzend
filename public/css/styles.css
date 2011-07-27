@@ -200,7 +200,7 @@ div.gallery.inspiration h2 {
 div.gallery.inspiration li {
     font-size:0.99em;
     line-height:1.2em;
-    height:12.8px;
+    height:12.8px !important;
     margin:5px 0;
     padding:0.1em 0em .45em 1.45em !important;
     width:200px;
