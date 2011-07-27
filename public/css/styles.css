@@ -263,6 +263,9 @@ div.content.history + div.footer {
 div.content.factory + div.footer {
     margin:30px 0 0 0;
 }
+div.content.category + div.footer {
+    margin: -60px 0 0;
+}
 div.footer p.copyright {
     width:400px;
     display:inline;
@@ -437,10 +440,6 @@ div.image-history img{
     margin-right: 15px;
     width: 300px;
 }
-div.language-english {
-    font-size:90%;
-}
-
 
 /*********************** VACANCIES PAGE *********************/
 div.tabs div.vacancies{
@@ -466,6 +465,10 @@ div.glcorporate{
 	margin-bottom: 50px;
 }
 div.glcorporate.container.main {
+    overflow:hidden;
+	padding-bottom:5px;
+}
+div.glcorporate.container.collection {
     overflow:hidden;
 	padding-bottom:5px;
 }
@@ -542,4 +545,5 @@ p.factory{
 div.factory-video{
 	margin-left: 10px;
 	float: right;
+	border: 1px solid;
 }
