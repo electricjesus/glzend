@@ -25,7 +25,8 @@
                                    'href' => '/images/favicon.png')
                             );
         ?>  
-        <?= $this->headScript() 
+        <?= $this->headScript()
+                ->appendFile('http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js')
                 ->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js')
                 ->appendFile('/js/flowplayer-3.2.6.min.js')
                 ->appendFile('/js/jquery.tinycarousel.min.js')
