@@ -24,6 +24,7 @@ div.category-title{
 	margin-left: -5px !important;
 }
 div.navigation{
+	background: url(../images/menu_title.jpg);
 	margin-top: -78px;
 }
 div.navigation ul ul{

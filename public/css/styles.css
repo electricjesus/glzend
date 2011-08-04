@@ -77,12 +77,6 @@ div.content {
     min-height:640px;
 	position: relative;
 }
-div.category-title {
-    height:50px;
-    margin-top:21px;
-    width:300px;
-    overflow:hidden;
-}
 div.category-title.art-nouveau img {
     margin-top:-22px;
 }
@@ -108,9 +102,9 @@ div.category-title.contact img{
 	margin-top: -274px;
 }
 div.image-right img{
-	width: 50%;
+	/*width: 50%;
 	position: relative;
-	left: 450px; top: -200px;
+	left: 450px; top: -200px;*/
 }
 div.content.category div.gallery {
     float:right;
@@ -155,7 +149,10 @@ div.content.category div.gallery ul {
 div.category-title {
     float:left;
     display:inline;
-    margin-left:-20px;
+    margin-left:-20px;   margin-top: 25px;
+}
+div.category-title h1{
+	margin-bottom: 5px;
 }
 div.extra-info{
 	background-color: #7F6E57;
@@ -193,6 +190,7 @@ div.category-info.category-header p {
     font-size:0.835em;
     line-height:1.5em;
 	margin-top: 0;
+	width: 500px;
 }
 div.gallery.inspiration h2 {
     color:#eee;    
@@ -371,24 +369,13 @@ div div img.images{
 }
 
 /*********************** VISION PAGE *********************/
-img.image{
-	border: 1px solid;
+
+div.image-right{
+	border: 1px solid #9ea19a;
     float: right;
-    padding: 5px;
-	margin-left: 10px;
+    margin-left: 10px;
+    padding: 5px 49px;
 }
-img.image.vision{
-	
-    width: 14%;
-}
-img.image.history{
-
-    width: 27%;
-}
-div.content.index.vision div p{
-	clear: none;
-}
-
 /*********************** HISTORY PAGE *********************/
 .htabs {
     overflow: hidden;
@@ -426,17 +413,17 @@ div.language-english p, div.language-dutch p{
 	line-height: 1.2em;
     text-align: justify;
 }
-div.language-english p.history1{
+div p.history1{
 	font-weight:bold;
 }
 div.language-dutch p {
     line-height: 1.4em;
 }
 div.image-history img{
-	float: left;
-    margin-left: 1em;
-    margin-right: 15px;
-    width: 300px;
+	border: 1px solid;
+    float: right;
+	padding: 5px;
+	margin-left: 10px;
 }
 
 /*********************** VACANCIES PAGE *********************/
