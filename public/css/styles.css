@@ -90,16 +90,16 @@ div.category-title.vision img{
 	margin-top: -32px;
 }
 div.category-title.history img{
-	margin-top: -90px;
+	margin-top: -32px;
 }
 div.category-title.factory img{
-	margin-top: -150px;
+	margin-top: -32px;
 }
 div.category-title.vacancies img{
-	margin-top: -210px;
+	margin-top: -32px;
 }
 div.category-title.contact img{
-	margin-top: -274px;
+	margin-top: -32px;
 }
 div.image-right img{
 	/*width: 50%;
@@ -185,6 +185,9 @@ div.category-info.category-header hr{
 div.category-info.category-header p{
     clear:none;
     text-align:left;
+}
+div.category-info.category-header p.factory{
+	width: 410px;
 }
 div.category-info.category-header p {
     font-size:0.835em;
@@ -349,7 +352,7 @@ div.category-title.home img{
 
 }
 div.category-title.home{
-	width: 369px;
+	
 }
 div.home{
 	margin-bottom: 20px;
@@ -376,6 +379,7 @@ div.image-right{
     margin-left: 10px;
     padding: 5px 49px;
 }
+
 /*********************** HISTORY PAGE *********************/
 .htabs {
     overflow: hidden;
@@ -428,19 +432,41 @@ div.image-history img{
 
 /*********************** VACANCIES PAGE *********************/
 div.tabs div.vacancies{
-	
 	text-align: justify;
 }
 div.category-info.category-header div div ul{
 	text-align: left;
 }
-
+div.image-right-vacancies{
+	border: 1px solid #9ea19a;
+    float: right;
+    margin-left: 10px;
+	padding: 5px 10px;
+}
+ul.vacancies-address{
+	list-style-type: none;
+	padding-left: 0;
+}
 /*********************** CONTACT PAGE *********************/
 div.contact-info p{
 	margin-top: 0;
 }
+div.contact-info{
+	clear: both;
+}
+ul.contact{
+	list-style-type: none;
+    padding-left: 0;
+}
+div.image-contact{
+	border: 1px solid #9ea19a;
+    float: right;
+    margin-left: 10px;
+	padding: 5px 18px;
+}
 div.contact-form{
 	margin-bottom: 25px;
+	float: left;
 }
 div.glcorporate{
 	border-left: 1px solid #FFFFFF;
@@ -452,7 +478,7 @@ div.glcorporate{
 }
 div.glcorporate.container.main {
     overflow:hidden;
-	padding-bottom:5px;
+	padding-bottom:30px;
 }
 div.glcorporate.container.collection {
     overflow:hidden;
