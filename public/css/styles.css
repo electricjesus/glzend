@@ -186,7 +186,7 @@ div.category-info.category-header hr{
 }
 
 div.category-info.category-header p{
-    clear:both;
+    clear:none;
     text-align:left;
 }
 div.category-info.category-header p {
@@ -378,6 +378,7 @@ img.image{
 	border: 1px solid;
     float: right;
     padding: 5px;
+	margin-left: 10px;
 }
 img.image.vision{
 	
