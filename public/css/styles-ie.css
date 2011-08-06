@@ -10,9 +10,9 @@ div.gallery.inspiration li:hover {
 background-color:#333;
 }
 div.image-right img{
-	width: 50%;
+	/*width: 50%;
 	position: relative;
-	left: 450px; top: -200px;
+	left: 450px; top: -200px;*/
 }
 div.content.index.index{
 	margin: 50px 165px 0px 78px;
@@ -36,4 +36,26 @@ div.navigation ul ul{
 div#exposeMask{
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	filter: alpha(opacity=100);
+}
+
+/******************* collection ************************/
+div.category-title-collection{
+	float:left;
+    display:inline;
+    margin-left:-20px;   
+	overflow: hidden;
+	height: 80px;
+}
+div.category-title-collection.late-victorian{
+	margin-bottom: 10px;
+	margin-top: -8px;
+}
+div.category-title-collection.art-nouveau img{
+	margin-top: -145px;
+}
+div.category-title-collection.art-deco img{
+	margin-top: -77px;
+}
+div.category-title-collection.late-victorian img{
+	margin-top: 1px;
 }

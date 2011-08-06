@@ -6,15 +6,12 @@
 </script>
 <div class="content category">
     <!-- start content -->
-    <div class="category-info category-header">
-        <div class="category-title <?= $this->categoryname ?>">
-            <h1><img src="/images/category-titles.jpg" alt="Art Nouveau" /></h1>
+    <div class="category-info category-header collection">
+        <div class="category-title-collection <?= $this->categoryname ?>">
+            <h1><img src="/images/category-titles.jpg" alt="Art Nouveau Late Victorian Art Deco" /></h1>
         </div>
         <?php foreach($this->categorydata as $_cdata ): ?>
-        <div class="circa">
-            <h2><?= $_cdata['circa']; ?></h2>
-        </div>
-        <hr />
+        
         <p>
             <?= $_cdata['description']; ?>
         <br/>
