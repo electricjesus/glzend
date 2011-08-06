@@ -1,7 +1,7 @@
 <?php echo $this->doctype() ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <?php   
+        <?php
             // setting the controller and action name as title segments:
             $request = Zend_Controller_Front::getInstance()->getRequest();
         ?>
@@ -17,8 +17,8 @@
         ?>
         <?= $this->headLink()->appendStylesheet('/css/styles.css')
                  ->appendStylesheet('/css/styles-ie.css','screen, projection', 'IE')
-				 ->appendStylesheet('/css/styles-ie7.css','screen, projection', 'IE 7')				 
-				 ->appendStylesheet('/css/styles-ie6.css','screen, projection', 'IE 6')
+                 ->appendStylesheet('/css/styles-ie7.css','screen, projection', 'IE 7')                 
+                 ->appendStylesheet('/css/styles-ie6.css','screen, projection', 'IE 6')
                  ->appendStylesheet('/css/skin.css')
                  ->headLink(array( 'rel' => 'icon',
                                    'type' => 'image/png',
@@ -36,13 +36,13 @@
         ?>
     </head>
     <body>
-		<div class="glcorporate container collection">
-			<div class="header">
-				<img src="/images/header-image.jpg" alt="" />
-				<div class="navigation">
-					<?= $this->navigation()->menu(); ?>
-				</div>
-			</div>
+        <div class="glcorporate container collection">
+            <div class="header">
+                <img src="/images/header-image.jpg" alt="" />
+                <div class="navigation">
+                    <?= $this->navigation()->menu(); ?>
+                </div>
+            </div>
             <?= $this->layout()->content ?>
             <?php 
             /* 
@@ -50,15 +50,27 @@
                 <!-- and other stuff.. -->
             </div>
             */ ?>
+<<<<<<< HEAD
 			<!--<div class="footer">
                  <p class="copyright">Copyright &copy; GL Corporation 2011 &raquo;&raquo; All rights reserved.</p>
+=======
+            <div class="footer">
+                <p class="copyright">Copyright &copy; GL Corporation 2011 &raquo;&raquo; All rights reserved.</p>
+>>>>>>> 53d72f18f35cff295224ac15791466a6bd719d15
                 <ul>
                     <li><a href="/contact">Contact us</a></li>
                     <li><a href="/">Frequently Asked Questions</a></li>
                     <li><a href="/index/vacancies">Careers</a></li>
                     <li><a href="/">Disclaimers</a></li>
+<<<<<<< HEAD
                 </ul> 
 			</div>-->
 		</div>
 	</body>
+=======
+                </ul>
+            </div>
+        </div>
+    </body>
+>>>>>>> 53d72f18f35cff295224ac15791466a6bd719d15
 </html>
