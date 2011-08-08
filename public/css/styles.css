@@ -8,6 +8,7 @@ html, body {
     font-family:Georgia, serif;
     font-size:95%;
 }
+
 .ieshadow {
 	display:none;
 }
@@ -36,7 +37,6 @@ div.navigation ul > li,
 div.navigation ul > li a {
     display: inline;
     list-style-type: none;
-    padding:0 .5em;
     color:#c9c9c9;
 }
 div.navigation ul ul {
@@ -44,34 +44,79 @@ div.navigation ul ul {
     padding: 5px 0 0 293px;
     display: none;
 }
+/*
 div.navigation ul li:hover  ul{
 	display: block !important;
 	z-index:100;
 }
 div.navigation ul li a:hover{
 	color: #e2e2e2;
-}
+}*/
 div.navigation ul ul li {
     border-right: none;
     display: block;
     line-height: 1.2em;
 	background-color: #3f3f3f;
 }
-div.navigation {
-    margin-top: -79px;
-    padding-left: 167px;	
-}
-div.navigation ul li{
-	border-right: 1px solid #C9C9C9;
+div.navigation {    
+    padding: 0 0 0 205px;
+	clear:both;
+	background-color:#404040;
 }
 div.navigation ul li:last-child{
 	border-right: none;
+}
+ul.navigation {
+	margin:0;
+	padding:0;	
+	background-position:0 0;
+	background-repeat: no-repeat;
 }
 ul.navigation, ul.navigation li, ul.navigation li a{
 	z-index: 100;
 	font-size: 14px;		
 	font-family: Times New Roman;
 }
+ul.navigation li {    
+	width:auto;
+	display:inline;
+	padding:0;
+	margin:0;
+}
+ul.navigation li a{    
+	display:inline-block !important;
+	background-image:url(../images/main_menu.jpg);
+	text-indent:-9999px;
+	padding:0;
+	margin:0;
+}
+ul.navigation li a.home 		{width:58px;background-position:0 -1px}
+ul.navigation li a.vision		{width:69px;background-position:-58px -1px}
+ul.navigation li a.history  	{width:75px;background-position:-132px -1px}
+ul.navigation li a.factory  	{width:75px;background-position:-212px -1px}
+ul.navigation li a.collection 	{width:91px;background-position:-292px -1px}
+ul.navigation li a.vacancies 	{width:87px;background-position:-388px -1px}
+ul.navigation li a.contact width	{width:77px;background-position:-480px -1px}
+/*
+ul.navigation li a {
+    opacity:0;
+}   
+ul.navigation li ul li a{
+	opacity:1;
+}
+*/
+
+div.header-icon {
+	position:absolute;
+	top:0;
+	float:left;	
+}
+div.header-icon img {
+	margin:0;
+	padding:0;
+	border:none;
+}
+
 div.content {
     margin:47px 165px 0px 78px;
     min-height:640px;
@@ -194,7 +239,12 @@ div.category-info.category-header p {
     line-height:1.5em;
 	margin-top: 0;
 	width: 500px;
+	text-align:justify;
 }
+div.collection div.category-info.category-header p { 
+	width: auto;
+	text-align:justify;
+}	
 div.gallery.inspiration h2 {
     color:#eee;    
 }

@@ -4,44 +4,54 @@
         <home>
             <label>Home</label>
             <uri>/index/index</uri>
+			<class>home</class>
         </home>
         <vision>
             <label>Vision</label>
             <uri>/index/vision</uri>
+			<class>vision</class>
         </vision>
         <history>
             <label>History</label>
             <uri>/index/history</uri>
+			<class>history</class>
         </history>
         <factory>
             <label>Factory</label>
             <uri>/index/factory</uri>
+			<class>factory</class>
         </factory>
         <collection>
             <label>Collection</label>
             <uri>/collection</uri>
+			<class>collection</class>
             <pages>
                 <latevictorian>
                     <label>Late Victorian</label>
                     <uri>/collection/latevictorian</uri>
+					<class>latevictorian</class>
                 </latevictorian>
                 <artnouveau>
                     <label>Art Nouveau</label>
                     <uri>/collection/artnouveau</uri>
+					<class>artnouveau</class>
                 </artnouveau>
                 <artdeco>
                     <label>Art Deco</label>
                     <uri>/collection/artdeco</uri>
+					<class>artdeco</class>
                 </artdeco>
             </pages>            
         </collection>
         <vacancies>
             <label>Vacancies</label>
             <uri>/index/vacancies</uri>
+			<class>vacancies</class>
         </vacancies>
         <contact>
             <label>Contact</label>
             <uri>/contact</uri>
+			<class>contact</class>
         </contact>
     </navigation>
 </configdata>

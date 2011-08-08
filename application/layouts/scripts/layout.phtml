@@ -15,6 +15,13 @@
                  ->appendName('description', 'custom made jewelry by GL high quality high value high fashion sense sensibility')
                  ->appendName('robots', 'index, follow');
         ?>
+		<?= $this->headScript() 
+                ->appendFile('http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js')
+                ->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js')
+                ->appendFile('http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js')
+                ->appendFile('/js/flowplayer-3.2.6.min.js')
+                ->appendFile('/js/custom.jq.calls.js');                
+        ?>
         <?= $this->headLink()->appendStylesheet('/css/styles.css')
                  ->appendStylesheet('/css/styles-ie.css','screen, projection', 'IE')
                  ->appendStylesheet('/css/styles-ie7.css','screen, projection', 'IE 7')
@@ -24,48 +31,33 @@
                                    'type' => 'image/png',
                                    'href' => '/images/favicon.png')
                             );
-        ?>  
-        <?= $this->headScript() 
-                ->appendFile('http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js')
-                ->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js')
-                ->appendFile('http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js')
-                ->appendFile('/js/flowplayer-3.2.6.min.js')
-                ->appendFile('/js/custom.jq.calls.js');                
-        ?>
+        ?>          
     </head>
     <body>
         <div class="glcorporate container main">
             <div class="header">
-                <img src="/images/header-image.jpg" alt="" />
+                <img src="/images/header-head.jpg" alt="Timeless Classics by GL Nederlands" />
                 <div class="navigation">
                     <?= $this->navigation()->menu(); ?>
                 </div>
+				<div class="header-icon">
+					<img src="/images/header-jewelry.png" alt="Art Deco Art Nouveau Late Victorian" />
+				</div>
             </div>
             <?php $controllerName = Zend_Controller_Front::getInstance()->getRequest()->getControllerName(); ?>
             <?php $actionName = Zend_Controller_Front::getInstance()->getRequest()->getActionName(); ?>
             <div class="content <?= $controllerName ?> <?= $actionName ?>">
                 <?= $this->layout()->content ?>
             </div>
-<<<<<<< HEAD
-            <div class="footer">
-=======
-			<!-- <div class="footer">
->>>>>>> dfec618b328d57e0d643ca3c17962c56984cb317
+		<!--<div class="footer">
                 <p class="copyright">Copyright &copy; GL Corporation 2011 &raquo;&raquo; All rights reserved.</p>
                 <ul>
                     <li><a href="/contact">Contact us</a></li>
                     <li><a href="/">Frequently Asked Questions</a></li>
                     <li><a href="/index/vacancies">Careers</a></li>
                     <li><a href="/">Disclaimers</a></li>
-<<<<<<< HEAD
-                </ul>
-            </div>
-        </div>
-    </body>
-=======
-                </ul> 
+                </ul>                  
 			</div>-->
 		</div>		
 	</body>
->>>>>>> dfec618b328d57e0d643ca3c17962c56984cb317
 </html>
