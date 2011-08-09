@@ -40,22 +40,30 @@ div.navigation ul > li a {
 }
 div.navigation ul ul {
     position:absolute;
-    padding: 5px 0 0 293px;
+    padding: 5px 0 0 305px;
     display: none;
+	width:100px;	
 }
-/*
+div.navigation ul ul a{
+	text-indent:1em !important;
+	background:none;
+	padding:2px 0;
+	font-size:0.9em;
+	font-weight:500;	
+}
+
 div.navigation ul li:hover  ul{
 	display: block !important;
 	z-index:100;
 }
 div.navigation ul li a:hover{
-	color: #e2e2e2;
-}*/
+	color: #e2e2e2;	
+}
 div.navigation ul ul li {
     border-right: none;
     display: block;
     line-height: 1.2em;
-	background-color: #3f3f3f;
+	background-color: #222;
 }
 div.navigation {    
     padding: 0 0 0 205px;
@@ -616,4 +624,26 @@ div.factory-video{
 	margin-left: 10px;
 	float: right;
 	border: 1px solid;
+}
+
+/******************* collection ************************/
+div.category-title-collection{
+	float:left;
+    display:inline;
+    margin-left:-20px;   
+	overflow: hidden;
+	height: 80px;
+}
+div.category-title-collection.late-victorian{
+	margin-bottom: 10px;
+	margin-top: -8px;
+}
+div.category-title-collection.art-nouveau img{
+	margin-top: -145px;
+}
+div.category-title-collection.art-deco img{
+	margin-top: -77px;
+}
+div.category-title-collection.late-victorian img{
+	margin-top: 1px;
 }
