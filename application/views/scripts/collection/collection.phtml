@@ -59,15 +59,12 @@
         <?php $rowData =  $_designer->toArray(); ?>
             <li>
                 <a class="inspiration-link" href="/collection/a/m/designer/id/<?= $rowData['designerid'] ?>/c/<?= $rowData['category_id'] ?>">
-                   <?= $rowData['name'] ?>
+					<?= $rowData['name'] ?>&nbsp;&nbsp;
+					<?php if($rowData['description'] != ""): ?>
+						<?= $rowData['description'] ?>
+					<?php endif; ?>
                 </a>
-                <?php if($rowData['description'] != ""): ?>
-                  
-                    <div class="extra-info">
-                        <?= $rowData['description'] ?>
-                    </div>
-                   
-                <?php endif; ?>
+                
             </li>
         <?php endforeach; ?>
         </ul>

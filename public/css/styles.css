@@ -186,7 +186,7 @@ div#products.gallery.tinycarousel .overview li img {margin:20px auto}
 
 
 div.gallery.inspiration {
-    right:391px;
+    right:367px;
     top:-8px;
     z-index:43;
 }
@@ -266,7 +266,7 @@ div.gallery.inspiration li {
     height:12.8px !important;
     margin:5px 0;
     padding:0.1em 0em .45em 1.45em !important;
-    width:200px;
+    width:225px;
 }
 div.gallery.inspiration li a {
     color:#c9c9c9;
