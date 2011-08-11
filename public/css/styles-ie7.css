@@ -1,66 +1,7 @@
-html, body {}
-
-div.navigation{
-	position: relative;
-	top: -9px;
-}
-div.navigation ul ul{
-	position: absolute;
-	top: 21px;
-	left: 170px;
-}
-ul.navigation{
-	padding: 5px 0;
-}
-div.navigation{
-	margin-top: -79px !important;
-}
-/*div.content.index.index{
-	margin: 50px 78px 0px 78px !important;
-}*/
-div.block-content p.home{
-	margin-top: 30px;
-}
-div.image-right img{
-	width: 50%;
-	position: relative;
-	left: 450px; top: -200px;
-}
-div.vision.category-title img{
-	margin-top: -15px;
-}
-div.history.category-title img{
-	margin-top: -75px;
-}
-div.factory.category-title img{
-	margin-top: -135px;
-}
-div.vacancies.category-title img{
-	margin-top: -195px;
-}
-div.contact.category-title img{
-	margin-top: -255px;
-}
-
-/****** COLLECTION **********/
-div.late-victorian.category-title img{
-	margin-top: -123px;
-}
-div.art-nouveau.category-title img{
-	margin-top: -5px;
-}
-div.art-deco.category-title img{
-	margin-top: -65px;
-}
-
-/******** HOMEPAGE ********/
-div.category-title.home img{
-	margin-top: -5px;
-
-}
-div.category-title.home{
-	width: 380px;
-}
-div.home{
-	margin-bottom: 15px;
+ul.navigation li a{    
+	display:inline-block !important;
+	background-image:url(../images/main_menu.jpg);
+	text-indent:-99px !important;
+	padding:0;
+	margin:0;
 }

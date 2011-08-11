@@ -40,12 +40,12 @@ div.navigation ul > li a {
 }
 div.navigation ul ul {
     position:absolute;
-    padding: 5px 0 0 305px;
+    padding: 5px 0 0 298px;
     display: none;
-	width:100px;	
+	width:95px;	
 }
 div.navigation ul ul a{
-	text-indent:1em !important;
+	text-indent:.8em !important;
 	background:none;
 	padding:2px 0;
 	font-size:0.9em;
@@ -66,7 +66,8 @@ div.navigation ul ul li {
 	background-color: #222;
 }
 div.navigation {    
-    padding: 0 0 0 205px;
+    padding: 0 0 3px 205px;
+	margin:-4px 0 0 0;
 	clear:both;
 	background-color:#404040;
 }
@@ -97,13 +98,13 @@ ul.navigation li a{
 	padding:0;
 	margin:0;
 }
-ul.navigation li a.home 		{width:58px;background-position:0 -1px}
-ul.navigation li a.vision		{width:69px;background-position:-58px -1px}
-ul.navigation li a.history  	{width:75px;background-position:-132px -1px}
-ul.navigation li a.factory  	{width:75px;background-position:-212px -1px}
-ul.navigation li a.collection 	{width:91px;background-position:-292px -1px}
-ul.navigation li a.vacancies 	{width:87px;background-position:-388px -1px}
-ul.navigation li a.contact width	{width:77px;background-position:-480px -1px}
+ul.navigation li a.home 		{width:58px;background-position:0 0}
+ul.navigation li a.vision		{width:69px;background-position:-58px 0}
+ul.navigation li a.history  	{width:75px;background-position:-132px 0}
+ul.navigation li a.factory  	{width:75px;background-position:-212px 0}
+ul.navigation li a.collection 	{width:91px;background-position:-292px 0}
+ul.navigation li a.vacancies 	{width:87px;background-position:-388px 0}
+ul.navigation li a.contact 		{width:77px;background-position:-480px 0}
 /*
 ul.navigation li a {
     opacity:0;

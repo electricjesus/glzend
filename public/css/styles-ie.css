@@ -61,3 +61,6 @@ div.category-title-collection.late-victorian img{
 div.gallery.inspiration li {
    padding-left: 1em !important;
 }
+
+/*** main menu ***/
+ul.navigation li a {margin-top:2px;}
