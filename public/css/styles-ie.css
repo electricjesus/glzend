@@ -5,6 +5,9 @@ div.container {
 div.gallery.inspiration li {
 height:30px;
 }
+div.gallery.spotlight {
+right:282px;
+}
 div.gallery.inspiration li.active,
 div.gallery.inspiration li:hover {
 background-color:#333;

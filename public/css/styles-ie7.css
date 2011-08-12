@@ -47,4 +47,7 @@ div.category-title{
 div.content.index.index{
 	height: 410px !important;
 }
+div.header-icon {
+margin-top:-9px;
+}
 
