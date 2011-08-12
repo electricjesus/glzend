@@ -58,6 +58,9 @@ div.category-title-collection.art-deco img{
 div.category-title-collection.late-victorian img{
 	margin-top: 1px;
 }
+div.gallery.inspiration li {
+   padding-left: 1em !important;
+}
 
 /*** main menu ***/
 ul.navigation li a {margin-top:2px;}

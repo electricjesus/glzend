@@ -61,7 +61,7 @@ div.navigation ul ul li {
     border-right: none;
     display: block;
     line-height: 1.2em;
-	background-color: #222;
+	background-color: #404040;
 }
 div.navigation {    
     padding: 0 0 3px 205px;
@@ -185,7 +185,7 @@ div#products.gallery.tinycarousel .overview li img {margin:20px auto}
 
 
 div.gallery.inspiration {
-    right:391px;
+    right:367px;
     top:-8px;
     z-index:43;
 }
@@ -265,7 +265,7 @@ div.gallery.inspiration li {
     height:12.8px !important;
     margin:5px 0;
     padding:0.1em 0em .45em 1.45em !important;
-    width:200px;
+    width:225px;
 }
 div.gallery.inspiration li a {
     color:#c9c9c9;

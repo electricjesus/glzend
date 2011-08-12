@@ -13,6 +13,10 @@ overflow:hidden;
 ul.navigation ul {
 	width:105px !important;
 	padding-left:308px !important;
+	left: 374px !important;
+}
+div.navigation  ul ul li{
+	background-color: #404040 !important;
 }
 ul.navigation ul a{
 	text-indent:.2em !important;
