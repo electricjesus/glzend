@@ -1,6 +1,7 @@
 div.navigation {
 overflow:hidden;
 height:17px !important;
+margin:-3px 0 0 0;
 }
 ul.navigation {
 	margin-left:-15px;
