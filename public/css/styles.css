@@ -175,9 +175,9 @@ div.gallery.tinycarousel {
     z-index:42;
 }
 
-div#products.gallery.tinycarousel { height: 500px; overflow:hidden; }
-div#products.gallery.tinycarousel .viewport { float: left; width: 125px; height: 440px; overflow: hidden; position: relative; }
-div#products.gallery.tinycarousel .buttons { display: block; height:30px; width:125px;}
+div#products.gallery.tinycarousel { height: 550px; overflow:hidden; }
+div#products.gallery.tinycarousel .viewport { float: left; width: 125px; height: 440px; overflow: hidden; position: relative; clear:both; }
+div#products.gallery.tinycarousel .buttons { display: inline-block; position:relative; float:left; clear:both; height:30px; width:125px;}
 div#products.gallery.tinycarousel a.buttons {border:none}
 div#products.gallery.tinycarousel .buttons img { margin:0 35%; }
 div#products.gallery.tinycarousel .disable { opacity: .5; }
