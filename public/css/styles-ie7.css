@@ -13,7 +13,7 @@ overflow:hidden;
 ul.navigation ul {
 	width:105px !important;
 	padding-left:308px !important;
-	left: 374px !important;
+	left: 194px !important;
 }
 div.navigation  ul ul li{
 	background-color: #404040 !important;
@@ -37,3 +37,14 @@ div.gallery.inspiration {
 div.gallery.tinycarousel {
     right:260px;
 }
+div.category-title h1.timeless-subtitles{
+	margin-top: 40px !important;
+}
+div.category-title{
+	margin-top: 37px !important;
+}
+/*************** CONTENT PAGES **********************/
+div.content.index.index{
+	height: 410px !important;
+}
+
