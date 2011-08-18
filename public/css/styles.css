@@ -584,28 +584,37 @@ form#contactForm label.error{
 	color: #F5403A;
 }
 /*********************** FACTORY PAGE *********************/
+/* overlay size and background image */
 .overlay {
+
+	/*
+		THIS ARE YOUR FULLSCREEN DIMENSIONS
+	*/
 	width:800px;
 	height:600px;
-	/*background-image:url(http://static.flowplayer.org/img/overlay/petrol.png);*/
+	background-image:url(../images/factory-bg.jpg);
 	display:none;
 	padding: 0 !important;
 }
+
+/* close button for overlay */
 .overlay .close {
 	background:url(http://static.flowplayer.org/img/overlay/close.png) no-repeat;
 	position:absolute;
-    right: 267px;
-    top: -369px;
+	top:2px;
+	right:5px;
 	width:35px;
 	height:35px;
 	cursor:pointer;
 }
-#player, #player_api { 
+
+/* original size of the player */
+#player, #player_api {
 	height: 233px;
     width: 310px;
 	display:block;
-	float: right;
 }
+
 /* absolute positioning of the player */
 #player_api {
 	position:absolute; 
@@ -613,20 +622,16 @@ form#contactForm label.error{
 	/* layer as the topmost element */
 	z-index:10000; 	
 }
-div#exposeMask{
-	opacity: 1 !important;
-}
-div#exposeMask+img{
-	top:0 !important;
-}
-p.factory{
-	clear: none !important;
-}
+
 div.factory-video{
 	margin-left: 10px;
 	float: right;
 	border: 1px solid;
 }
+p.factory{
+	clear: none !important;
+}
+
 
 /******************* collection ************************/
 div.category-title-collection{
