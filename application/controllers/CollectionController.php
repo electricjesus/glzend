@@ -39,7 +39,7 @@ class CollectionController extends Zend_Controller_Action
                 ->select()
                 ->where('categories.id = ?',$_category_id)
             );        
-        //construct data for slideshow
+        //construct data for slideshow regular
         $_slideshowdata =
             $_products->fetchAll(
                 $_products

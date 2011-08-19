@@ -45,12 +45,13 @@
     <?php elseif($this->where == 'slideshow'): ?>
     <?php
        $_rows = $_products->fetchAll(
-            $_products
-                ->select(Zend_Db_Table::SELECT_WITH_FROM_PART)
-                ->setIntegrityCheck(false)
-                ->join('featured','featured.product_id = products.id')
-                ->where('featured.location = ?','category')
-                ->where('category_id = ?',$this->category)
+        $_products
+            ->select()
+            ->from(array('products'),array('pid'=>'id','*',))
+            ->setIntegrityCheck(false)
+            ->join('sort','sort.item_id = products.id')
+            ->where('sort.item_type = ?','product')
+            ->where('subcategory_id = ?',$this->id)
             );
     ?>
     <?php foreach($_rows as $_row):?>
