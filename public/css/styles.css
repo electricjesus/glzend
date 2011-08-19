@@ -614,6 +614,12 @@ form#contactForm label.error{
     width: 310px;
 	display:block;
 }
+/*#player_api{
+	top: 50%;
+	left: 50%;
+	margin-top: -232px;
+	margin-left: -250px;
+}*/
 
 /* absolute positioning of the player */
 #player_api {
