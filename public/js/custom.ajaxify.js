@@ -10,6 +10,8 @@ carouselClickEvtSet = function() {
 $(document).ready(function() {
     carouselClickEvtSet.call();
     $('a.inspiration-link').click(function() {
+        clearInterval(slideshowIntervalID);
+        slideshowIntervalID = setInterval( "slideSwitch()", 3500 );
         $('#inspiration-active').removeAttr('id');
         $(this).attr('id','inspiration-active');
         $('div.viewport').load($(this).attr('href')+'/w/carousel', function() {
