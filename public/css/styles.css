@@ -103,6 +103,10 @@ ul.navigation li a.factory  	{width:75px;background-position:-212px 0}
 ul.navigation li a.collection 	{width:91px;background-position:-292px 0}
 ul.navigation li a.vacancies 	{width:87px;background-position:-388px 0}
 ul.navigation li a.contact 		{width:77px;background-position:-480px 0}
+
+ul#inspiration li a#inspiration-active{
+	color: #FFF;
+}
 /*
 ul.navigation li a {
     opacity:0;
