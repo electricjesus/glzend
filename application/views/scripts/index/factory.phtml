@@ -54,24 +54,24 @@ var overlay = $(".overlay").overlay({
     // use the Apple effect for overlay
     effect: 'apple',    
     // 1. start expose effect when overlaying begins
-    mask: '#123448',    
+    mask: '#ffffff',    
     fixed: false,
     // 2. when overlay is loaded, we reposition and resize the player on top of it
     onLoad: function() {
+        $('#exposeMask').remove();
         // get handle to the embed element
         var embed = $("#player :first");
         /* and reposition / resize it. you will propably have to tweak
             these when placing this on your site */
         var el = this.getOverlay();
+            el.css(top:);
         var height = el.height();
-        embed.css({
-            // size
-            width:parseInt(el.width()) -80,
-            height:parseInt(height) -80,
             // position
             left: parseInt(el.css("left")),
             top: parseInt(el.css("top"))
         });
+        $calc_w = ($('div.container+img').width()-embed.width())/2;
+        embed.css({left:12+$calc_w, top:-130}));
         // while overlay was growing we were in the paused state
         $f().resume();
     },
