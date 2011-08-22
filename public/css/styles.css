@@ -586,17 +586,12 @@ form#contactForm label.error{
 /*********************** FACTORY PAGE *********************/
 /* overlay size and background image */
 .overlay {
-
-	/*
-		THIS ARE YOUR FULLSCREEN DIMENSIONS
-	*/
 	width:800px;
 	height:600px;
 	background-image:url(../images/factory-bg.jpg);
 	display:none;
 	padding: 0 !important;
 }
-
 /* close button for overlay */
 .overlay .close {
 	background:url(http://static.flowplayer.org/img/overlay/close.png) no-repeat;
@@ -614,21 +609,13 @@ form#contactForm label.error{
     width: 310px;
 	display:block;
 }
-/*#player_api{
-	top: 50%;
-	left: 50%;
-	margin-top: -232px;
-	margin-left: -250px;
-}*/
 
 /* absolute positioning of the player */
 #player_api {
-	position:absolute; 
-	
+	position:absolute; 	
 	/* layer as the topmost element */
 	z-index:10000; 	
 }
-
 div.factory-video{
 	margin-left: 10px;
 	float: right;

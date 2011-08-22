@@ -1,125 +1,87 @@
 <div class="category-info category-header">
-	<div class="category-title factory">
-		<h1><img src="/images/factory_header.jpg" alt="Factory" /></h1>
-	</div>
-	
-	<div class="factory-video">	
-		<!-- container for the player -->
-		<a id="player" href="/movies/GL-2011-small.flv"></a>
-		<!-- element that is overlayed, visuals are done with external CSS -->
-		<div class="overlay"></div>
-	
-		<!-- JavaScript coding -->
-		<script type="text/javascript">
-		
-		// setup overlay
-		var overlay = $(".overlay").overlay({
-
-		// use the Apple effect for overlay
-		effect: 'apple',	
-		
-		// 1. start expose effect when overlaying begins
-		mask: { color: '#000', opacity: 1},
-		fixed: false,
-
-		// 2. when overlay is loaded, we reposition and resize the player on top of it
-		onLoad: function() {
-
-			// get handle to the embed element
-			var embed = $("#player :first");
-
-			/* and reposition / resize it. you will propably have to tweak
-				these when placing this on your site */
-
-			var el = this.getOverlay();
-			var height = el.height();
-
-			embed.css({
-				// size
-				width:parseInt(el.width()) -190,
-				height:parseInt(height) -135,
-			
-				//margin-top:-232,
-				//margin-left:-250
-				// position
-				left: parseInt(el.css("left")) - 160,
-				top: parseInt(el.css("top")) - 200
-			});
-			
-			
-
-			// while overlay was growing we were in the paused state
-			$f().resume();
-		},
-
-		// when overlay closes
-		onClose: function() {
-
-			// 1. return our player to its original size/position
-			$("#player :first").css({top: null, left: null, width: null, height: null});
-
-			// 2. enable the fullscreen button again
-			$f().getControls().enable({fullscreen:true});
-		}
-	
-		}).data("overlay");
-				
-		$f("player", "/swf/flowplayer-3.2.7.swf",  {
-
-		// our fake fullscreen action.
-		onBeforeFullscreen: function()  {
-
-			// 1. launch overlay
-			overlay.load();
-
-			// 2. pause the player and make it hidden while overlay "grows"
-			this.hide().pause();
-
-			// 3. disable fullscreen button when overlayed
-			this.getControls().enable({fullscreen:false});
-
-			// 4. disable normal fullscreen action by returning false
-			return false;
-		},
-
-		// when ESC is pressed above the player, "fullscreen" is closed
-		onKeyPress: function(key) {
-			if (key == 27) {
-				overlay.close();
-			}
-		},
-
-		// in this case, use the commercial version for a change
-		key: '#$7162d2d730cf607ac6d',
-
-		// some basic visual setups
-		clip: { scaling: 'fit'},
-		canvas: {backgroundGradient: 'none'}
-
-	});
-
-
-		</script>
-	
-		
-		
-	</div>
-		<p class="factory">
-			When GL Nederland BV took over the silver factory of the Dutch "Royal van Kempen en Begeer" in 1984, she also took over 33 
-			professional Dutch craftsman, a large amount of machines and also a container filled with carton boxes.
-		</p>
-		<p class="factory">
-			The owner of GL wanted to throw away all the boxes. Fortunately that did not happen because the content of the boxes consisted 
-			of more than 30.000 original, well conserved malls. All malls were designed in the period of approximately 1825 up to the end of 1930. 
-		</p>
-		<p class="factory">
-			Since then, GL is producing partly replica's of the antique models from the original malls and partly totally new jewellery by combining 
-			several components.
-		</p>
-		<p class="factory">
-			We are very proud that we are still producing in our own factory in Holland. So, if you want to have a look into our Dutch based 
-			factory, please click on the movie. 
-
-		</p>
+    <div class="category-title factory">
+        <h1><img src="/images/factory_header.jpg" alt="Factory" /></h1>
+    </div>    
+    <div class="factory-video">    
+        <!-- container for the player -->
+        <a id="player" href="/movies/GL-2011-small.flv"></a>
+        <!-- element that is overlayed, visuals are done with external CSS -->
+        <div class="overlay"></div>
+    </div>
+        <p class="factory">
+            When GL Nederland BV took over the silver factory of the Dutch "Royal van Kempen en Begeer" in 1984, she also took over 33 
+            professional Dutch craftsman, a large amount of machines and also a container filled with carton boxes.
+        </p>
+        <p class="factory">
+            The owner of GL wanted to throw away all the boxes. Fortunately that did not happen because the content of the boxes consisted 
+            of more than 30.000 original, well conserved malls. All malls were designed in the period of approximately 1825 up to the end of 1930. 
+        </p>
+        <p class="factory">
+            Since then, GL is producing partly replica's of the antique models from the original malls and partly totally new jewellery by combining 
+            several components.
+        </p>
+        <p class="factory">
+            We are very proud that we are still producing in our own factory in Holland. So, if you want to have a look into our Dutch based 
+            factory, please click on the movie.
+        </p>
 </div>
+<script type="text/javascript">
+    // install flowplayer on the container
+$f("player", "/swf/flowplayer-3.2.7.swf",  {
+    // our fake fullscreen action.
+    onBeforeFullscreen: function()  {
+        // 1. launch overlay
+        overlay.load();
+        // 2. pause the player and make it hidden while overlay "grows"
+        this.hide().pause();
+        // 3. disable fullscreen button when overlayed
+        this.getControls().enable({fullscreen:false});
+        // 4. disable normal fullscreen action by returning false
+        return false;
+    },
+    // when ESC is pressed above the player, "fullscreen" is closed
+    onKeyPress: function(key) {if (key == 27) {overlay.close();}},
+    // in this case, use the commercial version for a change
+    //key: '#$7162d2d730cf607ac6d',
+    // some basic visual setups
+    clip: { scaling: 'fit'},
+    canvas: {backgroundGradient: 'none'}
+});
+</script>
+<script type="text/javascript">
+// setup overlay
+var overlay = $(".overlay").overlay({
+    // use the Apple effect for overlay
+    effect: 'apple',    
+    // 1. start expose effect when overlaying begins
+    mask: '#123448',    
+    fixed: false,
+    // 2. when overlay is loaded, we reposition and resize the player on top of it
+    onLoad: function() {
+        // get handle to the embed element
+        var embed = $("#player :first");
+        /* and reposition / resize it. you will propably have to tweak
+            these when placing this on your site */
+        var el = this.getOverlay();
+        var height = el.height();
+        embed.css({
+            // size
+            width:parseInt(el.width()) -80,
+            height:parseInt(height) -80,
+            // position
+            left: parseInt(el.css("left")),
+            top: parseInt(el.css("top"))
+        });
+        // while overlay was growing we were in the paused state
+        $f().resume();
+    },
+    // when overlay closes
+    onClose: function() {
+        // 1. return our player to its original size/position
+        $("#player :first").css({top: null, left: null, width: null, height: null});
+        // 2. enable the fullscreen button again
+        $f().getControls().enable({fullscreen:true});
+    }
+}).data("overlay");
+</script>
 
