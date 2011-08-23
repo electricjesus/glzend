@@ -58,19 +58,22 @@ var overlay = $(".overlay").overlay({
     fixed: false,
     // 2. when overlay is loaded, we reposition and resize the player on top of it
     onLoad: function() {
-        $('#exposeMask').css({'opacity':.99,'z-index':200});
+        $('#exposeMask').css({'opacity':.999999,'z-index':200});
         // get handle to the embed element
         var overlay = this.getOverlay();
         overlay.css({
             'z-index':900,
         });
-        var w = overlay.width()*.9;
-        var h = w/1.333333333;
-        var t = window.pageYOffset + (($(window).height()-h)-$("#player :first").offset().top)/1.5;
-        
-        $("#player :first").css({top: t, left: (overlay.width()-w)/2, width: w, height: h,'z-index':300});
 
-        $f().resume();
+        //adjustments: (pretty much auto, but you can change according to your preferrences)
+        var aspect_ratio = 1.333333333;                     // change this to video's aspect ratio
+        var overlay_to_vidsize_ratio = 0.9;                 // change this to your preferred ratio to the overlay container (not exposeMask)
+        var w = overlay.width()*overlay_to_vidsize_ratio;   // width is calculated from the above vars
+        var h = w/aspect_ratio;                             // height is adjusted according to aspect_ratio    
+        var distance_ratio = 1.5;                           // change this to values ranges 1 to 2
+        var t = window.pageYOffset + (($(window).height()-h)-$("#player :first").offset().top)/distance_ratio;  // calculated top        
+        $("#player :first").css({top: t, left: (overlay.width()-w)/2, width: w, height: h,'z-index':1000});      //apply to the player object
+        $f().resume();      //resume playing video
     },
     // when overlay closes
     onClose: function() {
