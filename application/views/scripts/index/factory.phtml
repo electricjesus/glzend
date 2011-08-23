@@ -60,14 +60,16 @@ var overlay = $(".overlay").overlay({
     onLoad: function() {
         $('#exposeMask').css({'opacity':.99,'z-index':200});
         // get handle to the embed element
-        var embed = $("#player :first");
         var overlay = this.getOverlay();
         overlay.css({
             'z-index':900,
         });
         var w = overlay.width()*.9;
         var h = w/1.333333333;
-        $("#player :first").css({top: 0, left: (overlay.width()-w)/2, width: w, height: h,'z-index':300});
+        var t = (($(window).height()-h)-$("#player :first").offset().top)/1.5;
+        
+        $("#player :first").css({top: t, left: (overlay.width()-w)/2, width: w, height: h,'z-index':300});
+
         $f().resume();
     },
     // when overlay closes
