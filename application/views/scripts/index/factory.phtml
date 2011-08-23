@@ -66,7 +66,7 @@ var overlay = $(".overlay").overlay({
         });
         var w = overlay.width()*.9;
         var h = w/1.333333333;
-        var t = (($(window).height()-h)-$("#player :first").offset().top)/1.5;
+        var t = window.pageYOffset + (($(window).height()-h)-$("#player :first").offset().top)/1.5;
         
         $("#player :first").css({top: t, left: (overlay.width()-w)/2, width: w, height: h,'z-index':300});
 
