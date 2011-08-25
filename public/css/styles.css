@@ -446,7 +446,9 @@ div.image-right{
 	border: 1px solid #9ea19a;
     float: right;
     margin-left: 10px;
-    padding: 5px 49px;
+    /*padding: 5px 49px;*/
+    width: 232px;
+	text-align: center;
 }
 
 /*********************** HISTORY PAGE *********************/
@@ -493,10 +495,17 @@ div.language-dutch p {
     line-height: 1.4em;
 }
 div.image-history img{
-	border: 1px solid;
+	/*border: 1px solid;
     float: right;
 	padding: 5px;
-	margin-left: 10px;
+	margin-left: 10px;*/
+}
+div.image-history{
+	border: 1px solid #9EA19A;
+    float: right;
+    margin-left: 10px;
+    text-align: center;
+    width: 232px;
 }
 
 /*********************** VACANCIES PAGE *********************/
@@ -510,7 +519,8 @@ div.image-right-vacancies{
 	border: 1px solid #9ea19a;
     float: right;
     margin-left: 10px;
-	padding: 5px 10px;
+	width: 232px;
+	text-align: center;
 }
 ul.vacancies-address{
 	list-style-type: none;
@@ -531,7 +541,8 @@ div.image-contact{
 	border: 1px solid #9ea19a;
     float: right;
     margin-left: 10px;
-	padding: 5px 18px;
+	width: 232px;
+	text-align: center;
 }
 div.contact-form{
 	margin-bottom: 25px;
