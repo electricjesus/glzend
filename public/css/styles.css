@@ -370,6 +370,7 @@ div.footer li a:hover {
 }
 #slideshow div {
     display:none;
+
 }
 
 #slideshow div.prod,
@@ -604,6 +605,12 @@ form#contactForm label.error{
 	width:35px;
 	height:35px;
 	cursor:pointer;
+}
+
+#exposeMask {
+    background-image:url(../images/video_close.jpg);
+    background-repeat:no-repeat;
+    background-position:70% 1%;
 }
 
 /* original size of the player */
