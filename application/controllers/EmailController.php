@@ -18,7 +18,7 @@ class EmailController extends Zend_Controller_Action
 		$emailMessage = $this->_request->getPost('comment');
 		$fromEmail = $this->_request->getPost('email');
 		$fromFullName = $this->_request->getPost('name');
-		$to = "info@glnederland.com";
+		$to = "youngstownph@gmail.com";
 		$subject = $this->_request->getPost('subject');
 		
 		$MailObj->setBodyText($emailMessage);
