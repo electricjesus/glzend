@@ -6,7 +6,7 @@ class IndexController extends Zend_Controller_Action
         /* Initialize action controller here */
     }
     public function indexAction() {
-		$this->view->assign('test', $this->_getParam('test')); 
+		//$this->view->assign('test', $this->_getParam('test')); 
     }
     public function factoryAction() {}
     public function vacanciesAction() {}
