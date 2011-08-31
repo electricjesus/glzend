@@ -31,7 +31,7 @@ class EmailController extends Zend_Controller_Action
 			{
 				$MailObj->send();
 				echo "<p class=\"email-success\">Thank you for your interest in our collection.<br/>
-We will contact you a soon as possible.</p>";
+				We will contact you as soon as possible.</p>";
 			}
 		catch(Zend_Mail_Exception $e)
 			{
