@@ -15,9 +15,49 @@
         <p>
             <?= $_cdata['description']; ?> 
         </p>
+		<?php if($this->look == 1): ?>
         <p style="text-align:center;">
+            <img src="/images/glimpse-header-1.jpg" alt="Glimpse of the collection" style="width:300px"/>
+        </p>
+		<? elseif($this->look == 2) : ?>
+		<p style="text-align:center;">
             <img src="/images/glimpse-header-2.jpg" alt="Glimpse of the collection" style="width:300px"/>
         </p>
+		<? elseif($this->look == 3) : ?>
+		<p style="text-align:center;">
+            <img src="/images/glimpse-header-3.jpg" alt="Glimpse of the collection" />
+        </p>
+		<? elseif($this->look == 4) : ?>
+		<p style="text-align:left;">
+			<br/>
+            <img src="/images/glimpse-header-3.jpg" alt="Glimpse of the collection" />
+        </p>		
+		<? elseif($this->look == 6) : ?>
+		<p style="text-align:left;">
+			<br/>
+            <img src="/images/glimpse-header-4.jpg" alt="Glimpse of the collection" style="opacity:.8"/>
+        </p>
+		<? elseif($this->look == 7) : ?>
+		<p style="text-align:left;">
+			<br/>
+            <img src="/images/glimpse-header-4.jpg" alt="Glimpse of the collection" style="opacity:1"/>
+        </p>
+		<? elseif($this->look == 8) : ?>
+		<p style="text-align:left;">
+			<br/>
+            <img src="/images/glimpse-header-3.jpg" alt="Glimpse of the collection" style="width:210px;"/>
+        </p>
+		<? elseif($this->look == 9) : ?>
+		<p style="text-align:left;">
+			<br/>
+            <img src="/images/glimpse-header-4.jpg" alt="Glimpse of the collection" style="width:210px;opacity:.8"/>
+        </p>
+		<? elseif($this->look == 10) : ?>
+		<p style="text-align:left;">
+			<br/>
+            <img src="/images/glimpse-header-4.jpg" alt="Glimpse of the collection" style="width:210px;opacity:1"/>
+        </p>
+		<? endif; ?>
         <?php endforeach; ?>
     </div>
     <div class="gallery spotlight">

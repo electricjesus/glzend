@@ -5,6 +5,7 @@ class CollectionController extends Zend_Controller_Action
     public function init()
     {
         $this->_helper->_layout->setLayout('collectionlayout');
+		$this->view->assign('look', $this->_getParam('look'));
     }
     public function indexAction() {
         $this->_forward('latevictorian');
@@ -12,7 +13,7 @@ class CollectionController extends Zend_Controller_Action
     public function latevictorianAction() {
         // construct data
         $this->_buildCategoryData('3', "late-victorian");
-        $this->render('collection');
+        $this->render('collection');		
     }
     public function artnouveauAction() {
         $this->_buildCategoryData('2', "art-nouveau");
