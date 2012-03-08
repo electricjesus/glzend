@@ -253,7 +253,7 @@ div.category-info.category-header p {
 	font-size: 14px;
     line-height:1.5em;
 	margin-top: 0;
-	width: 500px;
+	width: 475px;
 	text-align:justify;
 }
 div.category-info.category-header.collection p{
@@ -568,7 +568,7 @@ div.glcorporate.container.collection {
 	padding-bottom:5px;
 }
 div.content.index {
-    min-height:350px;
+    /*min-height:350px;*/
     height:100%;
 }
 img.image.contact1{
